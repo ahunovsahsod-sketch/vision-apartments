@@ -1,0 +1,2691 @@
+{
+  "settings": {
+    "method": "Per receiver and dominant geometric normal, density-compensated masked Gaussian in world metres; albedo/normal maps untouched",
+    "cellMetres": 0.12,
+    "giSigmaMetres": 0.26,
+    "aoSigmaMetres": 0.1,
+    "seconds": 3.53
+  },
+  "meshes": [
+    {
+      "id": "static_0000",
+      "vertices": 29386,
+      "shortEdgeVariationBefore": 0.042782582342624664,
+      "shortEdgeVariationAfter": 0.00957427080720663,
+      "meanDayBefore": 0.06651392579078674,
+      "meanDayAfter": 0.06872396171092987
+    },
+    {
+      "id": "static_0001",
+      "vertices": 5022,
+      "shortEdgeVariationBefore": 0.019923510029911995,
+      "shortEdgeVariationAfter": 0.003893885063007474,
+      "meanDayBefore": 0.021409202367067337,
+      "meanDayAfter": 0.02254270389676094
+    },
+    {
+      "id": "static_0002",
+      "vertices": 5718,
+      "shortEdgeVariationBefore": 0.006090064067393541,
+      "shortEdgeVariationAfter": 0.0012485969346016645,
+      "meanDayBefore": 0.013938942924141884,
+      "meanDayAfter": 0.014851481653749943
+    },
+    {
+      "id": "static_0003",
+      "vertices": 418,
+      "shortEdgeVariationBefore": 0.007912195287644863,
+      "shortEdgeVariationAfter": 0.0012544379569590092,
+      "meanDayBefore": 0.012229932472109795,
+      "meanDayAfter": 0.012293580919504166
+    },
+    {
+      "id": "static_0004",
+      "vertices": 3074,
+      "shortEdgeVariationBefore": 0.009583179838955402,
+      "shortEdgeVariationAfter": 0.0012330448953434825,
+      "meanDayBefore": 0.015824131667613983,
+      "meanDayAfter": 0.018217584118247032
+    },
+    {
+      "id": "static_0005",
+      "vertices": 82,
+      "shortEdgeVariationBefore": 0.015015519224107265,
+      "shortEdgeVariationAfter": 0.0015225763199850917,
+      "meanDayBefore": 0.012137380428612232,
+      "meanDayAfter": 0.011973255313932896
+    },
+    {
+      "id": "static_0006",
+      "vertices": 2886,
+      "shortEdgeVariationBefore": 0.006499286741018295,
+      "shortEdgeVariationAfter": 0.0007554602925665677,
+      "meanDayBefore": 0.009117793291807175,
+      "meanDayAfter": 0.018000289797782898
+    },
+    {
+      "id": "static_0007",
+      "vertices": 46,
+      "shortEdgeVariationBefore": 0.010085506364703178,
+      "shortEdgeVariationAfter": 0.001190905924886465,
+      "meanDayBefore": 0.008713582530617714,
+      "meanDayAfter": 0.008636780083179474
+    },
+    {
+      "id": "static_0008",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.04565265774726868,
+      "shortEdgeVariationAfter": 0.009018718264997005,
+      "meanDayBefore": 0.06693702191114426,
+      "meanDayAfter": 0.09362547844648361
+    },
+    {
+      "id": "static_0009",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.012459560297429562,
+      "shortEdgeVariationAfter": 0.0009652663138695061,
+      "meanDayBefore": 0.010053236037492752,
+      "meanDayAfter": 0.010093684308230877
+    },
+    {
+      "id": "static_0010",
+      "vertices": 3042,
+      "shortEdgeVariationBefore": 0.03294822946190834,
+      "shortEdgeVariationAfter": 0.008330006152391434,
+      "meanDayBefore": 0.027314653620123863,
+      "meanDayAfter": 0.06100178882479668
+    },
+    {
+      "id": "static_0011",
+      "vertices": 72,
+      "shortEdgeVariationBefore": 0.05975257605314255,
+      "shortEdgeVariationAfter": 0.008660448715090752,
+      "meanDayBefore": 0.039573270827531815,
+      "meanDayAfter": 0.03738325461745262
+    },
+    {
+      "id": "static_0012",
+      "vertices": 2778,
+      "shortEdgeVariationBefore": 0.007431822828948498,
+      "shortEdgeVariationAfter": 0.001397829269990325,
+      "meanDayBefore": 0.006187780760228634,
+      "meanDayAfter": 0.015363953076303005
+    },
+    {
+      "id": "static_0013",
+      "vertices": 36,
+      "shortEdgeVariationBefore": 0.014445889741182327,
+      "shortEdgeVariationAfter": 0.0001640294649405405,
+      "meanDayBefore": 0.004950216505676508,
+      "meanDayAfter": 0.004607405047863722
+    },
+    {
+      "id": "static_0014",
+      "vertices": 10506,
+      "shortEdgeVariationBefore": 0.036711983382701874,
+      "shortEdgeVariationAfter": 0.005223528947681189,
+      "meanDayBefore": 0.074981689453125,
+      "meanDayAfter": 0.09712443500757217
+    },
+    {
+      "id": "static_0015",
+      "vertices": 1126,
+      "shortEdgeVariationBefore": 0.04952741041779518,
+      "shortEdgeVariationAfter": 0.0035067712888121605,
+      "meanDayBefore": 0.056914687156677246,
+      "meanDayAfter": 0.05687263235449791
+    },
+    {
+      "id": "static_0016",
+      "vertices": 24902,
+      "shortEdgeVariationBefore": 0.02621571533381939,
+      "shortEdgeVariationAfter": 0.005341200157999992,
+      "meanDayBefore": 0.04870742931962013,
+      "meanDayAfter": 0.0568448044359684
+    },
+    {
+      "id": "static_0017",
+      "vertices": 3198,
+      "shortEdgeVariationBefore": 0.024581605568528175,
+      "shortEdgeVariationAfter": 0.002837180159986019,
+      "meanDayBefore": 0.027865547686815262,
+      "meanDayAfter": 0.028362013399600983
+    },
+    {
+      "id": "static_0018",
+      "vertices": 10478,
+      "shortEdgeVariationBefore": 0.05020996928215027,
+      "shortEdgeVariationAfter": 0.009262479841709137,
+      "meanDayBefore": 0.08852031826972961,
+      "meanDayAfter": 0.11122085899114609
+    },
+    {
+      "id": "static_0019",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.07086428999900818,
+      "shortEdgeVariationAfter": 0.004681064281612635,
+      "meanDayBefore": 0.07406219094991684,
+      "meanDayAfter": 0.07420896738767624
+    },
+    {
+      "id": "static_0020",
+      "vertices": 10478,
+      "shortEdgeVariationBefore": 0.06822419166564941,
+      "shortEdgeVariationAfter": 0.011254483833909035,
+      "meanDayBefore": 0.1695985049009323,
+      "meanDayAfter": 0.20281071960926056
+    },
+    {
+      "id": "static_0021",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.06929263472557068,
+      "shortEdgeVariationAfter": 0.007235103752464056,
+      "meanDayBefore": 0.10624069720506668,
+      "meanDayAfter": 0.10708502680063248
+    },
+    {
+      "id": "static_0022",
+      "vertices": 3042,
+      "shortEdgeVariationBefore": 0.08420512825250626,
+      "shortEdgeVariationAfter": 0.013672891072928905,
+      "meanDayBefore": 0.1419750303030014,
+      "meanDayAfter": 0.17219547927379608
+    },
+    {
+      "id": "static_0023",
+      "vertices": 68,
+      "shortEdgeVariationBefore": 0.07496317476034164,
+      "shortEdgeVariationAfter": 0.009795144200325012,
+      "meanDayBefore": 0.07310197502374649,
+      "meanDayAfter": 0.07176913321018219
+    },
+    {
+      "id": "static_0024",
+      "vertices": 4014,
+      "shortEdgeVariationBefore": 0.09060737490653992,
+      "shortEdgeVariationAfter": 0.00999965239316225,
+      "meanDayBefore": 0.15714752674102783,
+      "meanDayAfter": 0.1901540756225586
+    },
+    {
+      "id": "static_0025",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.09103188663721085,
+      "shortEdgeVariationAfter": 0.006713741924613714,
+      "meanDayBefore": 0.11046718806028366,
+      "meanDayAfter": 0.10915953665971756
+    },
+    {
+      "id": "static_0026",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.05773190036416054,
+      "shortEdgeVariationAfter": 0.005925670266151428,
+      "meanDayBefore": 0.084164559841156,
+      "meanDayAfter": 0.09954884648323059
+    },
+    {
+      "id": "static_0027",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.05338626354932785,
+      "shortEdgeVariationAfter": 0.004300118889659643,
+      "meanDayBefore": 0.07515572756528854,
+      "meanDayAfter": 0.0754360780119896
+    },
+    {
+      "id": "static_0028",
+      "vertices": 2688,
+      "shortEdgeVariationBefore": 0.05776939541101456,
+      "shortEdgeVariationAfter": 0.007629176136106253,
+      "meanDayBefore": 0.06644534319639206,
+      "meanDayAfter": 0.0676952376961708
+    },
+    {
+      "id": "static_0029",
+      "vertices": 24,
+      "shortEdgeVariationBefore": 0.05170263350009918,
+      "shortEdgeVariationAfter": 0.0018047073390334845,
+      "meanDayBefore": 0.016846418380737305,
+      "meanDayAfter": 0.016504980623722076
+    },
+    {
+      "id": "static_0030",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.07077688723802567,
+      "shortEdgeVariationAfter": 0.011114337481558323,
+      "meanDayBefore": 0.08005871623754501,
+      "meanDayAfter": 0.12008532136678696
+    },
+    {
+      "id": "static_0031",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.03659994527697563,
+      "shortEdgeVariationAfter": 0.0030721162911504507,
+      "meanDayBefore": 0.02973904088139534,
+      "meanDayAfter": 0.029454560950398445
+    },
+    {
+      "id": "static_0032",
+      "vertices": 2858,
+      "shortEdgeVariationBefore": 0.02111147716641426,
+      "shortEdgeVariationAfter": 0.0037624770775437355,
+      "meanDayBefore": 0.020046161487698555,
+      "meanDayAfter": 0.05727865919470787
+    },
+    {
+      "id": "static_0033",
+      "vertices": 36,
+      "shortEdgeVariationBefore": 0.0627913847565651,
+      "shortEdgeVariationAfter": 0.002342662075534463,
+      "meanDayBefore": 0.03769339621067047,
+      "meanDayAfter": 0.03263814002275467
+    },
+    {
+      "id": "static_0034",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.05587390065193176,
+      "shortEdgeVariationAfter": 0.008971222676336765,
+      "meanDayBefore": 0.09318196773529053,
+      "meanDayAfter": 0.12364884465932846
+    },
+    {
+      "id": "static_0035",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.06554991006851196,
+      "shortEdgeVariationAfter": 0.007129590027034283,
+      "meanDayBefore": 0.08280857652425766,
+      "meanDayAfter": 0.08274224400520325
+    },
+    {
+      "id": "static_0036",
+      "vertices": 10478,
+      "shortEdgeVariationBefore": 0.11073838919401169,
+      "shortEdgeVariationAfter": 0.018340008333325386,
+      "meanDayBefore": 0.18441276252269745,
+      "meanDayAfter": 0.21418994665145874
+    },
+    {
+      "id": "static_0037",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.07692699879407883,
+      "shortEdgeVariationAfter": 0.006053293123841286,
+      "meanDayBefore": 0.08379222452640533,
+      "meanDayAfter": 0.08316396176815033
+    },
+    {
+      "id": "static_0038",
+      "vertices": 4014,
+      "shortEdgeVariationBefore": 0.06685570627450943,
+      "shortEdgeVariationAfter": 0.011214464902877808,
+      "meanDayBefore": 0.062304072082042694,
+      "meanDayAfter": 0.1068190485239029
+    },
+    {
+      "id": "static_0039",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.0675833597779274,
+      "shortEdgeVariationAfter": 0.007394728716462851,
+      "meanDayBefore": 0.05002247914671898,
+      "meanDayAfter": 0.04803529381752014
+    },
+    {
+      "id": "static_0040",
+      "vertices": 3838,
+      "shortEdgeVariationBefore": 0.0826064944267273,
+      "shortEdgeVariationAfter": 0.014394949190318584,
+      "meanDayBefore": 0.09582915902137756,
+      "meanDayAfter": 0.17636512219905853
+    },
+    {
+      "id": "static_0041",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.11053696274757385,
+      "shortEdgeVariationAfter": 0.008578546345233917,
+      "meanDayBefore": 0.12051980197429657,
+      "meanDayAfter": 0.1122613325715065
+    },
+    {
+      "id": "static_0042",
+      "vertices": 3046,
+      "shortEdgeVariationBefore": 0.08900737017393112,
+      "shortEdgeVariationAfter": 0.021262457594275475,
+      "meanDayBefore": 0.11246225237846375,
+      "meanDayAfter": 0.18019674718379974
+    },
+    {
+      "id": "static_0043",
+      "vertices": 76,
+      "shortEdgeVariationBefore": 0.1105157881975174,
+      "shortEdgeVariationAfter": 0.014410418458282948,
+      "meanDayBefore": 0.0899372324347496,
+      "meanDayAfter": 0.08723011612892151
+    },
+    {
+      "id": "static_0044",
+      "vertices": 10478,
+      "shortEdgeVariationBefore": 0.08232784271240234,
+      "shortEdgeVariationAfter": 0.015879034996032715,
+      "meanDayBefore": 0.12821197509765625,
+      "meanDayAfter": 0.14670276641845703
+    },
+    {
+      "id": "static_0045",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.04292799532413483,
+      "shortEdgeVariationAfter": 0.003967725671827793,
+      "meanDayBefore": 0.03500661998987198,
+      "meanDayAfter": 0.03439446538686752
+    },
+    {
+      "id": "static_0046",
+      "vertices": 3838,
+      "shortEdgeVariationBefore": 0.11431406438350677,
+      "shortEdgeVariationAfter": 0.017958320677280426,
+      "meanDayBefore": 0.11982499808073044,
+      "meanDayAfter": 0.18446682393550873
+    },
+    {
+      "id": "static_0047",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.11689090728759766,
+      "shortEdgeVariationAfter": 0.008991739712655544,
+      "meanDayBefore": 0.08876080065965652,
+      "meanDayAfter": 0.08862274885177612
+    },
+    {
+      "id": "static_0048",
+      "vertices": 3046,
+      "shortEdgeVariationBefore": 0.1397286355495453,
+      "shortEdgeVariationAfter": 0.03740982711315155,
+      "meanDayBefore": 0.14845719933509827,
+      "meanDayAfter": 0.22769062221050262
+    },
+    {
+      "id": "static_0049",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.1436803638935089,
+      "shortEdgeVariationAfter": 0.007478944957256317,
+      "meanDayBefore": 0.10100369900465012,
+      "meanDayAfter": 0.09161880612373352
+    },
+    {
+      "id": "static_0050",
+      "vertices": 2692,
+      "shortEdgeVariationBefore": 0.0831642597913742,
+      "shortEdgeVariationAfter": 0.012951589189469814,
+      "meanDayBefore": 0.08270309120416641,
+      "meanDayAfter": 0.08378337323665619
+    },
+    {
+      "id": "static_0051",
+      "vertices": 24,
+      "shortEdgeVariationBefore": 0.09769295156002045,
+      "shortEdgeVariationAfter": 0.004651219118386507,
+      "meanDayBefore": 0.04682333022356033,
+      "meanDayAfter": 0.04671192169189453
+    },
+    {
+      "id": "static_0052",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.14794974029064178,
+      "shortEdgeVariationAfter": 0.024905355647206306,
+      "meanDayBefore": 0.20440246164798737,
+      "meanDayAfter": 0.29976019263267517
+    },
+    {
+      "id": "static_0053",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.1264428049325943,
+      "shortEdgeVariationAfter": 0.006400515791028738,
+      "meanDayBefore": 0.11063536256551743,
+      "meanDayAfter": 0.1114044189453125
+    },
+    {
+      "id": "static_0054",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.10427279025316238,
+      "shortEdgeVariationAfter": 0.015069560147821903,
+      "meanDayBefore": 0.13680845499038696,
+      "meanDayAfter": 0.1854190230369568
+    },
+    {
+      "id": "static_0055",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.09447003155946732,
+      "shortEdgeVariationAfter": 0.0048368233256042,
+      "meanDayBefore": 0.09570705890655518,
+      "meanDayAfter": 0.09392764419317245
+    },
+    {
+      "id": "static_0056",
+      "vertices": 3042,
+      "shortEdgeVariationBefore": 0.046622298657894135,
+      "shortEdgeVariationAfter": 0.00771017512306571,
+      "meanDayBefore": 0.043720606714487076,
+      "meanDayAfter": 0.07595903426408768
+    },
+    {
+      "id": "static_0057",
+      "vertices": 68,
+      "shortEdgeVariationBefore": 0.0459367111325264,
+      "shortEdgeVariationAfter": 0.004092929884791374,
+      "meanDayBefore": 0.024623678997159004,
+      "meanDayAfter": 0.024588052183389664
+    },
+    {
+      "id": "static_0058",
+      "vertices": 3838,
+      "shortEdgeVariationBefore": 0.05575002357363701,
+      "shortEdgeVariationAfter": 0.008100447244942188,
+      "meanDayBefore": 0.06438788026571274,
+      "meanDayAfter": 0.1063622459769249
+    },
+    {
+      "id": "static_0059",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.0781489834189415,
+      "shortEdgeVariationAfter": 0.00657781632617116,
+      "meanDayBefore": 0.06996112316846848,
+      "meanDayAfter": 0.07241876423358917
+    },
+    {
+      "id": "static_0060",
+      "vertices": 10478,
+      "shortEdgeVariationBefore": 0.059270914644002914,
+      "shortEdgeVariationAfter": 0.008408134803175926,
+      "meanDayBefore": 0.10976996272802353,
+      "meanDayAfter": 0.12359423190355301
+    },
+    {
+      "id": "static_0061",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.05150631070137024,
+      "shortEdgeVariationAfter": 0.0030569303780794144,
+      "meanDayBefore": 0.06740473955869675,
+      "meanDayAfter": 0.06751389056444168
+    },
+    {
+      "id": "static_0062",
+      "vertices": 3042,
+      "shortEdgeVariationBefore": 0.026133306324481964,
+      "shortEdgeVariationAfter": 0.009057017974555492,
+      "meanDayBefore": 0.04117719829082489,
+      "meanDayAfter": 0.07702315598726273
+    },
+    {
+      "id": "static_0063",
+      "vertices": 68,
+      "shortEdgeVariationBefore": 0.022631105035543442,
+      "shortEdgeVariationAfter": 0.003956992644816637,
+      "meanDayBefore": 0.05401111766695976,
+      "meanDayAfter": 0.057390108704566956
+    },
+    {
+      "id": "static_0064",
+      "vertices": 5690,
+      "shortEdgeVariationBefore": 0.04261472076177597,
+      "shortEdgeVariationAfter": 0.0069699580781161785,
+      "meanDayBefore": 0.06362613290548325,
+      "meanDayAfter": 0.09848378598690033
+    },
+    {
+      "id": "static_0065",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.05660337209701538,
+      "shortEdgeVariationAfter": 0.004137321840971708,
+      "meanDayBefore": 0.10845272243022919,
+      "meanDayAfter": 0.10517898947000504
+    },
+    {
+      "id": "static_0066",
+      "vertices": 4014,
+      "shortEdgeVariationBefore": 0.029161496087908745,
+      "shortEdgeVariationAfter": 0.004839092493057251,
+      "meanDayBefore": 0.04802706092596054,
+      "meanDayAfter": 0.07087274640798569
+    },
+    {
+      "id": "static_0067",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.05388254672288895,
+      "shortEdgeVariationAfter": 0.006666189059615135,
+      "meanDayBefore": 0.07513272017240524,
+      "meanDayAfter": 0.07700375467538834
+    },
+    {
+      "id": "static_0068",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.018078014254570007,
+      "shortEdgeVariationAfter": 0.0011793518206104636,
+      "meanDayBefore": 0.02344394661486149,
+      "meanDayAfter": 0.02311640977859497
+    },
+    {
+      "id": "static_0069",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.024433616548776627,
+      "shortEdgeVariationAfter": 0.001424193731509149,
+      "meanDayBefore": 0.030408285558223724,
+      "meanDayAfter": 0.0295666866004467
+    },
+    {
+      "id": "static_0070",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.02820834144949913,
+      "shortEdgeVariationAfter": 0.0018626793753355742,
+      "meanDayBefore": 0.036913540214300156,
+      "meanDayAfter": 0.0370190292596817
+    },
+    {
+      "id": "static_0071",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.025001151487231255,
+      "shortEdgeVariationAfter": 0.0014390266733244061,
+      "meanDayBefore": 0.02931101620197296,
+      "meanDayAfter": 0.028463775292038918
+    },
+    {
+      "id": "static_0072",
+      "vertices": 146,
+      "shortEdgeVariationBefore": 0.12129534780979156,
+      "shortEdgeVariationAfter": 0.007044871337711811,
+      "meanDayBefore": 0.1700168401002884,
+      "meanDayAfter": 0.1693667471408844
+    },
+    {
+      "id": "static_0073",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.1316509246826172,
+      "shortEdgeVariationAfter": 0.013792066834867,
+      "meanDayBefore": 0.13443315029144287,
+      "meanDayAfter": 0.13443559408187866
+    },
+    {
+      "id": "static_0074",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.12361753731966019,
+      "shortEdgeVariationAfter": 0.01541043072938919,
+      "meanDayBefore": 0.15464426577091217,
+      "meanDayAfter": 0.15315023064613342
+    },
+    {
+      "id": "static_0075",
+      "vertices": 72,
+      "shortEdgeVariationBefore": 0.09015180170536041,
+      "shortEdgeVariationAfter": 0.006738724652677774,
+      "meanDayBefore": 0.13581474125385284,
+      "meanDayAfter": 0.13502424955368042
+    },
+    {
+      "id": "static_0076",
+      "vertices": 142,
+      "shortEdgeVariationBefore": 0.05663055554032326,
+      "shortEdgeVariationAfter": 0.0032672628294676542,
+      "meanDayBefore": 0.05964929237961769,
+      "meanDayAfter": 0.06226796656847
+    },
+    {
+      "id": "static_0077",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08178875595331192,
+      "shortEdgeVariationAfter": 0.004164662677794695,
+      "meanDayBefore": 0.07939604669809341,
+      "meanDayAfter": 0.07916965335607529
+    },
+    {
+      "id": "static_0078",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.06704999506473541,
+      "shortEdgeVariationAfter": 0.004389300476759672,
+      "meanDayBefore": 0.07338737696409225,
+      "meanDayAfter": 0.07477511465549469
+    },
+    {
+      "id": "static_0079",
+      "vertices": 68,
+      "shortEdgeVariationBefore": 0.07753569632768631,
+      "shortEdgeVariationAfter": 0.006063162349164486,
+      "meanDayBefore": 0.05511987954378128,
+      "meanDayAfter": 0.053717855364084244
+    },
+    {
+      "id": "static_0080",
+      "vertices": 142,
+      "shortEdgeVariationBefore": 0.049305081367492676,
+      "shortEdgeVariationAfter": 0.0033162864856421947,
+      "meanDayBefore": 0.052813105285167694,
+      "meanDayAfter": 0.050134267657995224
+    },
+    {
+      "id": "static_0081",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.046646200120449066,
+      "shortEdgeVariationAfter": 0.00279299751855433,
+      "meanDayBefore": 0.053485579788684845,
+      "meanDayAfter": 0.052729763090610504
+    },
+    {
+      "id": "static_0082",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.06918658316135406,
+      "shortEdgeVariationAfter": 0.004091406706720591,
+      "meanDayBefore": 0.07218422740697861,
+      "meanDayAfter": 0.07303475588560104
+    },
+    {
+      "id": "static_0083",
+      "vertices": 68,
+      "shortEdgeVariationBefore": 0.05695229396224022,
+      "shortEdgeVariationAfter": 0.0047181942500174046,
+      "meanDayBefore": 0.05214207246899605,
+      "meanDayAfter": 0.05049367994070053
+    },
+    {
+      "id": "static_0084",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.09911318868398666,
+      "shortEdgeVariationAfter": 0.00455792061984539,
+      "meanDayBefore": 0.157973974943161,
+      "meanDayAfter": 0.15659652650356293
+    },
+    {
+      "id": "static_0085",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.12524409592151642,
+      "shortEdgeVariationAfter": 0.011349140666425228,
+      "meanDayBefore": 0.16779394447803497,
+      "meanDayAfter": 0.1666802316904068
+    },
+    {
+      "id": "static_0086",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.12158002704381943,
+      "shortEdgeVariationAfter": 0.011832799762487411,
+      "meanDayBefore": 0.1650601327419281,
+      "meanDayAfter": 0.1658560186624527
+    },
+    {
+      "id": "static_0087",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.09972945600748062,
+      "shortEdgeVariationAfter": 0.004261038266122341,
+      "meanDayBefore": 0.14858712255954742,
+      "meanDayAfter": 0.14718979597091675
+    },
+    {
+      "id": "static_0088",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.0814155638217926,
+      "shortEdgeVariationAfter": 0.005496633239090443,
+      "meanDayBefore": 0.09316392987966537,
+      "meanDayAfter": 0.09302113950252533
+    },
+    {
+      "id": "static_0089",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.11795676499605179,
+      "shortEdgeVariationAfter": 0.008102704770863056,
+      "meanDayBefore": 0.14010284841060638,
+      "meanDayAfter": 0.14194166660308838
+    },
+    {
+      "id": "static_0090",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.11416690796613693,
+      "shortEdgeVariationAfter": 0.0070080021396279335,
+      "meanDayBefore": 0.1290762573480606,
+      "meanDayAfter": 0.1280789077281952
+    },
+    {
+      "id": "static_0091",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.09319179505109787,
+      "shortEdgeVariationAfter": 0.005427178461104631,
+      "meanDayBefore": 0.10149306803941727,
+      "meanDayAfter": 0.100471131503582
+    },
+    {
+      "id": "static_0092",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.0804825872182846,
+      "shortEdgeVariationAfter": 0.00486631179228425,
+      "meanDayBefore": 0.10315067321062088,
+      "meanDayAfter": 0.10564800351858139
+    },
+    {
+      "id": "static_0093",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.11702357232570648,
+      "shortEdgeVariationAfter": 0.0070403567515313625,
+      "meanDayBefore": 0.1535058617591858,
+      "meanDayAfter": 0.15571022033691406
+    },
+    {
+      "id": "static_0094",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.10694628208875656,
+      "shortEdgeVariationAfter": 0.006069774739444256,
+      "meanDayBefore": 0.14284449815750122,
+      "meanDayAfter": 0.14354680478572845
+    },
+    {
+      "id": "static_0095",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.09386523813009262,
+      "shortEdgeVariationAfter": 0.003590133273974061,
+      "meanDayBefore": 0.11278587579727173,
+      "meanDayAfter": 0.11099112778902054
+    },
+    {
+      "id": "static_0096",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.17936603724956512,
+      "shortEdgeVariationAfter": 0.01207066047936678,
+      "meanDayBefore": 0.2447638064622879,
+      "meanDayAfter": 0.24877113103866577
+    },
+    {
+      "id": "static_0097",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.22213298082351685,
+      "shortEdgeVariationAfter": 0.013385254889726639,
+      "meanDayBefore": 0.3288966417312622,
+      "meanDayAfter": 0.32322052121162415
+    },
+    {
+      "id": "static_0098",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.22764070332050323,
+      "shortEdgeVariationAfter": 0.016043132171034813,
+      "meanDayBefore": 0.3470211327075958,
+      "meanDayAfter": 0.34893515706062317
+    },
+    {
+      "id": "static_0099",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.1809544414281845,
+      "shortEdgeVariationAfter": 0.01019359938800335,
+      "meanDayBefore": 0.24267776310443878,
+      "meanDayAfter": 0.2381276786327362
+    },
+    {
+      "id": "static_0100",
+      "vertices": 142,
+      "shortEdgeVariationBefore": 0.43617764115333557,
+      "shortEdgeVariationAfter": 0.0350215770304203,
+      "meanDayBefore": 0.64061039686203,
+      "meanDayAfter": 0.6596506237983704
+    },
+    {
+      "id": "static_0101",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.2833201289176941,
+      "shortEdgeVariationAfter": 0.04007367417216301,
+      "meanDayBefore": 0.3707287609577179,
+      "meanDayAfter": 0.36970624327659607
+    },
+    {
+      "id": "static_0102",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.25976911187171936,
+      "shortEdgeVariationAfter": 0.0308131892234087,
+      "meanDayBefore": 0.35340192914009094,
+      "meanDayAfter": 0.35716256499290466
+    },
+    {
+      "id": "static_0103",
+      "vertices": 68,
+      "shortEdgeVariationBefore": 0.3102189302444458,
+      "shortEdgeVariationAfter": 0.026088673621416092,
+      "meanDayBefore": 0.4147820472717285,
+      "meanDayAfter": 0.41958296298980713
+    },
+    {
+      "id": "static_0104",
+      "vertices": 146,
+      "shortEdgeVariationBefore": 0.3957344889640808,
+      "shortEdgeVariationAfter": 0.035073138773441315,
+      "meanDayBefore": 0.5302609801292419,
+      "meanDayAfter": 0.5311131477355957
+    },
+    {
+      "id": "static_0105",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.2520635426044464,
+      "shortEdgeVariationAfter": 0.029874004423618317,
+      "meanDayBefore": 0.33673548698425293,
+      "meanDayAfter": 0.33560383319854736
+    },
+    {
+      "id": "static_0106",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.2572185695171356,
+      "shortEdgeVariationAfter": 0.03528408706188202,
+      "meanDayBefore": 0.30618804693222046,
+      "meanDayAfter": 0.3050433397293091
+    },
+    {
+      "id": "static_0107",
+      "vertices": 72,
+      "shortEdgeVariationBefore": 0.28806740045547485,
+      "shortEdgeVariationAfter": 0.03320178762078285,
+      "meanDayBefore": 0.40790486335754395,
+      "meanDayAfter": 0.3991360068321228
+    },
+    {
+      "id": "static_0108",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.23806141316890717,
+      "shortEdgeVariationAfter": 0.02066047675907612,
+      "meanDayBefore": 0.4024190902709961,
+      "meanDayAfter": 0.3963332176208496
+    },
+    {
+      "id": "static_0109",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.2227431684732437,
+      "shortEdgeVariationAfter": 0.018338492140173912,
+      "meanDayBefore": 0.328025221824646,
+      "meanDayAfter": 0.33381086587905884
+    },
+    {
+      "id": "static_0110",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.21038781106472015,
+      "shortEdgeVariationAfter": 0.026157652959227562,
+      "meanDayBefore": 0.3332856297492981,
+      "meanDayAfter": 0.335870623588562
+    },
+    {
+      "id": "static_0111",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.21402885019779205,
+      "shortEdgeVariationAfter": 0.013239944353699684,
+      "meanDayBefore": 0.33856984972953796,
+      "meanDayAfter": 0.325981467962265
+    },
+    {
+      "id": "static_0112",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.09290164709091187,
+      "shortEdgeVariationAfter": 0.00425343681126833,
+      "meanDayBefore": 0.1812014877796173,
+      "meanDayAfter": 0.1860911101102829
+    },
+    {
+      "id": "static_0113",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.12363996356725693,
+      "shortEdgeVariationAfter": 0.011054675094783306,
+      "meanDayBefore": 0.2352638691663742,
+      "meanDayAfter": 0.23760029673576355
+    },
+    {
+      "id": "static_0114",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.12613146007061005,
+      "shortEdgeVariationAfter": 0.012304486706852913,
+      "meanDayBefore": 0.2305380403995514,
+      "meanDayAfter": 0.23371054232120514
+    },
+    {
+      "id": "static_0115",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.096274234354496,
+      "shortEdgeVariationAfter": 0.00577498460188508,
+      "meanDayBefore": 0.19697919487953186,
+      "meanDayAfter": 0.19464769959449768
+    },
+    {
+      "id": "static_0116",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.05786503106355667,
+      "shortEdgeVariationAfter": 0.0028886732179671526,
+      "meanDayBefore": 0.09466277062892914,
+      "meanDayAfter": 0.09609478712081909
+    },
+    {
+      "id": "static_0117",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08189721405506134,
+      "shortEdgeVariationAfter": 0.005399636924266815,
+      "meanDayBefore": 0.15052717924118042,
+      "meanDayAfter": 0.14968323707580566
+    },
+    {
+      "id": "static_0118",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.07794661819934845,
+      "shortEdgeVariationAfter": 0.006328613497316837,
+      "meanDayBefore": 0.15290693938732147,
+      "meanDayAfter": 0.1538747102022171
+    },
+    {
+      "id": "static_0119",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.06426343321800232,
+      "shortEdgeVariationAfter": 0.0029144869185984135,
+      "meanDayBefore": 0.11388910561800003,
+      "meanDayAfter": 0.11017768085002899
+    },
+    {
+      "id": "static_0120",
+      "vertices": 1214,
+      "shortEdgeVariationBefore": 0.0467727966606617,
+      "shortEdgeVariationAfter": 0.004041552077978849,
+      "meanDayBefore": 0.10109167546033859,
+      "meanDayAfter": 0.09936409443616867
+    },
+    {
+      "id": "static_0121",
+      "vertices": 1120,
+      "shortEdgeVariationBefore": 0.060289572924375534,
+      "shortEdgeVariationAfter": 0.004214500077068806,
+      "meanDayBefore": 0.07013605535030365,
+      "meanDayAfter": 0.06871193647384644
+    },
+    {
+      "id": "static_0122",
+      "vertices": 1120,
+      "shortEdgeVariationBefore": 0.0614725686609745,
+      "shortEdgeVariationAfter": 0.004675738513469696,
+      "meanDayBefore": 0.0762823224067688,
+      "meanDayAfter": 0.07277116179466248
+    },
+    {
+      "id": "static_0123",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.009779386222362518,
+      "shortEdgeVariationAfter": 0.0008355453610420227,
+      "meanDayBefore": 0.010605910792946815,
+      "meanDayAfter": 0.01019387785345316
+    },
+    {
+      "id": "static_0124",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.09403061121702194,
+      "shortEdgeVariationAfter": 0.007847301661968231,
+      "meanDayBefore": 0.10420213639736176,
+      "meanDayAfter": 0.10060033202171326
+    },
+    {
+      "id": "static_0125",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08767340332269669,
+      "shortEdgeVariationAfter": 0.006658307276666164,
+      "meanDayBefore": 0.0999046191573143,
+      "meanDayAfter": 0.09556418657302856
+    },
+    {
+      "id": "static_0126",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.016538292169570923,
+      "shortEdgeVariationAfter": 0.0013246909948065877,
+      "meanDayBefore": 0.015451634302735329,
+      "meanDayAfter": 0.01474084984511137
+    },
+    {
+      "id": "static_0127",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.041394662111997604,
+      "shortEdgeVariationAfter": 0.003744448535144329,
+      "meanDayBefore": 0.06256182491779327,
+      "meanDayAfter": 0.059921711683273315
+    },
+    {
+      "id": "static_0128",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.04197530448436737,
+      "shortEdgeVariationAfter": 0.0025916853919625282,
+      "meanDayBefore": 0.05818062275648117,
+      "meanDayAfter": 0.057612642645835876
+    },
+    {
+      "id": "static_0129",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.026059361174702644,
+      "shortEdgeVariationAfter": 0.002237037057057023,
+      "meanDayBefore": 0.03318209946155548,
+      "meanDayAfter": 0.033498067408800125
+    },
+    {
+      "id": "static_0130",
+      "vertices": 7610,
+      "shortEdgeVariationBefore": 0.04349115863442421,
+      "shortEdgeVariationAfter": 0.0030509161297231913,
+      "meanDayBefore": 0.08377180993556976,
+      "meanDayAfter": 0.08338642865419388
+    },
+    {
+      "id": "static_0131",
+      "vertices": 5012,
+      "shortEdgeVariationBefore": 0.054529573768377304,
+      "shortEdgeVariationAfter": 0.0033731157891452312,
+      "meanDayBefore": 0.05413078889250755,
+      "meanDayAfter": 0.05379325896501541
+    },
+    {
+      "id": "static_0132",
+      "vertices": 5012,
+      "shortEdgeVariationBefore": 0.06957579404115677,
+      "shortEdgeVariationAfter": 0.006174397189170122,
+      "meanDayBefore": 0.07547134906053543,
+      "meanDayAfter": 0.07566583901643753
+    },
+    {
+      "id": "static_0133",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.02516292966902256,
+      "shortEdgeVariationAfter": 0.0015606025699526072,
+      "meanDayBefore": 0.032263826578855515,
+      "meanDayAfter": 0.030892180278897285
+    },
+    {
+      "id": "static_0134",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.055386628955602646,
+      "shortEdgeVariationAfter": 0.004215977620333433,
+      "meanDayBefore": 0.06818605959415436,
+      "meanDayAfter": 0.0655522271990776
+    },
+    {
+      "id": "static_0135",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.07146232575178146,
+      "shortEdgeVariationAfter": 0.0054933493956923485,
+      "meanDayBefore": 0.08260907977819443,
+      "meanDayAfter": 0.07919793576002121
+    },
+    {
+      "id": "static_0136",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08322906494140625,
+      "shortEdgeVariationAfter": 0.006057722494006157,
+      "meanDayBefore": 0.09282331168651581,
+      "meanDayAfter": 0.08928535133600235
+    },
+    {
+      "id": "static_0137",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.06981103867292404,
+      "shortEdgeVariationAfter": 0.009004523046314716,
+      "meanDayBefore": 0.06409109383821487,
+      "meanDayAfter": 0.06310857087373734
+    },
+    {
+      "id": "static_0138",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.0549873411655426,
+      "shortEdgeVariationAfter": 0.004615331534296274,
+      "meanDayBefore": 0.06176876276731491,
+      "meanDayAfter": 0.059716373682022095
+    },
+    {
+      "id": "static_0139",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.013396800495684147,
+      "shortEdgeVariationAfter": 0.0016851113177835941,
+      "meanDayBefore": 0.030799847096204758,
+      "meanDayAfter": 0.02999294362962246
+    },
+    {
+      "id": "static_0140",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.07534611970186234,
+      "shortEdgeVariationAfter": 0.005635473411530256,
+      "meanDayBefore": 0.0606653057038784,
+      "meanDayAfter": 0.059278618544340134
+    },
+    {
+      "id": "static_0141",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08767244964838028,
+      "shortEdgeVariationAfter": 0.007693412713706493,
+      "meanDayBefore": 0.1208387091755867,
+      "meanDayAfter": 0.11682146787643433
+    },
+    {
+      "id": "static_0142",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.07937001436948776,
+      "shortEdgeVariationAfter": 0.01162202749401331,
+      "meanDayBefore": 0.08307933807373047,
+      "meanDayAfter": 0.08349528163671494
+    },
+    {
+      "id": "static_0143",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.09431147575378418,
+      "shortEdgeVariationAfter": 0.007251974660903215,
+      "meanDayBefore": 0.10646628588438034,
+      "meanDayAfter": 0.10343112051486969
+    },
+    {
+      "id": "static_0144",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.10853016376495361,
+      "shortEdgeVariationAfter": 0.008195220492780209,
+      "meanDayBefore": 0.09939875453710556,
+      "meanDayAfter": 0.09719028323888779
+    },
+    {
+      "id": "static_0145",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.1162528544664383,
+      "shortEdgeVariationAfter": 0.012917444109916687,
+      "meanDayBefore": 0.10031117498874664,
+      "meanDayAfter": 0.09720224887132645
+    },
+    {
+      "id": "static_0146",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.005854813847690821,
+      "shortEdgeVariationAfter": 0.000578748993575573,
+      "meanDayBefore": 0.01665530353784561,
+      "meanDayAfter": 0.0176843274384737
+    },
+    {
+      "id": "static_0147",
+      "vertices": 1118,
+      "shortEdgeVariationBefore": 0.09885893017053604,
+      "shortEdgeVariationAfter": 0.009162135422229767,
+      "meanDayBefore": 0.2042817771434784,
+      "meanDayAfter": 0.19742506742477417
+    },
+    {
+      "id": "static_0148",
+      "vertices": 726,
+      "shortEdgeVariationBefore": 0.06465668231248856,
+      "shortEdgeVariationAfter": 0.007929557003080845,
+      "meanDayBefore": 0.05861349403858185,
+      "meanDayAfter": 0.05167393013834953
+    },
+    {
+      "id": "static_0149",
+      "vertices": 758,
+      "shortEdgeVariationBefore": 0.052091293036937714,
+      "shortEdgeVariationAfter": 0.004290803801268339,
+      "meanDayBefore": 0.06107223778963089,
+      "meanDayAfter": 0.06035422161221504
+    },
+    {
+      "id": "static_0150",
+      "vertices": 1118,
+      "shortEdgeVariationBefore": 0.0850897878408432,
+      "shortEdgeVariationAfter": 0.020069774240255356,
+      "meanDayBefore": 0.11325735598802567,
+      "meanDayAfter": 0.10775879770517349
+    },
+    {
+      "id": "static_0151",
+      "vertices": 690,
+      "shortEdgeVariationBefore": 0.13972724974155426,
+      "shortEdgeVariationAfter": 0.009683443233370781,
+      "meanDayBefore": 0.28807273507118225,
+      "meanDayAfter": 0.2917371094226837
+    },
+    {
+      "id": "static_0152",
+      "vertices": 726,
+      "shortEdgeVariationBefore": 0.14774078130722046,
+      "shortEdgeVariationAfter": 0.022569116204977036,
+      "meanDayBefore": 0.21381723880767822,
+      "meanDayAfter": 0.2183436155319214
+    },
+    {
+      "id": "static_0153",
+      "vertices": 726,
+      "shortEdgeVariationBefore": 0.04914508014917374,
+      "shortEdgeVariationAfter": 0.005452747922390699,
+      "meanDayBefore": 0.06044537574052811,
+      "meanDayAfter": 0.061500150710344315
+    },
+    {
+      "id": "static_0154",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.0004041774373035878,
+      "shortEdgeVariationAfter": 4.1684026655275375e-05,
+      "meanDayBefore": 0.0011329357512295246,
+      "meanDayAfter": 0.0010993791511282325
+    },
+    {
+      "id": "static_0155",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.00033746156259439886,
+      "shortEdgeVariationAfter": 3.7744877772638574e-05,
+      "meanDayBefore": 0.0010099285282194614,
+      "meanDayAfter": 0.0010196331422775984
+    },
+    {
+      "id": "static_0156",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.00033660855842754245,
+      "shortEdgeVariationAfter": 2.3757300368743017e-05,
+      "meanDayBefore": 0.0006271013407967985,
+      "meanDayAfter": 0.0006199030322022736
+    },
+    {
+      "id": "static_0157",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.0003568755055312067,
+      "shortEdgeVariationAfter": 2.5530582206556574e-05,
+      "meanDayBefore": 0.0010729336645454168,
+      "meanDayAfter": 0.0010419570608064532
+    },
+    {
+      "id": "static_0158",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.004100257996469736,
+      "shortEdgeVariationAfter": 0.0003180860367137939,
+      "meanDayBefore": 0.004971788264811039,
+      "meanDayAfter": 0.004957709927111864
+    },
+    {
+      "id": "static_0159",
+      "vertices": 1106,
+      "shortEdgeVariationBefore": 0.00021536683198064566,
+      "shortEdgeVariationAfter": 1.8838647520169616e-05,
+      "meanDayBefore": 0.0003876928531099111,
+      "meanDayAfter": 0.000394571601646021
+    },
+    {
+      "id": "static_0160",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.08470889180898666,
+      "shortEdgeVariationAfter": 0.026416264474391937,
+      "meanDayBefore": 0.08481623977422714,
+      "meanDayAfter": 0.08381271362304688
+    },
+    {
+      "id": "static_0161",
+      "vertices": 706,
+      "shortEdgeVariationBefore": 0.09588756412267685,
+      "shortEdgeVariationAfter": 0.023032812401652336,
+      "meanDayBefore": 0.0976841002702713,
+      "meanDayAfter": 0.10121787339448929
+    },
+    {
+      "id": "static_0162",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.0003999228647444397,
+      "shortEdgeVariationAfter": 4.9235801270697266e-05,
+      "meanDayBefore": 0.0012184894876554608,
+      "meanDayAfter": 0.001183817395940423
+    },
+    {
+      "id": "static_0163",
+      "vertices": 706,
+      "shortEdgeVariationBefore": 0.0003197610785719007,
+      "shortEdgeVariationAfter": 5.520094418898225e-05,
+      "meanDayBefore": 0.0008622809546068311,
+      "meanDayAfter": 0.0008566674659959972
+    },
+    {
+      "id": "static_0164",
+      "vertices": 1819,
+      "shortEdgeVariationBefore": 0.1007344201207161,
+      "shortEdgeVariationAfter": 0.006520360242575407,
+      "meanDayBefore": 0.14147186279296875,
+      "meanDayAfter": 0.14196495711803436
+    },
+    {
+      "id": "static_0165",
+      "vertices": 817,
+      "shortEdgeVariationBefore": 0.22108611464500427,
+      "shortEdgeVariationAfter": 0.020347245037555695,
+      "meanDayBefore": 0.37752392888069153,
+      "meanDayAfter": 0.38002708554267883
+    },
+    {
+      "id": "static_0166",
+      "vertices": 817,
+      "shortEdgeVariationBefore": 0.19277732074260712,
+      "shortEdgeVariationAfter": 0.02176254242658615,
+      "meanDayBefore": 0.36650872230529785,
+      "meanDayAfter": 0.372346967458725
+    },
+    {
+      "id": "static_0167",
+      "vertices": 817,
+      "shortEdgeVariationBefore": 0.1970071792602539,
+      "shortEdgeVariationAfter": 0.023464132100343704,
+      "meanDayBefore": 0.4079724848270416,
+      "meanDayAfter": 0.41136792302131653
+    },
+    {
+      "id": "static_0168",
+      "vertices": 1289,
+      "shortEdgeVariationBefore": 0.12270678579807281,
+      "shortEdgeVariationAfter": 0.012012745253741741,
+      "meanDayBefore": 0.26025158166885376,
+      "meanDayAfter": 0.26304489374160767
+    },
+    {
+      "id": "static_0169",
+      "vertices": 817,
+      "shortEdgeVariationBefore": 0.21193388104438782,
+      "shortEdgeVariationAfter": 0.021717436611652374,
+      "meanDayBefore": 0.39590394496917725,
+      "meanDayAfter": 0.3990289866924286
+    },
+    {
+      "id": "static_0170",
+      "vertices": 545,
+      "shortEdgeVariationBefore": 0.08642062544822693,
+      "shortEdgeVariationAfter": 0.007810321170836687,
+      "meanDayBefore": 0.11727673560380936,
+      "meanDayAfter": 0.11939241737127304
+    },
+    {
+      "id": "static_0171",
+      "vertices": 289,
+      "shortEdgeVariationBefore": 0.4354948103427887,
+      "shortEdgeVariationAfter": 0.05134238302707672,
+      "meanDayBefore": 0.5082880258560181,
+      "meanDayAfter": 0.5356636643409729
+    },
+    {
+      "id": "static_0172",
+      "vertices": 217,
+      "shortEdgeVariationBefore": 0.5067729353904724,
+      "shortEdgeVariationAfter": 0.0606224462389946,
+      "meanDayBefore": 0.5860303044319153,
+      "meanDayAfter": 0.5987093448638916
+    },
+    {
+      "id": "static_0173",
+      "vertices": 217,
+      "shortEdgeVariationBefore": 0.36762240529060364,
+      "shortEdgeVariationAfter": 0.07218506932258606,
+      "meanDayBefore": 0.4581676125526428,
+      "meanDayAfter": 0.4693053960800171
+    },
+    {
+      "id": "static_0174",
+      "vertices": 986,
+      "shortEdgeVariationBefore": 0.19048605859279633,
+      "shortEdgeVariationAfter": 0.022350076586008072,
+      "meanDayBefore": 0.2369818240404129,
+      "meanDayAfter": 0.24312667548656464
+    },
+    {
+      "id": "static_0175",
+      "vertices": 817,
+      "shortEdgeVariationBefore": 0.04971443861722946,
+      "shortEdgeVariationAfter": 0.0027523725293576717,
+      "meanDayBefore": 0.0567019023001194,
+      "meanDayAfter": 0.05636885389685631
+    },
+    {
+      "id": "static_0176",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.7210878729820251,
+      "shortEdgeVariationAfter": 0.009366116486489773,
+      "meanDayBefore": 0.9424211382865906,
+      "meanDayAfter": 1.0028176307678223
+    },
+    {
+      "id": "static_0177",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.211019828915596,
+      "shortEdgeVariationAfter": 0.0007138162036426365,
+      "meanDayBefore": 0.4797587990760803,
+      "meanDayAfter": 0.489266037940979
+    },
+    {
+      "id": "static_0178",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.10842358320951462,
+      "shortEdgeVariationAfter": 0.0004824504430871457,
+      "meanDayBefore": 0.13059256970882416,
+      "meanDayAfter": 0.13368302583694458
+    },
+    {
+      "id": "static_0179",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.07243642956018448,
+      "shortEdgeVariationAfter": 8.964654989540577e-05,
+      "meanDayBefore": 0.19380924105644226,
+      "meanDayAfter": 0.1956876516342163
+    },
+    {
+      "id": "static_0180",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.22079439461231232,
+      "shortEdgeVariationAfter": 0.004261062014847994,
+      "meanDayBefore": 0.22948215901851654,
+      "meanDayAfter": 0.2193659394979477
+    },
+    {
+      "id": "static_0181",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.14545410871505737,
+      "shortEdgeVariationAfter": 0.001237688702531159,
+      "meanDayBefore": 0.30583456158638,
+      "meanDayAfter": 0.30138280987739563
+    },
+    {
+      "id": "static_0182",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.16919751465320587,
+      "shortEdgeVariationAfter": 0.0032910360023379326,
+      "meanDayBefore": 0.09525272995233536,
+      "meanDayAfter": 0.09705562889575958
+    },
+    {
+      "id": "static_0183",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.12159737944602966,
+      "shortEdgeVariationAfter": 0.002599885920062661,
+      "meanDayBefore": 0.19856244325637817,
+      "meanDayAfter": 0.20243214070796967
+    },
+    {
+      "id": "static_0184",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.06902193278074265,
+      "shortEdgeVariationAfter": 0.00018812644702848047,
+      "meanDayBefore": 0.04510686919093132,
+      "meanDayAfter": 0.051780860871076584
+    },
+    {
+      "id": "static_0185",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.07606745511293411,
+      "shortEdgeVariationAfter": 0.0007802832988090813,
+      "meanDayBefore": 0.09006701409816742,
+      "meanDayAfter": 0.09135584533214569
+    },
+    {
+      "id": "static_0186",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.7447916865348816,
+      "shortEdgeVariationAfter": 0.0037350254133343697,
+      "meanDayBefore": 0.8332015872001648,
+      "meanDayAfter": 0.8657993674278259
+    },
+    {
+      "id": "static_0187",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.17192696034908295,
+      "shortEdgeVariationAfter": 0.001738071790896356,
+      "meanDayBefore": 0.23700526356697083,
+      "meanDayAfter": 0.23448823392391205
+    },
+    {
+      "id": "static_0188",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.05855060741305351,
+      "shortEdgeVariationAfter": 0.0005486404406838119,
+      "meanDayBefore": 0.044875942170619965,
+      "meanDayAfter": 0.042181629687547684
+    },
+    {
+      "id": "static_0189",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.052962880581617355,
+      "shortEdgeVariationAfter": 0.0008024498820304871,
+      "meanDayBefore": 0.08388268947601318,
+      "meanDayAfter": 0.08415640890598297
+    },
+    {
+      "id": "static_0190",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.17559973895549774,
+      "shortEdgeVariationAfter": 0.0017285592621192336,
+      "meanDayBefore": 0.133714497089386,
+      "meanDayAfter": 0.13347093760967255
+    },
+    {
+      "id": "static_0191",
+      "vertices": 260,
+      "shortEdgeVariationBefore": 0.09568997472524643,
+      "shortEdgeVariationAfter": 0.00022474907746072859,
+      "meanDayBefore": 0.24507814645767212,
+      "meanDayAfter": 0.24619847536087036
+    },
+    {
+      "id": "static_0192",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.10738994181156158,
+      "shortEdgeVariationAfter": 0.01062021218240261,
+      "meanDayBefore": 0.0972391664981842,
+      "meanDayAfter": 0.0938778892159462
+    },
+    {
+      "id": "static_0193",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08394047617912292,
+      "shortEdgeVariationAfter": 0.007468373514711857,
+      "meanDayBefore": 0.12984229624271393,
+      "meanDayAfter": 0.12828998267650604
+    },
+    {
+      "id": "static_0194",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.43058085441589355,
+      "shortEdgeVariationAfter": 0.0667487159371376,
+      "meanDayBefore": 0.4001179039478302,
+      "meanDayAfter": 0.3773510158061981
+    },
+    {
+      "id": "static_0195",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.1761060655117035,
+      "shortEdgeVariationAfter": 0.018390865996479988,
+      "meanDayBefore": 0.3598031997680664,
+      "meanDayAfter": 0.3615247309207916
+    },
+    {
+      "id": "static_0196",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.5474634766578674,
+      "shortEdgeVariationAfter": 0.1044728010892868,
+      "meanDayBefore": 0.4595695436000824,
+      "meanDayAfter": 0.43777069449424744
+    },
+    {
+      "id": "static_0197",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.36787524819374084,
+      "shortEdgeVariationAfter": 0.04513257369399071,
+      "meanDayBefore": 0.4901331067085266,
+      "meanDayAfter": 0.45695194602012634
+    },
+    {
+      "id": "static_0198",
+      "vertices": 4682,
+      "shortEdgeVariationBefore": 0.043523889034986496,
+      "shortEdgeVariationAfter": 0.005227209534496069,
+      "meanDayBefore": 0.036177858710289,
+      "meanDayAfter": 0.03728892654180527
+    },
+    {
+      "id": "static_0199",
+      "vertices": 2386,
+      "shortEdgeVariationBefore": 0.0781172513961792,
+      "shortEdgeVariationAfter": 0.009578303433954716,
+      "meanDayBefore": 0.07407029718160629,
+      "meanDayAfter": 0.07310844957828522
+    },
+    {
+      "id": "static_0200",
+      "vertices": 5334,
+      "shortEdgeVariationBefore": 0.021733790636062622,
+      "shortEdgeVariationAfter": 0.002366188447922468,
+      "meanDayBefore": 0.04797066003084183,
+      "meanDayAfter": 0.04799538850784302
+    },
+    {
+      "id": "static_0201",
+      "vertices": 2386,
+      "shortEdgeVariationBefore": 0.09101545065641403,
+      "shortEdgeVariationAfter": 0.010854106396436691,
+      "meanDayBefore": 0.09521189332008362,
+      "meanDayAfter": 0.09677024185657501
+    },
+    {
+      "id": "static_0202",
+      "vertices": 2386,
+      "shortEdgeVariationBefore": 0.07169723510742188,
+      "shortEdgeVariationAfter": 0.011635687202215195,
+      "meanDayBefore": 0.09297952800989151,
+      "meanDayAfter": 0.09268467873334885
+    },
+    {
+      "id": "static_0203",
+      "vertices": 3584,
+      "shortEdgeVariationBefore": 0.058109380304813385,
+      "shortEdgeVariationAfter": 0.009274851530790329,
+      "meanDayBefore": 0.07687181234359741,
+      "meanDayAfter": 0.07838055491447449
+    },
+    {
+      "id": "static_0204",
+      "vertices": 2386,
+      "shortEdgeVariationBefore": 0.06908471137285233,
+      "shortEdgeVariationAfter": 0.011613797396421432,
+      "meanDayBefore": 0.08427196741104126,
+      "meanDayAfter": 0.08797938376665115
+    },
+    {
+      "id": "static_0205",
+      "vertices": 1486,
+      "shortEdgeVariationBefore": 0.044650401920080185,
+      "shortEdgeVariationAfter": 0.0050275372341275215,
+      "meanDayBefore": 0.046165723353624344,
+      "meanDayAfter": 0.04669412598013878
+    },
+    {
+      "id": "static_0206",
+      "vertices": 974,
+      "shortEdgeVariationBefore": 0.10183307528495789,
+      "shortEdgeVariationAfter": 0.014076828956604004,
+      "meanDayBefore": 0.07741070538759232,
+      "meanDayAfter": 0.08140449970960617
+    },
+    {
+      "id": "static_0207",
+      "vertices": 706,
+      "shortEdgeVariationBefore": 0.12361789494752884,
+      "shortEdgeVariationAfter": 0.011812813580036163,
+      "meanDayBefore": 0.09878064692020416,
+      "meanDayAfter": 0.1049472987651825
+    },
+    {
+      "id": "static_0208",
+      "vertices": 706,
+      "shortEdgeVariationBefore": 0.07143454253673553,
+      "shortEdgeVariationAfter": 0.0104528134688735,
+      "meanDayBefore": 0.05061006173491478,
+      "meanDayAfter": 0.05208625644445419
+    },
+    {
+      "id": "static_0209",
+      "vertices": 3380,
+      "shortEdgeVariationBefore": 0.08474252372980118,
+      "shortEdgeVariationAfter": 0.00698661245405674,
+      "meanDayBefore": 0.07058392465114594,
+      "meanDayAfter": 0.07173270732164383
+    },
+    {
+      "id": "static_0210",
+      "vertices": 2386,
+      "shortEdgeVariationBefore": 0.04240546375513077,
+      "shortEdgeVariationAfter": 0.0036466759629547596,
+      "meanDayBefore": 0.031273216009140015,
+      "meanDayAfter": 0.03216664120554924
+    },
+    {
+      "id": "static_0211",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.010930821299552917,
+      "shortEdgeVariationAfter": 0.001033797045238316,
+      "meanDayBefore": 0.027052951976656914,
+      "meanDayAfter": 0.026688046753406525
+    },
+    {
+      "id": "static_0212",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.02506508305668831,
+      "shortEdgeVariationAfter": 0.0024128928780555725,
+      "meanDayBefore": 0.044923778623342514,
+      "meanDayAfter": 0.04385760799050331
+    },
+    {
+      "id": "static_0213",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.007423211354762316,
+      "shortEdgeVariationAfter": 0.0008924466092139482,
+      "meanDayBefore": 0.02911762148141861,
+      "meanDayAfter": 0.02866072952747345
+    },
+    {
+      "id": "static_0214",
+      "vertices": 5686,
+      "shortEdgeVariationBefore": 0.10207459330558777,
+      "shortEdgeVariationAfter": 0.011162066832184792,
+      "meanDayBefore": 0.16021592915058136,
+      "meanDayAfter": 0.14391644299030304
+    },
+    {
+      "id": "static_0215",
+      "vertices": 5174,
+      "shortEdgeVariationBefore": 0.10398455709218979,
+      "shortEdgeVariationAfter": 0.005764905363321304,
+      "meanDayBefore": 0.1506902426481247,
+      "meanDayAfter": 0.12271677702665329
+    },
+    {
+      "id": "static_0216",
+      "vertices": 3614,
+      "shortEdgeVariationBefore": 0.07866769284009933,
+      "shortEdgeVariationAfter": 0.015146086923778057,
+      "meanDayBefore": 0.13695451617240906,
+      "meanDayAfter": 0.12398975342512131
+    },
+    {
+      "id": "static_0217",
+      "vertices": 6106,
+      "shortEdgeVariationBefore": 0.19181887805461884,
+      "shortEdgeVariationAfter": 0.007977452129125595,
+      "meanDayBefore": 0.44362694025039673,
+      "meanDayAfter": 0.4416138827800751
+    },
+    {
+      "id": "static_0218",
+      "vertices": 1421,
+      "shortEdgeVariationBefore": 0.05683509260416031,
+      "shortEdgeVariationAfter": 0.002255393425002694,
+      "meanDayBefore": 0.06466694921255112,
+      "meanDayAfter": 0.06920333206653595
+    },
+    {
+      "id": "static_0219",
+      "vertices": 5686,
+      "shortEdgeVariationBefore": 0.10962072014808655,
+      "shortEdgeVariationAfter": 0.009679474867880344,
+      "meanDayBefore": 0.20190374553203583,
+      "meanDayAfter": 0.16706398129463196
+    },
+    {
+      "id": "static_0220",
+      "vertices": 5174,
+      "shortEdgeVariationBefore": 0.062272824347019196,
+      "shortEdgeVariationAfter": 0.003943538758903742,
+      "meanDayBefore": 0.1287570744752884,
+      "meanDayAfter": 0.10461326688528061
+    },
+    {
+      "id": "static_0221",
+      "vertices": 5174,
+      "shortEdgeVariationBefore": 0.05012223869562149,
+      "shortEdgeVariationAfter": 0.006772574037313461,
+      "meanDayBefore": 0.10635632276535034,
+      "meanDayAfter": 0.10929110646247864
+    },
+    {
+      "id": "static_0222",
+      "vertices": 6106,
+      "shortEdgeVariationBefore": 0.19657249748706818,
+      "shortEdgeVariationAfter": 0.006653394550085068,
+      "meanDayBefore": 0.40374553203582764,
+      "meanDayAfter": 0.3987930715084076
+    },
+    {
+      "id": "static_0223",
+      "vertices": 1421,
+      "shortEdgeVariationBefore": 0.044967133551836014,
+      "shortEdgeVariationAfter": 0.00181337702088058,
+      "meanDayBefore": 0.09289242327213287,
+      "meanDayAfter": 0.09157731384038925
+    },
+    {
+      "id": "static_0224",
+      "vertices": 5686,
+      "shortEdgeVariationBefore": 0.1131172850728035,
+      "shortEdgeVariationAfter": 0.011822164058685303,
+      "meanDayBefore": 0.17162759602069855,
+      "meanDayAfter": 0.15680678188800812
+    },
+    {
+      "id": "static_0225",
+      "vertices": 3614,
+      "shortEdgeVariationBefore": 0.1272791624069214,
+      "shortEdgeVariationAfter": 0.0070485989563167095,
+      "meanDayBefore": 0.17789533734321594,
+      "meanDayAfter": 0.14796075224876404
+    },
+    {
+      "id": "static_0226",
+      "vertices": 3610,
+      "shortEdgeVariationBefore": 0.07870576530694962,
+      "shortEdgeVariationAfter": 0.012478175573050976,
+      "meanDayBefore": 0.13248175382614136,
+      "meanDayAfter": 0.1247795894742012
+    },
+    {
+      "id": "static_0227",
+      "vertices": 6106,
+      "shortEdgeVariationBefore": 0.23811642825603485,
+      "shortEdgeVariationAfter": 0.006862540729343891,
+      "meanDayBefore": 0.4658313989639282,
+      "meanDayAfter": 0.4635111689567566
+    },
+    {
+      "id": "static_0228",
+      "vertices": 1421,
+      "shortEdgeVariationBefore": 0.05849219113588333,
+      "shortEdgeVariationAfter": 0.0020252512767910957,
+      "meanDayBefore": 0.10021017491817474,
+      "meanDayAfter": 0.10056713968515396
+    },
+    {
+      "id": "static_0229",
+      "vertices": 9994,
+      "shortEdgeVariationBefore": 0.06806536018848419,
+      "shortEdgeVariationAfter": 0.003437136998400092,
+      "meanDayBefore": 0.0712212324142456,
+      "meanDayAfter": 0.06586235016584396
+    },
+    {
+      "id": "static_0230",
+      "vertices": 566,
+      "shortEdgeVariationBefore": 0.006313655525445938,
+      "shortEdgeVariationAfter": 0.0012328270822763443,
+      "meanDayBefore": 0.004622162785381079,
+      "meanDayAfter": 0.005108348093926907
+    },
+    {
+      "id": "static_0231",
+      "vertices": 2765,
+      "shortEdgeVariationBefore": 0.013230717740952969,
+      "shortEdgeVariationAfter": 0.0020550743211060762,
+      "meanDayBefore": 0.02378879114985466,
+      "meanDayAfter": 0.02177582122385502
+    },
+    {
+      "id": "static_0232",
+      "vertices": 1517,
+      "shortEdgeVariationBefore": 0.062256935983896255,
+      "shortEdgeVariationAfter": 0.0057694800198078156,
+      "meanDayBefore": 0.07616005092859268,
+      "meanDayAfter": 0.0782550796866417
+    },
+    {
+      "id": "static_0233",
+      "vertices": 1525,
+      "shortEdgeVariationBefore": 0.09452839195728302,
+      "shortEdgeVariationAfter": 0.005672668106853962,
+      "meanDayBefore": 0.11857235431671143,
+      "meanDayAfter": 0.12669184803962708
+    },
+    {
+      "id": "static_0234",
+      "vertices": 1517,
+      "shortEdgeVariationBefore": 0.07821313291788101,
+      "shortEdgeVariationAfter": 0.004352015908807516,
+      "meanDayBefore": 0.10836385935544968,
+      "meanDayAfter": 0.1112695261836052
+    },
+    {
+      "id": "static_0235",
+      "vertices": 1525,
+      "shortEdgeVariationBefore": 0.09283439069986343,
+      "shortEdgeVariationAfter": 0.004281509667634964,
+      "meanDayBefore": 0.11613278836011887,
+      "meanDayAfter": 0.11629077047109604
+    },
+    {
+      "id": "static_0236",
+      "vertices": 1517,
+      "shortEdgeVariationBefore": 0.06648015230894089,
+      "shortEdgeVariationAfter": 0.005443108268082142,
+      "meanDayBefore": 0.08529356867074966,
+      "meanDayAfter": 0.08973963558673859
+    },
+    {
+      "id": "static_0237",
+      "vertices": 1525,
+      "shortEdgeVariationBefore": 0.09261035919189453,
+      "shortEdgeVariationAfter": 0.004832797683775425,
+      "meanDayBefore": 0.0980280190706253,
+      "meanDayAfter": 0.0998246818780899
+    },
+    {
+      "id": "static_0238",
+      "vertices": 1517,
+      "shortEdgeVariationBefore": 0.0815640389919281,
+      "shortEdgeVariationAfter": 0.006166440900415182,
+      "meanDayBefore": 0.12368624657392502,
+      "meanDayAfter": 0.1204170510172844
+    },
+    {
+      "id": "static_0239",
+      "vertices": 1517,
+      "shortEdgeVariationBefore": 0.0762123316526413,
+      "shortEdgeVariationAfter": 0.005482736974954605,
+      "meanDayBefore": 0.08987177163362503,
+      "meanDayAfter": 0.09866359084844589
+    },
+    {
+      "id": "static_0240",
+      "vertices": 772,
+      "shortEdgeVariationBefore": 0.14814230799674988,
+      "shortEdgeVariationAfter": 0.009877622127532959,
+      "meanDayBefore": 0.14701205492019653,
+      "meanDayAfter": 0.1422191858291626
+    },
+    {
+      "id": "static_0241",
+      "vertices": 2386,
+      "shortEdgeVariationBefore": 0.10426981002092361,
+      "shortEdgeVariationAfter": 0.011470548808574677,
+      "meanDayBefore": 0.11321818828582764,
+      "meanDayAfter": 0.11318987607955933
+    },
+    {
+      "id": "static_0242",
+      "vertices": 7346,
+      "shortEdgeVariationBefore": 0.07627389580011368,
+      "shortEdgeVariationAfter": 0.0021767960861325264,
+      "meanDayBefore": 0.06722451001405716,
+      "meanDayAfter": 0.07451487332582474
+    },
+    {
+      "id": "static_0243",
+      "vertices": 7346,
+      "shortEdgeVariationBefore": 0.04025904834270477,
+      "shortEdgeVariationAfter": 0.0015481889713555574,
+      "meanDayBefore": 0.04791662469506264,
+      "meanDayAfter": 0.051182977855205536
+    },
+    {
+      "id": "static_0244",
+      "vertices": 7342,
+      "shortEdgeVariationBefore": 0.00027590058743953705,
+      "shortEdgeVariationAfter": 6.725186540279537e-05,
+      "meanDayBefore": 0.00017564558947924525,
+      "meanDayAfter": 0.0006808289908803999
+    },
+    {
+      "id": "static_0245",
+      "vertices": 7342,
+      "shortEdgeVariationBefore": 0.08285200595855713,
+      "shortEdgeVariationAfter": 0.0022610763553529978,
+      "meanDayBefore": 0.08186901360750198,
+      "meanDayAfter": 0.08350038528442383
+    },
+    {
+      "id": "static_0246",
+      "vertices": 2046,
+      "shortEdgeVariationBefore": 0.05247816443443298,
+      "shortEdgeVariationAfter": 0.0034891192335635424,
+      "meanDayBefore": 0.03715752437710762,
+      "meanDayAfter": 0.03927120566368103
+    },
+    {
+      "id": "static_0247",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.027382411062717438,
+      "shortEdgeVariationAfter": 0.0008432333706878126,
+      "meanDayBefore": 0.057624973356723785,
+      "meanDayAfter": 0.05732957646250725
+    },
+    {
+      "id": "static_0248",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.001955089159309864,
+      "shortEdgeVariationAfter": 0.0001855796144809574,
+      "meanDayBefore": 0.0009544480708427727,
+      "meanDayAfter": 0.0010051013668999076
+    },
+    {
+      "id": "static_0249",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.0011235788697376847,
+      "shortEdgeVariationAfter": 0.00018101806927006692,
+      "meanDayBefore": 0.0003148278046865016,
+      "meanDayAfter": 0.000381346297217533
+    },
+    {
+      "id": "static_0250",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.027175331488251686,
+      "shortEdgeVariationAfter": 0.002328498288989067,
+      "meanDayBefore": 0.016599232330918312,
+      "meanDayAfter": 0.01661151647567749
+    },
+    {
+      "id": "static_0251",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.14026549458503723,
+      "shortEdgeVariationAfter": 0.012119142338633537,
+      "meanDayBefore": 0.11680210381746292,
+      "meanDayAfter": 0.11309217661619186
+    },
+    {
+      "id": "static_0252",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.16029566526412964,
+      "shortEdgeVariationAfter": 0.010325969196856022,
+      "meanDayBefore": 0.13865527510643005,
+      "meanDayAfter": 0.14101234078407288
+    },
+    {
+      "id": "static_0253",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.14490240812301636,
+      "shortEdgeVariationAfter": 0.011789876967668533,
+      "meanDayBefore": 0.12206900119781494,
+      "meanDayAfter": 0.12620332837104797
+    },
+    {
+      "id": "static_0254",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.15107658505439758,
+      "shortEdgeVariationAfter": 0.011708137579262257,
+      "meanDayBefore": 0.12099812179803848,
+      "meanDayAfter": 0.1199563667178154
+    },
+    {
+      "id": "static_0255",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.15753833949565887,
+      "shortEdgeVariationAfter": 0.012060665525496006,
+      "meanDayBefore": 0.12386327981948853,
+      "meanDayAfter": 0.12691010534763336
+    },
+    {
+      "id": "static_0256",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.156437948346138,
+      "shortEdgeVariationAfter": 0.013747844845056534,
+      "meanDayBefore": 0.12907081842422485,
+      "meanDayAfter": 0.13289621472358704
+    },
+    {
+      "id": "static_0257",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.15473772585391998,
+      "shortEdgeVariationAfter": 0.013690223917365074,
+      "meanDayBefore": 0.1507609635591507,
+      "meanDayAfter": 0.1483735740184784
+    },
+    {
+      "id": "static_0258",
+      "vertices": 2046,
+      "shortEdgeVariationBefore": 0.219623863697052,
+      "shortEdgeVariationAfter": 0.009937512688338757,
+      "meanDayBefore": 0.2301376610994339,
+      "meanDayAfter": 0.21197281777858734
+    },
+    {
+      "id": "static_0259",
+      "vertices": 2958,
+      "shortEdgeVariationBefore": 0.23752108216285706,
+      "shortEdgeVariationAfter": 0.0059530725702643394,
+      "meanDayBefore": 0.3277234137058258,
+      "meanDayAfter": 0.3322404623031616
+    },
+    {
+      "id": "static_0264",
+      "vertices": 7570,
+      "shortEdgeVariationBefore": 0.07789380848407745,
+      "shortEdgeVariationAfter": 0.0035815404262393713,
+      "meanDayBefore": 0.08281636238098145,
+      "meanDayAfter": 0.10252165049314499
+    },
+    {
+      "id": "static_0265",
+      "vertices": 1210,
+      "shortEdgeVariationBefore": 0.023322584107518196,
+      "shortEdgeVariationAfter": 0.0021284050308167934,
+      "meanDayBefore": 0.013093056157231331,
+      "meanDayAfter": 0.01280589122325182
+    },
+    {
+      "id": "static_0266",
+      "vertices": 1308,
+      "shortEdgeVariationBefore": 0.1470828503370285,
+      "shortEdgeVariationAfter": 0.010719683021306992,
+      "meanDayBefore": 0.19401772320270538,
+      "meanDayAfter": 0.1998075693845749
+    },
+    {
+      "id": "static_0267",
+      "vertices": 1210,
+      "shortEdgeVariationBefore": 0.18137572705745697,
+      "shortEdgeVariationAfter": 0.008905340917408466,
+      "meanDayBefore": 0.2355118989944458,
+      "meanDayAfter": 0.23465049266815186
+    },
+    {
+      "id": "static_0268",
+      "vertices": 1210,
+      "shortEdgeVariationBefore": 0.2780388593673706,
+      "shortEdgeVariationAfter": 0.01764790527522564,
+      "meanDayBefore": 0.3723263442516327,
+      "meanDayAfter": 0.3688969910144806
+    },
+    {
+      "id": "static_0269",
+      "vertices": 1116,
+      "shortEdgeVariationBefore": 0.16922558844089508,
+      "shortEdgeVariationAfter": 0.007711369078606367,
+      "meanDayBefore": 0.3548851013183594,
+      "meanDayAfter": 0.35235103964805603
+    },
+    {
+      "id": "static_0270",
+      "vertices": 2958,
+      "shortEdgeVariationBefore": 0.19128639996051788,
+      "shortEdgeVariationAfter": 0.006500458810478449,
+      "meanDayBefore": 0.3038536012172699,
+      "meanDayAfter": 0.30989572405815125
+    },
+    {
+      "id": "static_0275",
+      "vertices": 5750,
+      "shortEdgeVariationBefore": 0.060519713908433914,
+      "shortEdgeVariationAfter": 0.0032230676151812077,
+      "meanDayBefore": 0.0655975341796875,
+      "meanDayAfter": 0.06850176304578781
+    },
+    {
+      "id": "static_0276",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.1382778286933899,
+      "shortEdgeVariationAfter": 0.006963714025914669,
+      "meanDayBefore": 0.15868674218654633,
+      "meanDayAfter": 0.15941472351551056
+    },
+    {
+      "id": "static_0277",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.13316617906093597,
+      "shortEdgeVariationAfter": 0.005057391244918108,
+      "meanDayBefore": 0.13950222730636597,
+      "meanDayAfter": 0.13828325271606445
+    },
+    {
+      "id": "static_0278",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.12074201554059982,
+      "shortEdgeVariationAfter": 0.005175267346203327,
+      "meanDayBefore": 0.1256980299949646,
+      "meanDayAfter": 0.1236816793680191
+    },
+    {
+      "id": "static_0279",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.08638657629489899,
+      "shortEdgeVariationAfter": 0.004432849120348692,
+      "meanDayBefore": 0.09914252907037735,
+      "meanDayAfter": 0.10075059533119202
+    },
+    {
+      "id": "static_0280",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.09612742066383362,
+      "shortEdgeVariationAfter": 0.003798648715019226,
+      "meanDayBefore": 0.09484411031007767,
+      "meanDayAfter": 0.09559715539216995
+    },
+    {
+      "id": "static_0281",
+      "vertices": 5750,
+      "shortEdgeVariationBefore": 0.08857429772615433,
+      "shortEdgeVariationAfter": 0.005591921042650938,
+      "meanDayBefore": 0.14992667734622955,
+      "meanDayAfter": 0.1445881873369217
+    },
+    {
+      "id": "static_0282",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.01268570963293314,
+      "shortEdgeVariationAfter": 0.0014720405451953411,
+      "meanDayBefore": 0.010432133451104164,
+      "meanDayAfter": 0.010748965665698051
+    },
+    {
+      "id": "static_0283",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.00494504114612937,
+      "shortEdgeVariationAfter": 0.0012915070401504636,
+      "meanDayBefore": 0.004378974437713623,
+      "meanDayAfter": 0.0048475549556314945
+    },
+    {
+      "id": "static_0284",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.004762138705700636,
+      "shortEdgeVariationAfter": 0.0017125006997957826,
+      "meanDayBefore": 0.004785387311130762,
+      "meanDayAfter": 0.005427478812634945
+    },
+    {
+      "id": "static_0285",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.005392343271523714,
+      "shortEdgeVariationAfter": 0.0015189459081739187,
+      "meanDayBefore": 0.008380335755646229,
+      "meanDayAfter": 0.008874521590769291
+    },
+    {
+      "id": "static_0286",
+      "vertices": 404,
+      "shortEdgeVariationBefore": 0.009480014443397522,
+      "shortEdgeVariationAfter": 0.0018315199995413423,
+      "meanDayBefore": 0.037244077771902084,
+      "meanDayAfter": 0.03768787533044815
+    },
+    {
+      "id": "static_0287",
+      "vertices": 3694,
+      "shortEdgeVariationBefore": 0.0618789903819561,
+      "shortEdgeVariationAfter": 0.003511802526190877,
+      "meanDayBefore": 0.049201738089323044,
+      "meanDayAfter": 0.04337095841765404
+    },
+    {
+      "id": "static_0288",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.052159324288368225,
+      "shortEdgeVariationAfter": 0.005486042704433203,
+      "meanDayBefore": 0.04716426506638527,
+      "meanDayAfter": 0.04422500357031822
+    },
+    {
+      "id": "static_0289",
+      "vertices": 1807,
+      "shortEdgeVariationBefore": 0.1484774947166443,
+      "shortEdgeVariationAfter": 0.005156749859452248,
+      "meanDayBefore": 0.17609257996082306,
+      "meanDayAfter": 0.18415319919586182
+    },
+    {
+      "id": "static_0290",
+      "vertices": 1683,
+      "shortEdgeVariationBefore": 0.11569943279027939,
+      "shortEdgeVariationAfter": 0.0033414545468986034,
+      "meanDayBefore": 0.1347881257534027,
+      "meanDayAfter": 0.1412733793258667
+    },
+    {
+      "id": "static_0291",
+      "vertices": 1202,
+      "shortEdgeVariationBefore": 0.07149282097816467,
+      "shortEdgeVariationAfter": 0.006694174371659756,
+      "meanDayBefore": 0.1983150690793991,
+      "meanDayAfter": 0.18318133056163788
+    },
+    {
+      "id": "static_0292",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.07860764116048813,
+      "shortEdgeVariationAfter": 0.006142362020909786,
+      "meanDayBefore": 0.16775943338871002,
+      "meanDayAfter": 0.1712975651025772
+    },
+    {
+      "id": "static_0293",
+      "vertices": 1202,
+      "shortEdgeVariationBefore": 0.03502799570560455,
+      "shortEdgeVariationAfter": 0.0031830931548029184,
+      "meanDayBefore": 0.12689515948295593,
+      "meanDayAfter": 0.11598197370767593
+    },
+    {
+      "id": "static_0294",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.04146343097090721,
+      "shortEdgeVariationAfter": 0.0029473798349499702,
+      "meanDayBefore": 0.08420164883136749,
+      "meanDayAfter": 0.08352286368608475
+    },
+    {
+      "id": "static_0295",
+      "vertices": 1202,
+      "shortEdgeVariationBefore": 0.015031847171485424,
+      "shortEdgeVariationAfter": 0.005395884159952402,
+      "meanDayBefore": 0.09175287932157516,
+      "meanDayAfter": 0.08223723620176315
+    },
+    {
+      "id": "static_0296",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.01678011752665043,
+      "shortEdgeVariationAfter": 0.004379221238195896,
+      "meanDayBefore": 0.06901579350233078,
+      "meanDayAfter": 0.0690508559346199
+    },
+    {
+      "id": "static_0297",
+      "vertices": 1202,
+      "shortEdgeVariationBefore": 0.01574849896132946,
+      "shortEdgeVariationAfter": 0.0016547593986615539,
+      "meanDayBefore": 0.06915950030088425,
+      "meanDayAfter": 0.0657360851764679
+    },
+    {
+      "id": "static_0298",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.011196269653737545,
+      "shortEdgeVariationAfter": 0.001104963943362236,
+      "meanDayBefore": 0.053159210830926895,
+      "meanDayAfter": 0.052065540105104446
+    },
+    {
+      "id": "static_0299",
+      "vertices": 1246,
+      "shortEdgeVariationBefore": 0.02631310746073723,
+      "shortEdgeVariationAfter": 0.0025121683720499277,
+      "meanDayBefore": 0.12051961570978165,
+      "meanDayAfter": 0.10643105208873749
+    },
+    {
+      "id": "static_0300",
+      "vertices": 160,
+      "shortEdgeVariationBefore": 0.04306790605187416,
+      "shortEdgeVariationAfter": 0.005381591618061066,
+      "meanDayBefore": 0.08798794448375702,
+      "meanDayAfter": 0.09154912084341049
+    },
+    {
+      "id": "static_0301",
+      "vertices": 1202,
+      "shortEdgeVariationBefore": 0.01999760791659355,
+      "shortEdgeVariationAfter": 0.002102429512888193,
+      "meanDayBefore": 0.10741858929395676,
+      "meanDayAfter": 0.09736189246177673
+    },
+    {
+      "id": "static_0302",
+      "vertices": 156,
+      "shortEdgeVariationBefore": 0.023780636489391327,
+      "shortEdgeVariationAfter": 0.001708311727270484,
+      "meanDayBefore": 0.06350208073854446,
+      "meanDayAfter": 0.06399378925561905
+    },
+    {
+      "id": "static_0303",
+      "vertices": 594,
+      "shortEdgeVariationBefore": 0.015791477635502815,
+      "shortEdgeVariationAfter": 0.0010420563630759716,
+      "meanDayBefore": 0.07275406271219254,
+      "meanDayAfter": 0.07138250023126602
+    },
+    {
+      "id": "static_0304",
+      "vertices": 330,
+      "shortEdgeVariationBefore": 0.00919305719435215,
+      "shortEdgeVariationAfter": 0.0007775522535666823,
+      "meanDayBefore": 0.02210453525185585,
+      "meanDayAfter": 0.0220464076846838
+    },
+    {
+      "id": "static_0305",
+      "vertices": 2958,
+      "shortEdgeVariationBefore": 0.026837961748242378,
+      "shortEdgeVariationAfter": 0.002748536178842187,
+      "meanDayBefore": 0.12562377750873566,
+      "meanDayAfter": 0.10358952730894089
+    },
+    {
+      "id": "static_0306",
+      "vertices": 2958,
+      "shortEdgeVariationBefore": 0.02007318288087845,
+      "shortEdgeVariationAfter": 0.0022291040513664484,
+      "meanDayBefore": 0.09842005372047424,
+      "meanDayAfter": 0.09466307610273361
+    },
+    {
+      "id": "static_0307",
+      "vertices": 2746,
+      "shortEdgeVariationBefore": 0.01558178011327982,
+      "shortEdgeVariationAfter": 0.0023426134139299393,
+      "meanDayBefore": 0.08182007819414139,
+      "meanDayAfter": 0.08953434228897095
+    },
+    {
+      "id": "static_0311",
+      "vertices": 3038,
+      "shortEdgeVariationBefore": 0.13648608326911926,
+      "shortEdgeVariationAfter": 0.008580516092479229,
+      "meanDayBefore": 0.11888279765844345,
+      "meanDayAfter": 0.111345075070858
+    },
+    {
+      "id": "static_0313",
+      "vertices": 5686,
+      "shortEdgeVariationBefore": 0.21379081904888153,
+      "shortEdgeVariationAfter": 0.025743883103132248,
+      "meanDayBefore": 0.3633093535900116,
+      "meanDayAfter": 0.3077372908592224
+    },
+    {
+      "id": "static_0314",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.20820479094982147,
+      "shortEdgeVariationAfter": 0.046939168125391006,
+      "meanDayBefore": 0.3679640591144562,
+      "meanDayAfter": 0.35267674922943115
+    },
+    {
+      "id": "static_0315",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.1297713816165924,
+      "shortEdgeVariationAfter": 0.03074120171368122,
+      "meanDayBefore": 0.20289155840873718,
+      "meanDayAfter": 0.2009018212556839
+    },
+    {
+      "id": "static_0316",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.124972403049469,
+      "shortEdgeVariationAfter": 0.029351817443966866,
+      "meanDayBefore": 0.19948862493038177,
+      "meanDayAfter": 0.2027529925107956
+    },
+    {
+      "id": "static_0317",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.13672605156898499,
+      "shortEdgeVariationAfter": 0.03142692148685455,
+      "meanDayBefore": 0.21814419329166412,
+      "meanDayAfter": 0.22192566096782684
+    },
+    {
+      "id": "static_0318",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.19950853288173676,
+      "shortEdgeVariationAfter": 0.034444861114025116,
+      "meanDayBefore": 0.34767207503318787,
+      "meanDayAfter": 0.3409422039985657
+    },
+    {
+      "id": "static_0319",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.10226617753505707,
+      "shortEdgeVariationAfter": 0.006528160534799099,
+      "meanDayBefore": 0.1879315823316574,
+      "meanDayAfter": 0.15329954028129578
+    },
+    {
+      "id": "static_0320",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.10183729976415634,
+      "shortEdgeVariationAfter": 0.007230422459542751,
+      "meanDayBefore": 0.23447555303573608,
+      "meanDayAfter": 0.23486441373825073
+    },
+    {
+      "id": "static_0321",
+      "vertices": 5686,
+      "shortEdgeVariationBefore": 0.15818127989768982,
+      "shortEdgeVariationAfter": 0.01749342866241932,
+      "meanDayBefore": 0.33328479528427124,
+      "meanDayAfter": 0.28121960163116455
+    },
+    {
+      "id": "static_0322",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.13194742798805237,
+      "shortEdgeVariationAfter": 0.024789080023765564,
+      "meanDayBefore": 0.2540260851383209,
+      "meanDayAfter": 0.23911841213703156
+    },
+    {
+      "id": "static_0323",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.1131996437907219,
+      "shortEdgeVariationAfter": 0.025484871119260788,
+      "meanDayBefore": 0.1924872249364853,
+      "meanDayAfter": 0.1887831836938858
+    },
+    {
+      "id": "static_0324",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.11090357601642609,
+      "shortEdgeVariationAfter": 0.026052946224808693,
+      "meanDayBefore": 0.20487500727176666,
+      "meanDayAfter": 0.1987924873828888
+    },
+    {
+      "id": "static_0325",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.11409232765436172,
+      "shortEdgeVariationAfter": 0.027080239728093147,
+      "meanDayBefore": 0.21128182113170624,
+      "meanDayAfter": 0.2023894190788269
+    },
+    {
+      "id": "static_0326",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.16017001867294312,
+      "shortEdgeVariationAfter": 0.026385527104139328,
+      "meanDayBefore": 0.35900843143463135,
+      "meanDayAfter": 0.33785271644592285
+    },
+    {
+      "id": "static_0327",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.10328929871320724,
+      "shortEdgeVariationAfter": 0.006267136428505182,
+      "meanDayBefore": 0.17985479533672333,
+      "meanDayAfter": 0.14664089679718018
+    },
+    {
+      "id": "static_0328",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.10412520915269852,
+      "shortEdgeVariationAfter": 0.008650200441479683,
+      "meanDayBefore": 0.24567581713199615,
+      "meanDayAfter": 0.2475891411304474
+    },
+    {
+      "id": "static_0329",
+      "vertices": 5686,
+      "shortEdgeVariationBefore": 0.22065158188343048,
+      "shortEdgeVariationAfter": 0.018573109060525894,
+      "meanDayBefore": 0.3847348392009735,
+      "meanDayAfter": 0.3269011080265045
+    },
+    {
+      "id": "static_0330",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.196929469704628,
+      "shortEdgeVariationAfter": 0.03394477814435959,
+      "meanDayBefore": 0.36593562364578247,
+      "meanDayAfter": 0.34448787569999695
+    },
+    {
+      "id": "static_0331",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.158942312002182,
+      "shortEdgeVariationAfter": 0.036455605179071426,
+      "meanDayBefore": 0.2549438178539276,
+      "meanDayAfter": 0.2398371696472168
+    },
+    {
+      "id": "static_0332",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.14891166985034943,
+      "shortEdgeVariationAfter": 0.03211229294538498,
+      "meanDayBefore": 0.23871265351772308,
+      "meanDayAfter": 0.23463574051856995
+    },
+    {
+      "id": "static_0333",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.14256206154823303,
+      "shortEdgeVariationAfter": 0.03494621440768242,
+      "meanDayBefore": 0.23319603502750397,
+      "meanDayAfter": 0.22328001260757446
+    },
+    {
+      "id": "static_0334",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.18555715680122375,
+      "shortEdgeVariationAfter": 0.02956589125096798,
+      "meanDayBefore": 0.3589278757572174,
+      "meanDayAfter": 0.33638250827789307
+    },
+    {
+      "id": "static_0335",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.21412792801856995,
+      "shortEdgeVariationAfter": 0.011903087608516216,
+      "meanDayBefore": 0.3510850965976715,
+      "meanDayAfter": 0.2658008635044098
+    },
+    {
+      "id": "static_0336",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.18391548097133636,
+      "shortEdgeVariationAfter": 0.01129121147096157,
+      "meanDayBefore": 0.4505355954170227,
+      "meanDayAfter": 0.44876065850257874
+    },
+    {
+      "id": "static_0337",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.4630337059497833,
+      "shortEdgeVariationAfter": 0.044878631830215454,
+      "meanDayBefore": 0.5148435831069946,
+      "meanDayAfter": 0.43262147903442383
+    },
+    {
+      "id": "static_0338",
+      "vertices": 226,
+      "shortEdgeVariationBefore": 0.20492705702781677,
+      "shortEdgeVariationAfter": 0.012324144132435322,
+      "meanDayBefore": 0.25129884481430054,
+      "meanDayAfter": 0.2398310750722885
+    },
+    {
+      "id": "static_0339",
+      "vertices": 1918,
+      "shortEdgeVariationBefore": 0.026838460937142372,
+      "shortEdgeVariationAfter": 0.002750098705291748,
+      "meanDayBefore": 0.022537369281053543,
+      "meanDayAfter": 0.016902681440114975
+    },
+    {
+      "id": "static_0340",
+      "vertices": 310,
+      "shortEdgeVariationBefore": 0.01626816764473915,
+      "shortEdgeVariationAfter": 0.003081737319007516,
+      "meanDayBefore": 0.013846266083419323,
+      "meanDayAfter": 0.0129849873483181
+    },
+    {
+      "id": "static_0341",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.24722227454185486,
+      "shortEdgeVariationAfter": 0.021984459832310677,
+      "meanDayBefore": 0.5735625624656677,
+      "meanDayAfter": 0.7398092150688171
+    },
+    {
+      "id": "static_0342",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.0,
+      "shortEdgeVariationAfter": 0.0,
+      "meanDayBefore": 0.0,
+      "meanDayAfter": 0.0
+    },
+    {
+      "id": "static_0343",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.2498638927936554,
+      "shortEdgeVariationAfter": 0.028162788599729538,
+      "meanDayBefore": 0.6078310012817383,
+      "meanDayAfter": 0.7803949117660522
+    },
+    {
+      "id": "static_0344",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.0,
+      "shortEdgeVariationAfter": 0.0,
+      "meanDayBefore": 0.0,
+      "meanDayAfter": 0.0
+    },
+    {
+      "id": "static_0345",
+      "vertices": 1402,
+      "shortEdgeVariationBefore": 0.20843330025672913,
+      "shortEdgeVariationAfter": 0.02626119926571846,
+      "meanDayBefore": 0.6059721112251282,
+      "meanDayAfter": 0.7490915060043335
+    },
+    {
+      "id": "static_0346",
+      "vertices": 1378,
+      "shortEdgeVariationBefore": 0.0,
+      "shortEdgeVariationAfter": 0.0,
+      "meanDayBefore": 0.0,
+      "meanDayAfter": 0.0
+    }
+  ]
+}

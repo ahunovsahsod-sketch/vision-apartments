@@ -1,0 +1,2409 @@
+{
+  "metadata": {
+    "version": 1,
+    "source": "source-scene.json",
+    "blender": "4.5.9 LTS",
+    "method": "Cycles diffuse indirect with source colour normalized, ambient occlusion, FLOAT_COLOR vertex bake; density-compensated spatial denoise",
+    "samples": 64,
+    "spacing": 0.22,
+    "strideFloats": 15,
+    "compressed": true,
+    "excludedMaterials": [
+      "dining_chair_02",
+      "potted_plant_02_leaves"
+    ],
+    "elapsedSeconds": 87.91,
+    "excludedIds": [
+      "static_0260",
+      "static_0261",
+      "static_0262",
+      "static_0263",
+      "static_0312"
+    ],
+    "excludedReasons": {
+      "static_0260": "Office cabinet replaced with narrower unit outside baked group",
+      "static_0261": "Office shelves replaced",
+      "static_0262": "Office shelves replaced",
+      "static_0263": "Office shelves replaced",
+      "static_0312": "Dynamic throw blanket"
+    },
+    "vertexLightingWeld": "Coincident position/normal/UV, 1e-6 precision; averaged linear HDR lighting and AO",
+    "optimizedVertices": 609497,
+    "originalCornerVertices": 2154463,
+    "optimizationSeconds": 4.13,
+    "codec": "meshopt",
+    "meshopt": {
+      "version": "1.3.0",
+      "file": "scene.meshopt.bin.gz",
+      "fallback": "scene.meshopt.bin",
+      "decoder": "meshopt_decoder.mjs",
+      "filter": "EXPONENTIAL",
+      "mantissaBits": 16,
+      "decodedVertexBytes": 36569820,
+      "decodedIndexBytes": 13670232
+    },
+    "meshoptValidation": {
+      "maxPositionErrorMetres": 0.000244140625,
+      "maxLightingError": 0.00011587142944335938,
+      "encodedBytes": 14847697,
+      "gzipBytes": 11750872,
+      "seconds": 0.622
+    },
+    "spatialDenoise": {
+      "method": "Per receiver and dominant geometric normal, density-compensated masked Gaussian in world metres; albedo/normal maps untouched",
+      "cellMetres": 0.12,
+      "giSigmaMetres": 0.26,
+      "aoSigmaMetres": 0.1,
+      "seconds": 3.53
+    },
+    "sourceSHA256": "3e772fe78e47ebb2f15830b78753e85e8d72cc7433953d1d024c6818d386b958"
+  },
+  "meshes": [
+    {
+      "id": "static_0000",
+      "vertices": 29386,
+      "averageDay": 0.06651392579078674,
+      "averageNight": 0.11194045096635818,
+      "averageAO": 0.3662828505039215
+    },
+    {
+      "id": "static_0001",
+      "vertices": 5022,
+      "averageDay": 0.021409202367067337,
+      "averageNight": 0.03108793869614601,
+      "averageAO": 0.22922185063362122
+    },
+    {
+      "id": "static_0002",
+      "vertices": 5718,
+      "averageDay": 0.013938942924141884,
+      "averageNight": 0.00509402621537447,
+      "averageAO": 0.39654210209846497
+    },
+    {
+      "id": "static_0003",
+      "vertices": 418,
+      "averageDay": 0.012229932472109795,
+      "averageNight": 0.005250024143606424,
+      "averageAO": 0.31284475326538086
+    },
+    {
+      "id": "static_0004",
+      "vertices": 3074,
+      "averageDay": 0.015824131667613983,
+      "averageNight": 0.008861690759658813,
+      "averageAO": 0.4662310779094696
+    },
+    {
+      "id": "static_0005",
+      "vertices": 82,
+      "averageDay": 0.012137380428612232,
+      "averageNight": 0.009841617196798325,
+      "averageAO": 0.4045562744140625
+    },
+    {
+      "id": "static_0006",
+      "vertices": 2886,
+      "averageDay": 0.009117793291807175,
+      "averageNight": 0.005157905165106058,
+      "averageAO": 0.22522594034671783
+    },
+    {
+      "id": "static_0007",
+      "vertices": 46,
+      "averageDay": 0.008713582530617714,
+      "averageNight": 0.006842698901891708,
+      "averageAO": 0.21490034461021423
+    },
+    {
+      "id": "static_0008",
+      "vertices": 5690,
+      "averageDay": 0.06693702191114426,
+      "averageNight": 0.14546185731887817,
+      "averageAO": 0.27114489674568176
+    },
+    {
+      "id": "static_0009",
+      "vertices": 404,
+      "averageDay": 0.010053236037492752,
+      "averageNight": 0.011311652138829231,
+      "averageAO": 0.17604854702949524
+    },
+    {
+      "id": "static_0010",
+      "vertices": 3042,
+      "averageDay": 0.027314653620123863,
+      "averageNight": 0.05782817676663399,
+      "averageAO": 0.0783744677901268
+    },
+    {
+      "id": "static_0011",
+      "vertices": 72,
+      "averageDay": 0.039573270827531815,
+      "averageNight": 0.06898575276136398,
+      "averageAO": 0.13990162312984467
+    },
+    {
+      "id": "static_0012",
+      "vertices": 2778,
+      "averageDay": 0.006187780760228634,
+      "averageNight": 0.007640158291906118,
+      "averageAO": 0.03090953640639782
+    },
+    {
+      "id": "static_0013",
+      "vertices": 36,
+      "averageDay": 0.004950216505676508,
+      "averageNight": 0.011016176082193851,
+      "averageAO": 0.061342597007751465
+    },
+    {
+      "id": "static_0014",
+      "vertices": 10506,
+      "averageDay": 0.074981689453125,
+      "averageNight": 0.17375101149082184,
+      "averageAO": 0.4364834129810333
+    },
+    {
+      "id": "static_0015",
+      "vertices": 1126,
+      "averageDay": 0.056914687156677246,
+      "averageNight": 0.12616503238677979,
+      "averageAO": 0.43726202845573425
+    },
+    {
+      "id": "static_0016",
+      "vertices": 24902,
+      "averageDay": 0.04870742931962013,
+      "averageNight": 0.09465228021144867,
+      "averageAO": 0.3657166659832001
+    },
+    {
+      "id": "static_0017",
+      "vertices": 3198,
+      "averageDay": 0.027865547686815262,
+      "averageNight": 0.05472405627369881,
+      "averageAO": 0.34120050072669983
+    },
+    {
+      "id": "static_0018",
+      "vertices": 10478,
+      "averageDay": 0.08852031826972961,
+      "averageNight": 0.1925930231809616,
+      "averageAO": 0.15583503246307373
+    },
+    {
+      "id": "static_0019",
+      "vertices": 1116,
+      "averageDay": 0.07406219094991684,
+      "averageNight": 0.16576559841632843,
+      "averageAO": 0.2264920324087143
+    },
+    {
+      "id": "static_0020",
+      "vertices": 10478,
+      "averageDay": 0.1695985049009323,
+      "averageNight": 0.22670035064220428,
+      "averageAO": 0.24749651551246643
+    },
+    {
+      "id": "static_0021",
+      "vertices": 1116,
+      "averageDay": 0.10624069720506668,
+      "averageNight": 0.11861542612314224,
+      "averageAO": 0.15188078582286835
+    },
+    {
+      "id": "static_0022",
+      "vertices": 3042,
+      "averageDay": 0.1419750303030014,
+      "averageNight": 0.245416060090065,
+      "averageAO": 0.32350587844848633
+    },
+    {
+      "id": "static_0023",
+      "vertices": 68,
+      "averageDay": 0.07310197502374649,
+      "averageNight": 0.14698725938796997,
+      "averageAO": 0.08731617778539658
+    },
+    {
+      "id": "static_0024",
+      "vertices": 4014,
+      "averageDay": 0.15714752674102783,
+      "averageNight": 0.23911073803901672,
+      "averageAO": 0.35600462555885315
+    },
+    {
+      "id": "static_0025",
+      "vertices": 156,
+      "averageDay": 0.11046718806028366,
+      "averageNight": 0.15712334215641022,
+      "averageAO": 0.20005343854427338
+    },
+    {
+      "id": "static_0026",
+      "vertices": 5690,
+      "averageDay": 0.084164559841156,
+      "averageNight": 0.13772612810134888,
+      "averageAO": 0.2433638572692871
+    },
+    {
+      "id": "static_0027",
+      "vertices": 404,
+      "averageDay": 0.07515572756528854,
+      "averageNight": 0.0928879827260971,
+      "averageAO": 0.2460293024778366
+    },
+    {
+      "id": "static_0028",
+      "vertices": 2688,
+      "averageDay": 0.06644534319639206,
+      "averageNight": 0.13596013188362122,
+      "averageAO": 0.1396513283252716
+    },
+    {
+      "id": "static_0029",
+      "vertices": 24,
+      "averageDay": 0.016846418380737305,
+      "averageNight": 0.03973761573433876,
+      "averageAO": 0.0616319477558136
+    },
+    {
+      "id": "static_0030",
+      "vertices": 5690,
+      "averageDay": 0.08005871623754501,
+      "averageNight": 0.15382178127765656,
+      "averageAO": 0.12271767109632492
+    },
+    {
+      "id": "static_0031",
+      "vertices": 404,
+      "averageDay": 0.02973904088139534,
+      "averageNight": 0.054411593824625015,
+      "averageAO": 0.09877784550189972
+    },
+    {
+      "id": "static_0032",
+      "vertices": 2858,
+      "averageDay": 0.020046161487698555,
+      "averageNight": 0.02747042290866375,
+      "averageAO": 0.049209438264369965
+    },
+    {
+      "id": "static_0033",
+      "vertices": 36,
+      "averageDay": 0.03769339621067047,
+      "averageNight": 0.03167131543159485,
+      "averageAO": 0.06626157462596893
+    },
+    {
+      "id": "static_0034",
+      "vertices": 5690,
+      "averageDay": 0.09318196773529053,
+      "averageNight": 0.1159946620464325,
+      "averageAO": 0.26010775566101074
+    },
+    {
+      "id": "static_0035",
+      "vertices": 404,
+      "averageDay": 0.08280857652425766,
+      "averageNight": 0.1017269566655159,
+      "averageAO": 0.11914707720279694
+    },
+    {
+      "id": "static_0036",
+      "vertices": 10478,
+      "averageDay": 0.18441276252269745,
+      "averageNight": 0.33344709873199463,
+      "averageAO": 0.15885964035987854
+    },
+    {
+      "id": "static_0037",
+      "vertices": 1116,
+      "averageDay": 0.08379222452640533,
+      "averageNight": 0.1400979608297348,
+      "averageAO": 0.19142842292785645
+    },
+    {
+      "id": "static_0038",
+      "vertices": 4014,
+      "averageDay": 0.062304072082042694,
+      "averageNight": 0.12191326916217804,
+      "averageAO": 0.13204696774482727
+    },
+    {
+      "id": "static_0039",
+      "vertices": 156,
+      "averageDay": 0.05002247914671898,
+      "averageNight": 0.07713429629802704,
+      "averageAO": 0.12086004763841629
+    },
+    {
+      "id": "static_0040",
+      "vertices": 3838,
+      "averageDay": 0.09582915902137756,
+      "averageNight": 0.16502903401851654,
+      "averageAO": 0.1224830225110054
+    },
+    {
+      "id": "static_0041",
+      "vertices": 156,
+      "averageDay": 0.12051980197429657,
+      "averageNight": 0.17236930131912231,
+      "averageAO": 0.16853633522987366
+    },
+    {
+      "id": "static_0042",
+      "vertices": 3046,
+      "averageDay": 0.11246225237846375,
+      "averageNight": 0.19065849483013153,
+      "averageAO": 0.2225734293460846
+    },
+    {
+      "id": "static_0043",
+      "vertices": 76,
+      "averageDay": 0.0899372324347496,
+      "averageNight": 0.1483977735042572,
+      "averageAO": 0.1381579041481018
+    },
+    {
+      "id": "static_0044",
+      "vertices": 10478,
+      "averageDay": 0.12821197509765625,
+      "averageNight": 0.24814191460609436,
+      "averageAO": 0.16600091755390167
+    },
+    {
+      "id": "static_0045",
+      "vertices": 1116,
+      "averageDay": 0.03500661998987198,
+      "averageNight": 0.06954474747180939,
+      "averageAO": 0.11138296872377396
+    },
+    {
+      "id": "static_0046",
+      "vertices": 3838,
+      "averageDay": 0.11982499808073044,
+      "averageNight": 0.25554707646369934,
+      "averageAO": 0.20935362577438354
+    },
+    {
+      "id": "static_0047",
+      "vertices": 156,
+      "averageDay": 0.08876080065965652,
+      "averageNight": 0.17152006924152374,
+      "averageAO": 0.19534645974636078
+    },
+    {
+      "id": "static_0048",
+      "vertices": 3046,
+      "averageDay": 0.14845719933509827,
+      "averageNight": 0.3265157639980316,
+      "averageAO": 0.07379672676324844
+    },
+    {
+      "id": "static_0049",
+      "vertices": 156,
+      "averageDay": 0.10100369900465012,
+      "averageNight": 0.22654017806053162,
+      "averageAO": 0.19973070919513702
+    },
+    {
+      "id": "static_0050",
+      "vertices": 2692,
+      "averageDay": 0.08270309120416641,
+      "averageNight": 0.1623021811246872,
+      "averageAO": 0.20727844536304474
+    },
+    {
+      "id": "static_0051",
+      "vertices": 24,
+      "averageDay": 0.04682333022356033,
+      "averageNight": 0.05633208528161049,
+      "averageAO": 0.1006944477558136
+    },
+    {
+      "id": "static_0052",
+      "vertices": 5690,
+      "averageDay": 0.20440246164798737,
+      "averageNight": 0.3979795277118683,
+      "averageAO": 0.13674592971801758
+    },
+    {
+      "id": "static_0053",
+      "vertices": 404,
+      "averageDay": 0.11063536256551743,
+      "averageNight": 0.23332944512367249,
+      "averageAO": 0.2127103954553604
+    },
+    {
+      "id": "static_0054",
+      "vertices": 5690,
+      "averageDay": 0.13680845499038696,
+      "averageNight": 0.2673223316669464,
+      "averageAO": 0.2428193837404251
+    },
+    {
+      "id": "static_0055",
+      "vertices": 404,
+      "averageDay": 0.09570705890655518,
+      "averageNight": 0.1675254851579666,
+      "averageAO": 0.24026232957839966
+    },
+    {
+      "id": "static_0056",
+      "vertices": 3042,
+      "averageDay": 0.043720606714487076,
+      "averageNight": 0.07659339904785156,
+      "averageAO": 0.23420561850070953
+    },
+    {
+      "id": "static_0057",
+      "vertices": 68,
+      "averageDay": 0.024623678997159004,
+      "averageNight": 0.046503257006406784,
+      "averageAO": 0.16789215803146362
+    },
+    {
+      "id": "static_0058",
+      "vertices": 3838,
+      "averageDay": 0.06438788026571274,
+      "averageNight": 0.11834444105625153,
+      "averageAO": 0.20103098452091217
+    },
+    {
+      "id": "static_0059",
+      "vertices": 156,
+      "averageDay": 0.06996112316846848,
+      "averageNight": 0.12196920812129974,
+      "averageAO": 0.18703259527683258
+    },
+    {
+      "id": "static_0060",
+      "vertices": 10478,
+      "averageDay": 0.10976996272802353,
+      "averageNight": 0.20932357013225555,
+      "averageAO": 0.1397036761045456
+    },
+    {
+      "id": "static_0061",
+      "vertices": 1116,
+      "averageDay": 0.06740473955869675,
+      "averageNight": 0.09381391853094101,
+      "averageAO": 0.18558655679225922
+    },
+    {
+      "id": "static_0062",
+      "vertices": 3042,
+      "averageDay": 0.04117719829082489,
+      "averageNight": 0.04343844950199127,
+      "averageAO": 0.11546999961137772
+    },
+    {
+      "id": "static_0063",
+      "vertices": 68,
+      "averageDay": 0.05401111766695976,
+      "averageNight": 0.005631502717733383,
+      "averageAO": 0.11907679587602615
+    },
+    {
+      "id": "static_0064",
+      "vertices": 5690,
+      "averageDay": 0.06362613290548325,
+      "averageNight": 0.0866648256778717,
+      "averageAO": 0.25521060824394226
+    },
+    {
+      "id": "static_0065",
+      "vertices": 404,
+      "averageDay": 0.10845272243022919,
+      "averageNight": 0.0764356404542923,
+      "averageAO": 0.22183890640735626
+    },
+    {
+      "id": "static_0066",
+      "vertices": 4014,
+      "averageDay": 0.04802706092596054,
+      "averageNight": 0.038993220776319504,
+      "averageAO": 0.3266572654247284
+    },
+    {
+      "id": "static_0067",
+      "vertices": 156,
+      "averageDay": 0.07513272017240524,
+      "averageNight": 0.055435001850128174,
+      "averageAO": 0.2148771584033966
+    },
+    {
+      "id": "static_0068",
+      "vertices": 226,
+      "averageDay": 0.02344394661486149,
+      "averageNight": 0.021811936050653458,
+      "averageAO": 0.5070829391479492
+    },
+    {
+      "id": "static_0069",
+      "vertices": 404,
+      "averageDay": 0.030408285558223724,
+      "averageNight": 0.03225701302289963,
+      "averageAO": 0.41941598057746887
+    },
+    {
+      "id": "static_0070",
+      "vertices": 404,
+      "averageDay": 0.036913540214300156,
+      "averageNight": 0.044696614146232605,
+      "averageAO": 0.433734655380249
+    },
+    {
+      "id": "static_0071",
+      "vertices": 156,
+      "averageDay": 0.02931101620197296,
+      "averageNight": 0.03133327141404152,
+      "averageAO": 0.4698851704597473
+    },
+    {
+      "id": "static_0072",
+      "vertices": 146,
+      "averageDay": 0.1700168401002884,
+      "averageNight": 0.39232102036476135,
+      "averageAO": 0.45644980669021606
+    },
+    {
+      "id": "static_0073",
+      "vertices": 404,
+      "averageDay": 0.13443315029144287,
+      "averageNight": 0.30230608582496643,
+      "averageAO": 0.5388805270195007
+    },
+    {
+      "id": "static_0074",
+      "vertices": 404,
+      "averageDay": 0.15464426577091217,
+      "averageNight": 0.3349403440952301,
+      "averageAO": 0.5224925875663757
+    },
+    {
+      "id": "static_0075",
+      "vertices": 72,
+      "averageDay": 0.13581474125385284,
+      "averageNight": 0.2985367178916931,
+      "averageAO": 0.4119550585746765
+    },
+    {
+      "id": "static_0076",
+      "vertices": 142,
+      "averageDay": 0.05964929237961769,
+      "averageNight": 0.09577927738428116,
+      "averageAO": 0.42482149600982666
+    },
+    {
+      "id": "static_0077",
+      "vertices": 404,
+      "averageDay": 0.07939604669809341,
+      "averageNight": 0.15324099361896515,
+      "averageAO": 0.590228796005249
+    },
+    {
+      "id": "static_0078",
+      "vertices": 404,
+      "averageDay": 0.07338737696409225,
+      "averageNight": 0.12099841982126236,
+      "averageAO": 0.5353094935417175
+    },
+    {
+      "id": "static_0079",
+      "vertices": 68,
+      "averageDay": 0.05511987954378128,
+      "averageNight": 0.10913067311048508,
+      "averageAO": 0.4172028601169586
+    },
+    {
+      "id": "static_0080",
+      "vertices": 142,
+      "averageDay": 0.052813105285167694,
+      "averageNight": 0.0788886547088623,
+      "averageAO": 0.38859793543815613
+    },
+    {
+      "id": "static_0081",
+      "vertices": 404,
+      "averageDay": 0.053485579788684845,
+      "averageNight": 0.0946124866604805,
+      "averageAO": 0.5035796761512756
+    },
+    {
+      "id": "static_0082",
+      "vertices": 404,
+      "averageDay": 0.07218422740697861,
+      "averageNight": 0.13178575038909912,
+      "averageAO": 0.5332390069961548
+    },
+    {
+      "id": "static_0083",
+      "vertices": 68,
+      "averageDay": 0.05214207246899605,
+      "averageNight": 0.09346777200698853,
+      "averageAO": 0.3837622404098511
+    },
+    {
+      "id": "static_0084",
+      "vertices": 226,
+      "averageDay": 0.157973974943161,
+      "averageNight": 0.274914026260376,
+      "averageAO": 0.4629567265510559
+    },
+    {
+      "id": "static_0085",
+      "vertices": 404,
+      "averageDay": 0.16779394447803497,
+      "averageNight": 0.31739696860313416,
+      "averageAO": 0.622361421585083
+    },
+    {
+      "id": "static_0086",
+      "vertices": 404,
+      "averageDay": 0.1650601327419281,
+      "averageNight": 0.3077285885810852,
+      "averageAO": 0.6280924677848816
+    },
+    {
+      "id": "static_0087",
+      "vertices": 156,
+      "averageDay": 0.14858712255954742,
+      "averageNight": 0.29181206226348877,
+      "averageAO": 0.5132885575294495
+    },
+    {
+      "id": "static_0088",
+      "vertices": 226,
+      "averageDay": 0.09316392987966537,
+      "averageNight": 0.1776607632637024,
+      "averageAO": 0.43220236897468567
+    },
+    {
+      "id": "static_0089",
+      "vertices": 404,
+      "averageDay": 0.14010284841060638,
+      "averageNight": 0.2666471302509308,
+      "averageAO": 0.5681449770927429
+    },
+    {
+      "id": "static_0090",
+      "vertices": 404,
+      "averageDay": 0.1290762573480606,
+      "averageNight": 0.23491474986076355,
+      "averageAO": 0.6336934566497803
+    },
+    {
+      "id": "static_0091",
+      "vertices": 156,
+      "averageDay": 0.10149306803941727,
+      "averageNight": 0.18684306740760803,
+      "averageAO": 0.4672374129295349
+    },
+    {
+      "id": "static_0092",
+      "vertices": 226,
+      "averageDay": 0.10315067321062088,
+      "averageNight": 0.18371348083019257,
+      "averageAO": 0.3937739133834839
+    },
+    {
+      "id": "static_0093",
+      "vertices": 404,
+      "averageDay": 0.1535058617591858,
+      "averageNight": 0.22669599950313568,
+      "averageAO": 0.5070690512657166
+    },
+    {
+      "id": "static_0094",
+      "vertices": 404,
+      "averageDay": 0.14284449815750122,
+      "averageNight": 0.21778985857963562,
+      "averageAO": 0.4962991774082184
+    },
+    {
+      "id": "static_0095",
+      "vertices": 156,
+      "averageDay": 0.11278587579727173,
+      "averageNight": 0.19375422596931458,
+      "averageAO": 0.41434037685394287
+    },
+    {
+      "id": "static_0096",
+      "vertices": 226,
+      "averageDay": 0.2447638064622879,
+      "averageNight": 0.4315032958984375,
+      "averageAO": 0.45483675599098206
+    },
+    {
+      "id": "static_0097",
+      "vertices": 404,
+      "averageDay": 0.3288966417312622,
+      "averageNight": 0.5038749575614929,
+      "averageAO": 0.573350727558136
+    },
+    {
+      "id": "static_0098",
+      "vertices": 404,
+      "averageDay": 0.3470211327075958,
+      "averageNight": 0.5481358170509338,
+      "averageAO": 0.6831311583518982
+    },
+    {
+      "id": "static_0099",
+      "vertices": 156,
+      "averageDay": 0.24267776310443878,
+      "averageNight": 0.4072636067867279,
+      "averageAO": 0.4905633330345154
+    },
+    {
+      "id": "static_0100",
+      "vertices": 142,
+      "averageDay": 0.64061039686203,
+      "averageNight": 1.3086450099945068,
+      "averageAO": 0.4388180077075958
+    },
+    {
+      "id": "static_0101",
+      "vertices": 404,
+      "averageDay": 0.3707287609577179,
+      "averageNight": 0.7865164875984192,
+      "averageAO": 0.5767830014228821
+    },
+    {
+      "id": "static_0102",
+      "vertices": 404,
+      "averageDay": 0.35340192914009094,
+      "averageNight": 0.7348050475120544,
+      "averageAO": 0.6283903121948242
+    },
+    {
+      "id": "static_0103",
+      "vertices": 68,
+      "averageDay": 0.4147820472717285,
+      "averageNight": 0.870711624622345,
+      "averageAO": 0.42174604535102844
+    },
+    {
+      "id": "static_0104",
+      "vertices": 146,
+      "averageDay": 0.5302609801292419,
+      "averageNight": 1.1085906028747559,
+      "averageAO": 0.41832849383354187
+    },
+    {
+      "id": "static_0105",
+      "vertices": 404,
+      "averageDay": 0.33673548698425293,
+      "averageNight": 0.66147381067276,
+      "averageAO": 0.5674996972084045
+    },
+    {
+      "id": "static_0106",
+      "vertices": 404,
+      "averageDay": 0.30618804693222046,
+      "averageNight": 0.6022196412086487,
+      "averageAO": 0.4139692187309265
+    },
+    {
+      "id": "static_0107",
+      "vertices": 72,
+      "averageDay": 0.40790486335754395,
+      "averageNight": 0.7289857268333435,
+      "averageAO": 0.39477115869522095
+    },
+    {
+      "id": "static_0108",
+      "vertices": 226,
+      "averageDay": 0.4024190902709961,
+      "averageNight": 0.7108691334724426,
+      "averageAO": 0.4801349937915802
+    },
+    {
+      "id": "static_0109",
+      "vertices": 404,
+      "averageDay": 0.328025221824646,
+      "averageNight": 0.5400288105010986,
+      "averageAO": 0.5849034786224365
+    },
+    {
+      "id": "static_0110",
+      "vertices": 404,
+      "averageDay": 0.3332856297492981,
+      "averageNight": 0.5334862470626831,
+      "averageAO": 0.5285654067993164
+    },
+    {
+      "id": "static_0111",
+      "vertices": 156,
+      "averageDay": 0.33856984972953796,
+      "averageNight": 0.592345654964447,
+      "averageAO": 0.4450171887874603
+    },
+    {
+      "id": "static_0112",
+      "vertices": 226,
+      "averageDay": 0.1812014877796173,
+      "averageNight": 0.2525780200958252,
+      "averageAO": 0.604594886302948
+    },
+    {
+      "id": "static_0113",
+      "vertices": 404,
+      "averageDay": 0.2352638691663742,
+      "averageNight": 0.31013402342796326,
+      "averageAO": 0.6778889298439026
+    },
+    {
+      "id": "static_0114",
+      "vertices": 404,
+      "averageDay": 0.2305380403995514,
+      "averageNight": 0.2872908115386963,
+      "averageAO": 0.6190998554229736
+    },
+    {
+      "id": "static_0115",
+      "vertices": 156,
+      "averageDay": 0.19697919487953186,
+      "averageNight": 0.26156920194625854,
+      "averageAO": 0.5705780386924744
+    },
+    {
+      "id": "static_0116",
+      "vertices": 226,
+      "averageDay": 0.09466277062892914,
+      "averageNight": 0.11105390638113022,
+      "averageAO": 0.6039685010910034
+    },
+    {
+      "id": "static_0117",
+      "vertices": 404,
+      "averageDay": 0.15052717924118042,
+      "averageNight": 0.13512839376926422,
+      "averageAO": 0.6995143890380859
+    },
+    {
+      "id": "static_0118",
+      "vertices": 404,
+      "averageDay": 0.15290693938732147,
+      "averageNight": 0.12783469259738922,
+      "averageAO": 0.6552702188491821
+    },
+    {
+      "id": "static_0119",
+      "vertices": 156,
+      "averageDay": 0.11388910561800003,
+      "averageNight": 0.11025819927453995,
+      "averageAO": 0.5691512823104858
+    },
+    {
+      "id": "static_0120",
+      "vertices": 1214,
+      "averageDay": 0.10109167546033859,
+      "averageNight": 0.1013980284333229,
+      "averageAO": 0.47860652208328247
+    },
+    {
+      "id": "static_0121",
+      "vertices": 1120,
+      "averageDay": 0.07013605535030365,
+      "averageNight": 0.07429153472185135,
+      "averageAO": 0.6429499983787537
+    },
+    {
+      "id": "static_0122",
+      "vertices": 1120,
+      "averageDay": 0.0762823224067688,
+      "averageNight": 0.07415153831243515,
+      "averageAO": 0.7094277739524841
+    },
+    {
+      "id": "static_0123",
+      "vertices": 404,
+      "averageDay": 0.010605910792946815,
+      "averageNight": 0.008883509784936905,
+      "averageAO": 0.42088234424591064
+    },
+    {
+      "id": "static_0124",
+      "vertices": 404,
+      "averageDay": 0.10420213639736176,
+      "averageNight": 0.1212892085313797,
+      "averageAO": 0.8285149335861206
+    },
+    {
+      "id": "static_0125",
+      "vertices": 404,
+      "averageDay": 0.0999046191573143,
+      "averageNight": 0.11848946660757065,
+      "averageAO": 0.8366042971611023
+    },
+    {
+      "id": "static_0126",
+      "vertices": 404,
+      "averageDay": 0.015451634302735329,
+      "averageNight": 0.01392099168151617,
+      "averageAO": 0.43196162581443787
+    },
+    {
+      "id": "static_0127",
+      "vertices": 404,
+      "averageDay": 0.06256182491779327,
+      "averageNight": 0.05692725628614426,
+      "averageAO": 0.8214727640151978
+    },
+    {
+      "id": "static_0128",
+      "vertices": 404,
+      "averageDay": 0.05818062275648117,
+      "averageNight": 0.047170065343379974,
+      "averageAO": 0.8701801896095276
+    },
+    {
+      "id": "static_0129",
+      "vertices": 404,
+      "averageDay": 0.03318209946155548,
+      "averageNight": 0.028239140287041664,
+      "averageAO": 0.7414647340774536
+    },
+    {
+      "id": "static_0130",
+      "vertices": 7610,
+      "averageDay": 0.08377180993556976,
+      "averageNight": 0.08276301622390747,
+      "averageAO": 0.4661100208759308
+    },
+    {
+      "id": "static_0131",
+      "vertices": 5012,
+      "averageDay": 0.05413078889250755,
+      "averageNight": 0.06326813250780106,
+      "averageAO": 0.5293444991111755
+    },
+    {
+      "id": "static_0132",
+      "vertices": 5012,
+      "averageDay": 0.07547134906053543,
+      "averageNight": 0.09209286421537399,
+      "averageAO": 0.6725208163261414
+    },
+    {
+      "id": "static_0133",
+      "vertices": 404,
+      "averageDay": 0.032263826578855515,
+      "averageNight": 0.024157335981726646,
+      "averageAO": 0.7394824028015137
+    },
+    {
+      "id": "static_0134",
+      "vertices": 404,
+      "averageDay": 0.06818605959415436,
+      "averageNight": 0.05874241143465042,
+      "averageAO": 0.8729957938194275
+    },
+    {
+      "id": "static_0135",
+      "vertices": 404,
+      "averageDay": 0.08260907977819443,
+      "averageNight": 0.09283433109521866,
+      "averageAO": 0.8720058798789978
+    },
+    {
+      "id": "static_0136",
+      "vertices": 404,
+      "averageDay": 0.09282331168651581,
+      "averageNight": 0.11469729244709015,
+      "averageAO": 0.8383567929267883
+    },
+    {
+      "id": "static_0137",
+      "vertices": 404,
+      "averageDay": 0.06409109383821487,
+      "averageNight": 0.05974444001913071,
+      "averageAO": 0.6979157328605652
+    },
+    {
+      "id": "static_0138",
+      "vertices": 404,
+      "averageDay": 0.06176876276731491,
+      "averageNight": 0.07006440311670303,
+      "averageAO": 0.8149234056472778
+    },
+    {
+      "id": "static_0139",
+      "vertices": 404,
+      "averageDay": 0.030799847096204758,
+      "averageNight": 0.012274235486984253,
+      "averageAO": 0.5131875276565552
+    },
+    {
+      "id": "static_0140",
+      "vertices": 404,
+      "averageDay": 0.0606653057038784,
+      "averageNight": 0.07874289155006409,
+      "averageAO": 0.6611197590827942
+    },
+    {
+      "id": "static_0141",
+      "vertices": 404,
+      "averageDay": 0.1208387091755867,
+      "averageNight": 0.11314122378826141,
+      "averageAO": 0.6991336941719055
+    },
+    {
+      "id": "static_0142",
+      "vertices": 404,
+      "averageDay": 0.08307933807373047,
+      "averageNight": 0.08379530161619186,
+      "averageAO": 0.6897741556167603
+    },
+    {
+      "id": "static_0143",
+      "vertices": 404,
+      "averageDay": 0.10646628588438034,
+      "averageNight": 0.11777088791131973,
+      "averageAO": 0.8478281497955322
+    },
+    {
+      "id": "static_0144",
+      "vertices": 404,
+      "averageDay": 0.09939875453710556,
+      "averageNight": 0.12237488478422165,
+      "averageAO": 0.7515315413475037
+    },
+    {
+      "id": "static_0145",
+      "vertices": 404,
+      "averageDay": 0.10031117498874664,
+      "averageNight": 0.15987910330295563,
+      "averageAO": 0.48837152123451233
+    },
+    {
+      "id": "static_0146",
+      "vertices": 404,
+      "averageDay": 0.01665530353784561,
+      "averageNight": 0.001121554640121758,
+      "averageAO": 0.31291255354881287
+    },
+    {
+      "id": "static_0147",
+      "vertices": 1118,
+      "averageDay": 0.2042817771434784,
+      "averageNight": 0.26198604702949524,
+      "averageAO": 0.7175930142402649
+    },
+    {
+      "id": "static_0148",
+      "vertices": 726,
+      "averageDay": 0.05861349403858185,
+      "averageNight": 0.09320340305566788,
+      "averageAO": 0.484382301568985
+    },
+    {
+      "id": "static_0149",
+      "vertices": 758,
+      "averageDay": 0.06107223778963089,
+      "averageNight": 0.08163166791200638,
+      "averageAO": 0.5960941910743713
+    },
+    {
+      "id": "static_0150",
+      "vertices": 1118,
+      "averageDay": 0.11325735598802567,
+      "averageNight": 0.21266049146652222,
+      "averageAO": 0.553817629814148
+    },
+    {
+      "id": "static_0151",
+      "vertices": 690,
+      "averageDay": 0.28807273507118225,
+      "averageNight": 0.34739401936531067,
+      "averageAO": 0.6792222857475281
+    },
+    {
+      "id": "static_0152",
+      "vertices": 726,
+      "averageDay": 0.21381723880767822,
+      "averageNight": 0.4185134172439575,
+      "averageAO": 0.19164538383483887
+    },
+    {
+      "id": "static_0153",
+      "vertices": 726,
+      "averageDay": 0.06044537574052811,
+      "averageNight": 0.088695228099823,
+      "averageAO": 0.476560115814209
+    },
+    {
+      "id": "static_0154",
+      "vertices": 1486,
+      "averageDay": 0.0011329357512295246,
+      "averageNight": 5.249129389994778e-05,
+      "averageAO": 0.0005888291052542627
+    },
+    {
+      "id": "static_0155",
+      "vertices": 1486,
+      "averageDay": 0.0010099285282194614,
+      "averageNight": 4.8218356823781505e-05,
+      "averageAO": 0.0002336623438168317
+    },
+    {
+      "id": "static_0156",
+      "vertices": 1486,
+      "averageDay": 0.0006271013407967985,
+      "averageNight": 2.8810976800741628e-05,
+      "averageAO": 0.0047036223113536835
+    },
+    {
+      "id": "static_0157",
+      "vertices": 1486,
+      "averageDay": 0.0010729336645454168,
+      "averageNight": 5.06205833517015e-05,
+      "averageAO": 0.0002032862394116819
+    },
+    {
+      "id": "static_0158",
+      "vertices": 1486,
+      "averageDay": 0.004971788264811039,
+      "averageNight": 0.005491774063557386,
+      "averageAO": 0.013805840164422989
+    },
+    {
+      "id": "static_0159",
+      "vertices": 1106,
+      "averageDay": 0.0003876928531099111,
+      "averageNight": 1.8137372535420582e-05,
+      "averageAO": 0.007374547887593508
+    },
+    {
+      "id": "static_0160",
+      "vertices": 1486,
+      "averageDay": 0.08481623977422714,
+      "averageNight": 0.14135059714317322,
+      "averageAO": 0.16652902960777283
+    },
+    {
+      "id": "static_0161",
+      "vertices": 706,
+      "averageDay": 0.0976841002702713,
+      "averageNight": 0.13464806973934174,
+      "averageAO": 0.287898987531662
+    },
+    {
+      "id": "static_0162",
+      "vertices": 1486,
+      "averageDay": 0.0012184894876554608,
+      "averageNight": 5.6194887292804196e-05,
+      "averageAO": 0.0019020114559680223
+    },
+    {
+      "id": "static_0163",
+      "vertices": 706,
+      "averageDay": 0.0008622809546068311,
+      "averageNight": 3.8609585317317396e-05,
+      "averageAO": 0.00020656280685216188
+    },
+    {
+      "id": "static_0164",
+      "vertices": 1819,
+      "averageDay": 0.14147186279296875,
+      "averageNight": 0.22733938694000244,
+      "averageAO": 0.6677546501159668
+    },
+    {
+      "id": "static_0165",
+      "vertices": 817,
+      "averageDay": 0.37752392888069153,
+      "averageNight": 0.6857582926750183,
+      "averageAO": 0.6267956495285034
+    },
+    {
+      "id": "static_0166",
+      "vertices": 817,
+      "averageDay": 0.36650872230529785,
+      "averageNight": 0.8478168249130249,
+      "averageAO": 0.6370380520820618
+    },
+    {
+      "id": "static_0167",
+      "vertices": 817,
+      "averageDay": 0.4079724848270416,
+      "averageNight": 0.5950756072998047,
+      "averageAO": 0.7102691531181335
+    },
+    {
+      "id": "static_0168",
+      "vertices": 1289,
+      "averageDay": 0.26025158166885376,
+      "averageNight": 0.27281126379966736,
+      "averageAO": 0.7164841890335083
+    },
+    {
+      "id": "static_0169",
+      "vertices": 817,
+      "averageDay": 0.39590394496917725,
+      "averageNight": 0.49098971486091614,
+      "averageAO": 0.6878533363342285
+    },
+    {
+      "id": "static_0170",
+      "vertices": 545,
+      "averageDay": 0.11727673560380936,
+      "averageNight": 0.18942591547966003,
+      "averageAO": 0.4677083194255829
+    },
+    {
+      "id": "static_0171",
+      "vertices": 289,
+      "averageDay": 0.5082880258560181,
+      "averageNight": 0.9798830151557922,
+      "averageAO": 0.41705864667892456
+    },
+    {
+      "id": "static_0172",
+      "vertices": 217,
+      "averageDay": 0.5860303044319153,
+      "averageNight": 1.1505593061447144,
+      "averageAO": 0.3634032905101776
+    },
+    {
+      "id": "static_0173",
+      "vertices": 217,
+      "averageDay": 0.4581676125526428,
+      "averageNight": 0.8882946968078613,
+      "averageAO": 0.3803344666957855
+    },
+    {
+      "id": "static_0174",
+      "vertices": 986,
+      "averageDay": 0.2369818240404129,
+      "averageNight": 0.43601083755493164,
+      "averageAO": 0.5488743185997009
+    },
+    {
+      "id": "static_0175",
+      "vertices": 817,
+      "averageDay": 0.0567019023001194,
+      "averageNight": 0.0781373381614685,
+      "averageAO": 0.6018134355545044
+    },
+    {
+      "id": "static_0176",
+      "vertices": 260,
+      "averageDay": 0.9424211382865906,
+      "averageNight": 1.9493036270141602,
+      "averageAO": 0.494791716337204
+    },
+    {
+      "id": "static_0177",
+      "vertices": 260,
+      "averageDay": 0.4797587990760803,
+      "averageNight": 0.7690939903259277,
+      "averageAO": 0.5078526139259338
+    },
+    {
+      "id": "static_0178",
+      "vertices": 260,
+      "averageDay": 0.13059256970882416,
+      "averageNight": 0.14599254727363586,
+      "averageAO": 0.4932692348957062
+    },
+    {
+      "id": "static_0179",
+      "vertices": 260,
+      "averageDay": 0.19380924105644226,
+      "averageNight": 0.19698882102966309,
+      "averageAO": 0.5087606310844421
+    },
+    {
+      "id": "static_0180",
+      "vertices": 260,
+      "averageDay": 0.22948215901851654,
+      "averageNight": 0.3738504946231842,
+      "averageAO": 0.4939236044883728
+    },
+    {
+      "id": "static_0181",
+      "vertices": 260,
+      "averageDay": 0.30583456158638,
+      "averageNight": 0.4228622317314148,
+      "averageAO": 0.5069711804389954
+    },
+    {
+      "id": "static_0182",
+      "vertices": 260,
+      "averageDay": 0.09525272995233536,
+      "averageNight": 0.2603464126586914,
+      "averageAO": 0.2942841649055481
+    },
+    {
+      "id": "static_0183",
+      "vertices": 260,
+      "averageDay": 0.19856244325637817,
+      "averageNight": 0.4458760619163513,
+      "averageAO": 0.30184295773506165
+    },
+    {
+      "id": "static_0184",
+      "vertices": 260,
+      "averageDay": 0.04510686919093132,
+      "averageNight": 0.0900823324918747,
+      "averageAO": 0.3660256564617157
+    },
+    {
+      "id": "static_0185",
+      "vertices": 260,
+      "averageDay": 0.09006701409816742,
+      "averageNight": 0.17748327553272247,
+      "averageAO": 0.37793803215026855
+    },
+    {
+      "id": "static_0186",
+      "vertices": 260,
+      "averageDay": 0.8332015872001648,
+      "averageNight": 1.8155512809753418,
+      "averageAO": 0.34997329115867615
+    },
+    {
+      "id": "static_0187",
+      "vertices": 260,
+      "averageDay": 0.23700526356697083,
+      "averageNight": 0.5155101418495178,
+      "averageAO": 0.25506144762039185
+    },
+    {
+      "id": "static_0188",
+      "vertices": 260,
+      "averageDay": 0.044875942170619965,
+      "averageNight": 0.08480725437402725,
+      "averageAO": 0.2040064036846161
+    },
+    {
+      "id": "static_0189",
+      "vertices": 260,
+      "averageDay": 0.08388268947601318,
+      "averageNight": 0.14495719969272614,
+      "averageAO": 0.2895299196243286
+    },
+    {
+      "id": "static_0190",
+      "vertices": 260,
+      "averageDay": 0.133714497089386,
+      "averageNight": 0.34026503562927246,
+      "averageAO": 0.42753738164901733
+    },
+    {
+      "id": "static_0191",
+      "vertices": 260,
+      "averageDay": 0.24507814645767212,
+      "averageNight": 0.5887576341629028,
+      "averageAO": 0.4405983090400696
+    },
+    {
+      "id": "static_0192",
+      "vertices": 404,
+      "averageDay": 0.0972391664981842,
+      "averageNight": 0.16515524685382843,
+      "averageAO": 0.2964252531528473
+    },
+    {
+      "id": "static_0193",
+      "vertices": 404,
+      "averageDay": 0.12984229624271393,
+      "averageNight": 0.23695077002048492,
+      "averageAO": 0.3508354127407074
+    },
+    {
+      "id": "static_0194",
+      "vertices": 404,
+      "averageDay": 0.4001179039478302,
+      "averageNight": 0.9193264245986938,
+      "averageAO": 0.43366265296936035
+    },
+    {
+      "id": "static_0195",
+      "vertices": 404,
+      "averageDay": 0.3598031997680664,
+      "averageNight": 0.7399880290031433,
+      "averageAO": 0.5097978711128235
+    },
+    {
+      "id": "static_0196",
+      "vertices": 404,
+      "averageDay": 0.4595695436000824,
+      "averageNight": 1.0115972757339478,
+      "averageAO": 0.2349652647972107
+    },
+    {
+      "id": "static_0197",
+      "vertices": 404,
+      "averageDay": 0.4901331067085266,
+      "averageNight": 0.9399905800819397,
+      "averageAO": 0.27620741724967957
+    },
+    {
+      "id": "static_0198",
+      "vertices": 4682,
+      "averageDay": 0.036177858710289,
+      "averageNight": 0.062364187091588974,
+      "averageAO": 0.5923711061477661
+    },
+    {
+      "id": "static_0199",
+      "vertices": 2386,
+      "averageDay": 0.07407029718160629,
+      "averageNight": 0.13853633403778076,
+      "averageAO": 0.5011835694313049
+    },
+    {
+      "id": "static_0200",
+      "vertices": 5334,
+      "averageDay": 0.04797066003084183,
+      "averageNight": 0.018286297097802162,
+      "averageAO": 0.8407201766967773
+    },
+    {
+      "id": "static_0201",
+      "vertices": 2386,
+      "averageDay": 0.09521189332008362,
+      "averageNight": 0.21957072615623474,
+      "averageAO": 0.6322664022445679
+    },
+    {
+      "id": "static_0202",
+      "vertices": 2386,
+      "averageDay": 0.09297952800989151,
+      "averageNight": 0.12014209479093552,
+      "averageAO": 0.5685153007507324
+    },
+    {
+      "id": "static_0203",
+      "vertices": 3584,
+      "averageDay": 0.07687181234359741,
+      "averageNight": 0.08187351375818253,
+      "averageAO": 0.5872659087181091
+    },
+    {
+      "id": "static_0204",
+      "vertices": 2386,
+      "averageDay": 0.08427196741104126,
+      "averageNight": 0.10633376240730286,
+      "averageAO": 0.5479596257209778
+    },
+    {
+      "id": "static_0205",
+      "vertices": 1486,
+      "averageDay": 0.046165723353624344,
+      "averageNight": 0.07482513040304184,
+      "averageAO": 0.5744559168815613
+    },
+    {
+      "id": "static_0206",
+      "vertices": 974,
+      "averageDay": 0.07741070538759232,
+      "averageNight": 0.15863698720932007,
+      "averageAO": 0.47281792759895325
+    },
+    {
+      "id": "static_0207",
+      "vertices": 706,
+      "averageDay": 0.09878064692020416,
+      "averageNight": 0.18672117590904236,
+      "averageAO": 0.48338308930397034
+    },
+    {
+      "id": "static_0208",
+      "vertices": 706,
+      "averageDay": 0.05061006173491478,
+      "averageNight": 0.10429795831441879,
+      "averageAO": 0.44610899686813354
+    },
+    {
+      "id": "static_0209",
+      "vertices": 3380,
+      "averageDay": 0.07058392465114594,
+      "averageNight": 0.1337617039680481,
+      "averageAO": 0.508370578289032
+    },
+    {
+      "id": "static_0210",
+      "vertices": 2386,
+      "averageDay": 0.031273216009140015,
+      "averageNight": 0.05734418332576752,
+      "averageAO": 0.6259856224060059
+    },
+    {
+      "id": "static_0211",
+      "vertices": 1116,
+      "averageDay": 0.027052951976656914,
+      "averageNight": 0.006148660555481911,
+      "averageAO": 0.9452851414680481
+    },
+    {
+      "id": "static_0212",
+      "vertices": 1116,
+      "averageDay": 0.044923778623342514,
+      "averageNight": 0.018605582416057587,
+      "averageAO": 0.9080826044082642
+    },
+    {
+      "id": "static_0213",
+      "vertices": 1116,
+      "averageDay": 0.02911762148141861,
+      "averageNight": 0.0031900161411613226,
+      "averageAO": 0.8773536682128906
+    },
+    {
+      "id": "static_0214",
+      "vertices": 5686,
+      "averageDay": 0.16021592915058136,
+      "averageNight": 0.23733475804328918,
+      "averageAO": 0.17281730473041534
+    },
+    {
+      "id": "static_0215",
+      "vertices": 5174,
+      "averageDay": 0.1506902426481247,
+      "averageNight": 0.21665041148662567,
+      "averageAO": 0.15909159183502197
+    },
+    {
+      "id": "static_0216",
+      "vertices": 3614,
+      "averageDay": 0.13695451617240906,
+      "averageNight": 0.21504724025726318,
+      "averageAO": 0.10973266512155533
+    },
+    {
+      "id": "static_0217",
+      "vertices": 6106,
+      "averageDay": 0.44362694025039673,
+      "averageNight": 0.7106190919876099,
+      "averageAO": 0.6272507905960083
+    },
+    {
+      "id": "static_0218",
+      "vertices": 1421,
+      "averageDay": 0.06466694921255112,
+      "averageNight": 0.10422670096158981,
+      "averageAO": 0.0057075414806604385
+    },
+    {
+      "id": "static_0219",
+      "vertices": 5686,
+      "averageDay": 0.20190374553203583,
+      "averageNight": 0.21700161695480347,
+      "averageAO": 0.28550034761428833
+    },
+    {
+      "id": "static_0220",
+      "vertices": 5174,
+      "averageDay": 0.1287570744752884,
+      "averageNight": 0.10527867823839188,
+      "averageAO": 0.21233193576335907
+    },
+    {
+      "id": "static_0221",
+      "vertices": 5174,
+      "averageDay": 0.10635632276535034,
+      "averageNight": 0.09554821252822876,
+      "averageAO": 0.10950424522161484
+    },
+    {
+      "id": "static_0222",
+      "vertices": 6106,
+      "averageDay": 0.40374553203582764,
+      "averageNight": 0.4915902018547058,
+      "averageAO": 0.678102970123291
+    },
+    {
+      "id": "static_0223",
+      "vertices": 1421,
+      "averageDay": 0.09289242327213287,
+      "averageNight": 0.0668395608663559,
+      "averageAO": 0.007688736543059349
+    },
+    {
+      "id": "static_0224",
+      "vertices": 5686,
+      "averageDay": 0.17162759602069855,
+      "averageNight": 0.20353928208351135,
+      "averageAO": 0.20763739943504333
+    },
+    {
+      "id": "static_0225",
+      "vertices": 3614,
+      "averageDay": 0.17789533734321594,
+      "averageNight": 0.21434462070465088,
+      "averageAO": 0.23326142132282257
+    },
+    {
+      "id": "static_0226",
+      "vertices": 3610,
+      "averageDay": 0.13248175382614136,
+      "averageNight": 0.15982191264629364,
+      "averageAO": 0.11728121340274811
+    },
+    {
+      "id": "static_0227",
+      "vertices": 6106,
+      "averageDay": 0.4658313989639282,
+      "averageNight": 0.6225003004074097,
+      "averageAO": 0.6664358377456665
+    },
+    {
+      "id": "static_0228",
+      "vertices": 1421,
+      "averageDay": 0.10021017491817474,
+      "averageNight": 0.08275549113750458,
+      "averageAO": 0.007655749097466469
+    },
+    {
+      "id": "static_0229",
+      "vertices": 9994,
+      "averageDay": 0.0712212324142456,
+      "averageNight": 0.11041048169136047,
+      "averageAO": 0.21791128814220428
+    },
+    {
+      "id": "static_0230",
+      "vertices": 566,
+      "averageDay": 0.004622162785381079,
+      "averageNight": 0.00621421542018652,
+      "averageAO": 0.04926445335149765
+    },
+    {
+      "id": "static_0231",
+      "vertices": 2765,
+      "averageDay": 0.02378879114985466,
+      "averageNight": 0.03305487334728241,
+      "averageAO": 0.07261454313993454
+    },
+    {
+      "id": "static_0232",
+      "vertices": 1517,
+      "averageDay": 0.07616005092859268,
+      "averageNight": 0.1404300183057785,
+      "averageAO": 0.2281380444765091
+    },
+    {
+      "id": "static_0233",
+      "vertices": 1525,
+      "averageDay": 0.11857235431671143,
+      "averageNight": 0.20861029624938965,
+      "averageAO": 0.24321585893630981
+    },
+    {
+      "id": "static_0234",
+      "vertices": 1517,
+      "averageDay": 0.10836385935544968,
+      "averageNight": 0.18439988791942596,
+      "averageAO": 0.2982828617095947
+    },
+    {
+      "id": "static_0235",
+      "vertices": 1525,
+      "averageDay": 0.11613278836011887,
+      "averageNight": 0.2103482037782669,
+      "averageAO": 0.2436932921409607
+    },
+    {
+      "id": "static_0236",
+      "vertices": 1517,
+      "averageDay": 0.08529356867074966,
+      "averageNight": 0.1452021449804306,
+      "averageAO": 0.23261508345603943
+    },
+    {
+      "id": "static_0237",
+      "vertices": 1525,
+      "averageDay": 0.0980280190706253,
+      "averageNight": 0.19461685419082642,
+      "averageAO": 0.24825157225131989
+    },
+    {
+      "id": "static_0238",
+      "vertices": 1517,
+      "averageDay": 0.12368624657392502,
+      "averageNight": 0.1770031750202179,
+      "averageAO": 0.3361720144748688
+    },
+    {
+      "id": "static_0239",
+      "vertices": 1517,
+      "averageDay": 0.08987177163362503,
+      "averageNight": 0.17128810286521912,
+      "averageAO": 0.38223883509635925
+    },
+    {
+      "id": "static_0240",
+      "vertices": 772,
+      "averageDay": 0.14701205492019653,
+      "averageNight": 0.23798076808452606,
+      "averageAO": 0.42243462800979614
+    },
+    {
+      "id": "static_0241",
+      "vertices": 2386,
+      "averageDay": 0.11321818828582764,
+      "averageNight": 0.1878991723060608,
+      "averageAO": 0.18111978471279144
+    },
+    {
+      "id": "static_0242",
+      "vertices": 7346,
+      "averageDay": 0.06722451001405716,
+      "averageNight": 0.1166449785232544,
+      "averageAO": 0.22139957547187805
+    },
+    {
+      "id": "static_0243",
+      "vertices": 7346,
+      "averageDay": 0.04791662469506264,
+      "averageNight": 0.06516522914171219,
+      "averageAO": 0.08377343416213989
+    },
+    {
+      "id": "static_0244",
+      "vertices": 7342,
+      "averageDay": 0.00017564558947924525,
+      "averageNight": 0.00017769057012628764,
+      "averageAO": 0.00010971882147714496
+    },
+    {
+      "id": "static_0245",
+      "vertices": 7342,
+      "averageDay": 0.08186901360750198,
+      "averageNight": 0.13089676201343536,
+      "averageAO": 0.23366358876228333
+    },
+    {
+      "id": "static_0246",
+      "vertices": 2046,
+      "averageDay": 0.03715752437710762,
+      "averageNight": 0.059704896062612534,
+      "averageAO": 0.4704362154006958
+    },
+    {
+      "id": "static_0247",
+      "vertices": 1116,
+      "averageDay": 0.057624973356723785,
+      "averageNight": 0.0650741308927536,
+      "averageAO": 0.029632432386279106
+    },
+    {
+      "id": "static_0248",
+      "vertices": 404,
+      "averageDay": 0.0009544480708427727,
+      "averageNight": 0.0017243842594325542,
+      "averageAO": 0.0038417901378124952
+    },
+    {
+      "id": "static_0249",
+      "vertices": 404,
+      "averageDay": 0.0003148278046865016,
+      "averageNight": 0.0013877798337489367,
+      "averageAO": 0.0002578382845968008
+    },
+    {
+      "id": "static_0250",
+      "vertices": 404,
+      "averageDay": 0.016599232330918312,
+      "averageNight": 0.035418398678302765,
+      "averageAO": 0.022058680653572083
+    },
+    {
+      "id": "static_0251",
+      "vertices": 404,
+      "averageDay": 0.11680210381746292,
+      "averageNight": 0.22222450375556946,
+      "averageAO": 0.33555957674980164
+    },
+    {
+      "id": "static_0252",
+      "vertices": 404,
+      "averageDay": 0.13865527510643005,
+      "averageNight": 0.23762613534927368,
+      "averageAO": 0.3701806366443634
+    },
+    {
+      "id": "static_0253",
+      "vertices": 404,
+      "averageDay": 0.12206900119781494,
+      "averageNight": 0.23073063790798187,
+      "averageAO": 0.37179505825042725
+    },
+    {
+      "id": "static_0254",
+      "vertices": 404,
+      "averageDay": 0.12099812179803848,
+      "averageNight": 0.25106313824653625,
+      "averageAO": 0.3713774085044861
+    },
+    {
+      "id": "static_0255",
+      "vertices": 404,
+      "averageDay": 0.12386327981948853,
+      "averageNight": 0.25374874472618103,
+      "averageAO": 0.3722345232963562
+    },
+    {
+      "id": "static_0256",
+      "vertices": 404,
+      "averageDay": 0.12907081842422485,
+      "averageNight": 0.2687351107597351,
+      "averageAO": 0.37248101830482483
+    },
+    {
+      "id": "static_0257",
+      "vertices": 404,
+      "averageDay": 0.1507609635591507,
+      "averageNight": 0.2526906728744507,
+      "averageAO": 0.3809818625450134
+    },
+    {
+      "id": "static_0258",
+      "vertices": 2046,
+      "averageDay": 0.2301376610994339,
+      "averageNight": 0.4201177656650543,
+      "averageAO": 0.42818889021873474
+    },
+    {
+      "id": "static_0259",
+      "vertices": 2958,
+      "averageDay": 0.3277234137058258,
+      "averageNight": 0.7654007077217102,
+      "averageAO": 0.6008164882659912
+    },
+    {
+      "id": "static_0264",
+      "vertices": 7570,
+      "averageDay": 0.08281636238098145,
+      "averageNight": 0.13075441122055054,
+      "averageAO": 0.1383168250322342
+    },
+    {
+      "id": "static_0265",
+      "vertices": 1210,
+      "averageDay": 0.013093056157231331,
+      "averageNight": 0.02629273198544979,
+      "averageAO": 0.02726719155907631
+    },
+    {
+      "id": "static_0266",
+      "vertices": 1308,
+      "averageDay": 0.19401772320270538,
+      "averageNight": 0.34161391854286194,
+      "averageAO": 0.36308345198631287
+    },
+    {
+      "id": "static_0267",
+      "vertices": 1210,
+      "averageDay": 0.2355118989944458,
+      "averageNight": 0.42462286353111267,
+      "averageAO": 0.268841952085495
+    },
+    {
+      "id": "static_0268",
+      "vertices": 1210,
+      "averageDay": 0.3723263442516327,
+      "averageNight": 0.7162043452262878,
+      "averageAO": 0.346064031124115
+    },
+    {
+      "id": "static_0269",
+      "vertices": 1116,
+      "averageDay": 0.3548851013183594,
+      "averageNight": 0.6553928256034851,
+      "averageAO": 0.5230576395988464
+    },
+    {
+      "id": "static_0270",
+      "vertices": 2958,
+      "averageDay": 0.3038536012172699,
+      "averageNight": 0.5323216319084167,
+      "averageAO": 0.44616636633872986
+    },
+    {
+      "id": "static_0275",
+      "vertices": 5750,
+      "averageDay": 0.0655975341796875,
+      "averageNight": 0.11023122072219849,
+      "averageAO": 0.20262223482131958
+    },
+    {
+      "id": "static_0276",
+      "vertices": 404,
+      "averageDay": 0.15868674218654633,
+      "averageNight": 0.25997617840766907,
+      "averageAO": 0.4019956588745117
+    },
+    {
+      "id": "static_0277",
+      "vertices": 404,
+      "averageDay": 0.13950222730636597,
+      "averageNight": 0.2571106255054474,
+      "averageAO": 0.442460834980011
+    },
+    {
+      "id": "static_0278",
+      "vertices": 404,
+      "averageDay": 0.1256980299949646,
+      "averageNight": 0.21061937510967255,
+      "averageAO": 0.4535427391529083
+    },
+    {
+      "id": "static_0279",
+      "vertices": 404,
+      "averageDay": 0.09914252907037735,
+      "averageNight": 0.16351796686649323,
+      "averageAO": 0.4437655210494995
+    },
+    {
+      "id": "static_0280",
+      "vertices": 404,
+      "averageDay": 0.09484411031007767,
+      "averageNight": 0.1531478613615036,
+      "averageAO": 0.31975042819976807
+    },
+    {
+      "id": "static_0281",
+      "vertices": 5750,
+      "averageDay": 0.14992667734622955,
+      "averageNight": 0.16438959538936615,
+      "averageAO": 0.37488600611686707
+    },
+    {
+      "id": "static_0282",
+      "vertices": 404,
+      "averageDay": 0.010432133451104164,
+      "averageNight": 0.014493841677904129,
+      "averageAO": 0.014748349785804749
+    },
+    {
+      "id": "static_0283",
+      "vertices": 404,
+      "averageDay": 0.004378974437713623,
+      "averageNight": 0.006998373661190271,
+      "averageAO": 0.008405528031289577
+    },
+    {
+      "id": "static_0284",
+      "vertices": 404,
+      "averageDay": 0.004785387311130762,
+      "averageNight": 0.00649326341226697,
+      "averageAO": 0.009797854349017143
+    },
+    {
+      "id": "static_0285",
+      "vertices": 404,
+      "averageDay": 0.008380335755646229,
+      "averageNight": 0.00443580187857151,
+      "averageAO": 0.00969471875578165
+    },
+    {
+      "id": "static_0286",
+      "vertices": 404,
+      "averageDay": 0.037244077771902084,
+      "averageNight": 0.004349964205175638,
+      "averageAO": 0.0251650158315897
+    },
+    {
+      "id": "static_0287",
+      "vertices": 3694,
+      "averageDay": 0.049201738089323044,
+      "averageNight": 0.09106845408678055,
+      "averageAO": 0.2997356355190277
+    },
+    {
+      "id": "static_0288",
+      "vertices": 1402,
+      "averageDay": 0.04716426506638527,
+      "averageNight": 0.0774630755186081,
+      "averageAO": 0.2538211941719055
+    },
+    {
+      "id": "static_0289",
+      "vertices": 1807,
+      "averageDay": 0.17609257996082306,
+      "averageNight": 0.37110066413879395,
+      "averageAO": 0.2565509080886841
+    },
+    {
+      "id": "static_0290",
+      "vertices": 1683,
+      "averageDay": 0.1347881257534027,
+      "averageNight": 0.28237003087997437,
+      "averageAO": 0.2395719438791275
+    },
+    {
+      "id": "static_0291",
+      "vertices": 1202,
+      "averageDay": 0.1983150690793991,
+      "averageNight": 0.08376740664243698,
+      "averageAO": 0.49442258477211
+    },
+    {
+      "id": "static_0292",
+      "vertices": 156,
+      "averageDay": 0.16775943338871002,
+      "averageNight": 0.07259294390678406,
+      "averageAO": 0.5490785241127014
+    },
+    {
+      "id": "static_0293",
+      "vertices": 1202,
+      "averageDay": 0.12689515948295593,
+      "averageNight": 0.038723234087228775,
+      "averageAO": 0.5232941508293152
+    },
+    {
+      "id": "static_0294",
+      "vertices": 156,
+      "averageDay": 0.08420164883136749,
+      "averageNight": 0.03681362420320511,
+      "averageAO": 0.567301332950592
+    },
+    {
+      "id": "static_0295",
+      "vertices": 1202,
+      "averageDay": 0.09175287932157516,
+      "averageNight": 0.007728877477347851,
+      "averageAO": 0.30778321623802185
+    },
+    {
+      "id": "static_0296",
+      "vertices": 156,
+      "averageDay": 0.06901579350233078,
+      "averageNight": 0.004337714985013008,
+      "averageAO": 0.32439523935317993
+    },
+    {
+      "id": "static_0297",
+      "vertices": 1202,
+      "averageDay": 0.06915950030088425,
+      "averageNight": 0.007875771261751652,
+      "averageAO": 0.44835978746414185
+    },
+    {
+      "id": "static_0298",
+      "vertices": 156,
+      "averageDay": 0.053159210830926895,
+      "averageNight": 0.00409332662820816,
+      "averageAO": 0.5140202641487122
+    },
+    {
+      "id": "static_0299",
+      "vertices": 1246,
+      "averageDay": 0.12051961570978165,
+      "averageNight": 0.025868207216262817,
+      "averageAO": 0.5057580471038818
+    },
+    {
+      "id": "static_0300",
+      "vertices": 160,
+      "averageDay": 0.08798794448375702,
+      "averageNight": 0.022056756541132927,
+      "averageAO": 0.5646050572395325
+    },
+    {
+      "id": "static_0301",
+      "vertices": 1202,
+      "averageDay": 0.10741858929395676,
+      "averageNight": 0.01620587892830372,
+      "averageAO": 0.5149338841438293
+    },
+    {
+      "id": "static_0302",
+      "vertices": 156,
+      "averageDay": 0.06350208073854446,
+      "averageNight": 0.013157491572201252,
+      "averageAO": 0.5616430640220642
+    },
+    {
+      "id": "static_0303",
+      "vertices": 594,
+      "averageDay": 0.07275406271219254,
+      "averageNight": 0.014285854063928127,
+      "averageAO": 0.3415766656398773
+    },
+    {
+      "id": "static_0304",
+      "vertices": 330,
+      "averageDay": 0.02210453525185585,
+      "averageNight": 0.006250623147934675,
+      "averageAO": 0.5030555725097656
+    },
+    {
+      "id": "static_0305",
+      "vertices": 2958,
+      "averageDay": 0.12562377750873566,
+      "averageNight": 0.02170157991349697,
+      "averageAO": 0.3921283185482025
+    },
+    {
+      "id": "static_0306",
+      "vertices": 2958,
+      "averageDay": 0.09842005372047424,
+      "averageNight": 0.018479635939002037,
+      "averageAO": 0.38463711738586426
+    },
+    {
+      "id": "static_0307",
+      "vertices": 2746,
+      "averageDay": 0.08182007819414139,
+      "averageNight": 0.01000700332224369,
+      "averageAO": 0.5901061296463013
+    },
+    {
+      "id": "static_0311",
+      "vertices": 3038,
+      "averageDay": 0.11888279765844345,
+      "averageNight": 0.22018951177597046,
+      "averageAO": 0.4900769889354706
+    },
+    {
+      "id": "static_0313",
+      "vertices": 5686,
+      "averageDay": 0.3633093535900116,
+      "averageNight": 0.6277117729187012,
+      "averageAO": 0.21063822507858276
+    },
+    {
+      "id": "static_0314",
+      "vertices": 1402,
+      "averageDay": 0.3679640591144562,
+      "averageNight": 0.7024154663085938,
+      "averageAO": 0.20899121463298798
+    },
+    {
+      "id": "static_0315",
+      "vertices": 1402,
+      "averageDay": 0.20289155840873718,
+      "averageNight": 0.3680559992790222,
+      "averageAO": 0.2135714590549469
+    },
+    {
+      "id": "static_0316",
+      "vertices": 1402,
+      "averageDay": 0.19948862493038177,
+      "averageNight": 0.3354492485523224,
+      "averageAO": 0.21840012073516846
+    },
+    {
+      "id": "static_0317",
+      "vertices": 1402,
+      "averageDay": 0.21814419329166412,
+      "averageNight": 0.3668323755264282,
+      "averageAO": 0.22696462273597717
+    },
+    {
+      "id": "static_0318",
+      "vertices": 1402,
+      "averageDay": 0.34767207503318787,
+      "averageNight": 0.5561969876289368,
+      "averageAO": 0.3066100776195526
+    },
+    {
+      "id": "static_0319",
+      "vertices": 1402,
+      "averageDay": 0.1879315823316574,
+      "averageNight": 0.16605474054813385,
+      "averageAO": 0.5066280364990234
+    },
+    {
+      "id": "static_0320",
+      "vertices": 226,
+      "averageDay": 0.23447555303573608,
+      "averageNight": 0.2276449054479599,
+      "averageAO": 0.35361313819885254
+    },
+    {
+      "id": "static_0321",
+      "vertices": 5686,
+      "averageDay": 0.33328479528427124,
+      "averageNight": 0.3841320872306824,
+      "averageAO": 0.29551488161087036
+    },
+    {
+      "id": "static_0322",
+      "vertices": 1402,
+      "averageDay": 0.2540260851383209,
+      "averageNight": 0.3477904200553894,
+      "averageAO": 0.34946635365486145
+    },
+    {
+      "id": "static_0323",
+      "vertices": 1402,
+      "averageDay": 0.1924872249364853,
+      "averageNight": 0.2352905124425888,
+      "averageAO": 0.22849006950855255
+    },
+    {
+      "id": "static_0324",
+      "vertices": 1402,
+      "averageDay": 0.20487500727176666,
+      "averageNight": 0.22554785013198853,
+      "averageAO": 0.21844930946826935
+    },
+    {
+      "id": "static_0325",
+      "vertices": 1402,
+      "averageDay": 0.21128182113170624,
+      "averageNight": 0.24668392539024353,
+      "averageAO": 0.22882023453712463
+    },
+    {
+      "id": "static_0326",
+      "vertices": 1402,
+      "averageDay": 0.35900843143463135,
+      "averageNight": 0.3694348633289337,
+      "averageAO": 0.32085415720939636
+    },
+    {
+      "id": "static_0327",
+      "vertices": 1402,
+      "averageDay": 0.17985479533672333,
+      "averageNight": 0.16685529053211212,
+      "averageAO": 0.5071407556533813
+    },
+    {
+      "id": "static_0328",
+      "vertices": 226,
+      "averageDay": 0.24567581713199615,
+      "averageNight": 0.2177731841802597,
+      "averageAO": 0.35438692569732666
+    },
+    {
+      "id": "static_0329",
+      "vertices": 5686,
+      "averageDay": 0.3847348392009735,
+      "averageNight": 0.5037335753440857,
+      "averageAO": 0.27801060676574707
+    },
+    {
+      "id": "static_0330",
+      "vertices": 1402,
+      "averageDay": 0.36593562364578247,
+      "averageNight": 0.4941980838775635,
+      "averageAO": 0.32658571004867554
+    },
+    {
+      "id": "static_0331",
+      "vertices": 1402,
+      "averageDay": 0.2549438178539276,
+      "averageNight": 0.33775269985198975,
+      "averageAO": 0.2284991443157196
+    },
+    {
+      "id": "static_0332",
+      "vertices": 1402,
+      "averageDay": 0.23871265351772308,
+      "averageNight": 0.298721045255661,
+      "averageAO": 0.21838578581809998
+    },
+    {
+      "id": "static_0333",
+      "vertices": 1402,
+      "averageDay": 0.23319603502750397,
+      "averageNight": 0.32443761825561523,
+      "averageAO": 0.2288331836462021
+    },
+    {
+      "id": "static_0334",
+      "vertices": 1402,
+      "averageDay": 0.3589278757572174,
+      "averageNight": 0.4544759690761566,
+      "averageAO": 0.3191016912460327
+    },
+    {
+      "id": "static_0335",
+      "vertices": 1402,
+      "averageDay": 0.3510850965976715,
+      "averageNight": 0.4139765501022339,
+      "averageAO": 0.8122681379318237
+    },
+    {
+      "id": "static_0336",
+      "vertices": 226,
+      "averageDay": 0.4505355954170227,
+      "averageNight": 0.3810332119464874,
+      "averageAO": 0.43660449981689453
+    },
+    {
+      "id": "static_0337",
+      "vertices": 1402,
+      "averageDay": 0.5148435831069946,
+      "averageNight": 1.0303621292114258,
+      "averageAO": 0.561722993850708
+    },
+    {
+      "id": "static_0338",
+      "vertices": 226,
+      "averageDay": 0.25129884481430054,
+      "averageNight": 0.47847476601600647,
+      "averageAO": 0.42256638407707214
+    },
+    {
+      "id": "static_0339",
+      "vertices": 1918,
+      "averageDay": 0.022537369281053543,
+      "averageNight": 0.03188421204686165,
+      "averageAO": 0.11862398684024811
+    },
+    {
+      "id": "static_0340",
+      "vertices": 310,
+      "averageDay": 0.013846266083419323,
+      "averageNight": 0.021038338541984558,
+      "averageAO": 0.11075269430875778
+    },
+    {
+      "id": "static_0341",
+      "vertices": 1402,
+      "averageDay": 0.5735625624656677,
+      "averageNight": 0.9862114787101746,
+      "averageAO": 0.30990517139434814
+    },
+    {
+      "id": "static_0342",
+      "vertices": 1402,
+      "averageDay": 0.0,
+      "averageNight": 0.0,
+      "averageAO": 0.3478585183620453
+    },
+    {
+      "id": "static_0343",
+      "vertices": 1402,
+      "averageDay": 0.6078310012817383,
+      "averageNight": 1.016720175743103,
+      "averageAO": 0.27524060010910034
+    },
+    {
+      "id": "static_0344",
+      "vertices": 1402,
+      "averageDay": 0.0,
+      "averageNight": 0.0,
+      "averageAO": 0.31494227051734924
+    },
+    {
+      "id": "static_0345",
+      "vertices": 1402,
+      "averageDay": 0.6059721112251282,
+      "averageNight": 0.9634882211685181,
+      "averageAO": 0.3038899600505829
+    },
+    {
+      "id": "static_0346",
+      "vertices": 1378,
+      "averageDay": 0.0,
+      "averageNight": 0.0,
+      "averageAO": 0.33698785305023193
+    }
+  ],
+  "statisticsStage": "Raw Cycles bake, before spatial denoising; use denoise-report for field smoothing metrics."
+}

@@ -1,0 +1,7 @@
+{
+  "name": "vision-apartments-interactive",
+  "private": true,
+  "type": "module",
+  "version": "0.2.0",
+  "description": "Two local apartment experiences, Residence and Atelier. No deployment."
+}

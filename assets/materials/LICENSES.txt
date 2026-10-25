@@ -1,0 +1,14 @@
+Official CC0 texture sources used in this local asset bundle
+
+Wood049: https://ambientcg.com/a/Wood049
+Fabric061: https://ambientcg.com/a/Fabric061
+hessian_380: https://polyhaven.com/a/hessian_380
+Travertine001: https://ambientcg.com/a/Travertine001
+Plaster001: https://ambientcg.com/a/Plaster001
+
+ambientCG license: https://docs.ambientcg.com/license/
+Poly Haven asset license: https://polyhaven.com/license
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Assets may be used and redistributed commercially under CC0. Source websites, logos and API services have their own terms. These are local downloaded maps; the website need not call either API at runtime.
+Only resolution/encoding were changed. Albedos were not painted, relit, or AI-generated. Source normals remain OpenGL +Y. For absent AO, manifest ambientOcclusion is null; ORM R is a neutral identity, not a fabricated AO measurement.

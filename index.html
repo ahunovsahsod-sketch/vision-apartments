@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#26372e">
+ <title>Vision Apartments</title><meta name="description" content="Интерактивный интерьер квартиры Vision Apartments.">
+ <link rel="stylesheet" href="styles.css?v=20261025-gesture12"><link rel="stylesheet" href="quality.css?v=20261025-gesture12"><link rel="stylesheet" href="controls.css?v=20261025-gesture12">
+ <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/","three/examples/jsm/":"./vendor/three/addons/","three-mesh-bvh":"./vendor/bvh/index.js"}}</script>
+ <script type="module" src="app.js?v=20261025-gesture13"></script>
+</head>
+<body data-experience="residence">
+ <header class="hero" id="home">
+  <img class="hero-photo" src="assets/complex.jpg" alt="Общий вид комплекса Vision Apartments" fetchpriority="high"><div class="hero-shade"></div>
+  <h1>VISION<br>APARTMENTS</h1><a class="enter-tour" href="#apartment-tour" aria-label="Войти в квартиру"><span aria-hidden="true">↓</span></a>
+ </header>
+ <main>
+  <section id="apartment-tour" aria-label="Интерактивная квартира">
+   <div class="tour" id="vision-apartment" data-room="living">
+    <div class="scene-stage"><canvas id="apartment-canvas" tabindex="0" aria-label="Квартира. WASD — движение, мышь или касание — осмотр. На телефоне: один палец — прокрутка, джойстик и второй палец — прогулка и осмотр. Escape — остановка."></canvas><div class="scene-loader" role="status"><span></span></div><div class="scene-error" hidden>Не удалось открыть интерьер.<button class="retry-tour" type="button">Повторить загрузку</button></div></div>
+    <button class="full-button" type="button" aria-label="Открыть на весь экран">⤢</button>
+    <aside class="tour-navigation" aria-label="Карта и текущее положение">
+     <div class="map-header"><span>План квартиры · м²</span><button class="map-size" type="button" aria-label="Развернуть карту" aria-expanded="false">⤢</button></div>
+     <div class="map-body"><div class="floor-plan" id="floor-plan"></div><div id="room-legend" class="room-legend" aria-label="Комнаты и площади в квадратных метрах"></div></div><div class="current-location"><span id="current-room">Гостиная</span><span id="current-area">21,0 м²</span></div>
+     <label class="sr-only" for="room-picker">Выбрать комнату</label><select id="room-picker"></select>
+    </aside>
+    <a class="leave-tour" href="#contacts" aria-label="Перейти к контактам">↓</a>
+    <div class="gesture-hint">WASD — движение<span>Потяните мышью — осмотритесь</span></div>
+    <div class="interaction-feedback" role="status" hidden></div>
+    <div class="atmosphere-bar" aria-label="Управление интерьером">
+      <div class="daylight-control"><label for="daylight" id="daylight-value">День</label><input id="daylight" type="range" min="0" max="100" value="27" aria-label="Свет: день, закат, вечер"><span aria-hidden="true">◐</span></div>
+      <button id="curtains-button" type="button" aria-pressed="false" title="Раздвинуть шторы">Шторы</button>
+      
+     </div>
+   </div>
+  </section>
+ </main>
+ <footer class="contacts" id="contacts">
+  <div><h2>Контакты</h2><a class="phone" href="tel:+998954542222">+998 95 454 22 22</a><p>Улица Арнасай, 5А<br>Ташкент, Узбекистан</p><div class="contact-links"><a href="https://www.instagram.com/visionapartments.uz/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://yandex.uz/maps/?pt=69.2331854,41.2841240&z=16&l=map" target="_blank" rel="noopener">Локация ↗</a></div></div>
+  <form id="preview-form"><label>Ваше имя<input type="text" name="name" autocomplete="name" required></label><label>Номер телефона<input type="tel" name="phone" autocomplete="tel" placeholder="+998" required></label><button type="submit">Оставить заявку <span aria-hidden="true">↗</span></button><p class="form-note">Заявки в предпросмотре не отправляются.</p><p class="form-result" role="status" hidden></p></form>
+ </footer>
+</body>
+</html>

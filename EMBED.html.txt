@@ -1,0 +1,124 @@
+VISION APARTMENTS — ЗАГОТОВКА БУДУЩЕГО IFRAME
+
+Этот файл — текстовая инструкция и готовый фрагмент HTML. Он не выполняет
+загрузку, вход в аккаунт или публикацию. Tilda для его подготовки не нужна.
+Домен YOUR-VIEWER-DOMAIN.example является заглушкой; адрес ещё не размещён.
+
+Перед будущим подключением разместите папку viewer на разрешённом HTTPS-хостинге,
+сохранив index.html, atelier.html, все модули, assets/ и vendor/ по тем же путям.
+Замените домен-заглушку ниже на точный HTTPS-домен viewer. Для второго варианта
+замените index.html на atelier.html. Параметр ?embed=1 скрывает собственную
+шапку и контакты viewer: фото комплекса и готовая форма могут оставаться
+отдельными обычными блоками основной страницы.
+
+ОСНОВНОЙ HTML-ФРАГМЕН
+
+<style>
+  .vision-apartment-embed {
+    width: 100%;
+    height: 100svh;
+    min-height: 520px;
+    margin: 0;
+    position: relative;
+  }
+  .vision-apartment-embed iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #e7dfd0;
+  }
+</style>
+
+<div class="vision-apartment-embed">
+  <iframe
+    id="vision-apartment-frame"
+    src="https://YOUR-VIEWER-DOMAIN.example/index.html?embed=1"
+    title="Интерактивная квартира Vision Apartments"
+    loading="lazy"
+    allow="fullscreen"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
+</div>
+
+<!-- Укажите этот id на существующем следующем блоке с локацией/заявкой.
+     Если у блока уже есть свой id, используйте его в обработчике ниже. -->
+<div id="vision-after-tour"></div>
+
+НЕОБЯЗАТЕЛЬНЫЙ ПЕРЕХОД К СЛЕДУЮЩЕМУ БЛОКУ
+
+В режиме embed нижняя стрелка viewer отправляет родительскому окну сообщение
+{ type: 'vision:continue' }. Чтобы оно прокручивало основную страницу,
+добавьте обработчик ниже. Он проверяет одновременно точный origin viewer,
+конкретное окно iframe и допустимый тип сообщения. Данные из сообщения
+не используются как URL или HTML.
+
+<script>
+(() => {
+  const frame = document.getElementById('vision-apartment-frame');
+  if (!frame) return;
+
+  const expectedViewerOrigin = new URL(frame.getAttribute('src'), location.href).origin;
+
+  window.addEventListener('message', (event) => {
+    if (event.source !== frame.contentWindow) return;
+    if (event.origin !== expectedViewerOrigin) return;
+    if (!event.data || typeof event.data !== 'object' || Array.isArray(event.data)) return;
+    if (event.data.type === 'vision:scroll') {
+      const delta = event.data.deltaY;
+      if (typeof delta !== 'number' || !Number.isFinite(delta)) return;
+      const scrollPage = () => window.scrollBy({ top: Math.max(-200, Math.min(200, delta)), left: 0, behavior: 'auto' });
+      if (document.fullscreenElement) document.exitFullscreen().then(scrollPage).catch(() => {});
+      else scrollPage();
+      return;
+    }
+    if (event.data.type !== 'vision:continue') return;
+
+    const nextBlock = document.getElementById('vision-after-tour');
+    if (!nextBlock) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    nextBlock.scrollIntoView({
+      behavior: reducedMotion ? 'auto' : 'smooth',
+      block: 'start'
+    });
+  });
+})();
+</script>
+
+ПОЯСНЕНИЯ ДЛЯ ИНТЕГРАЦИИ
+
+1. Обработчик необязателен для самой 3D-сцены; он нужен для нижней стрелки,
+   которая продолжает основную страницу за пределами iframe.
+2. Замените vision-after-tour в обработчике на id настоящего следующего блока.
+   Пустой div в примере — место привязки, не новая форма и не отправка заявки.
+3. Не заменяйте проверку event.origin на приём от любого домена. Если viewer
+   действительно переедет на другой домен, обновите src на его точный адрес.
+4. Для просмотра нужен современный браузер с JavaScript, модулями, WebGL2
+   и WebAssembly. Режимы качества меняются внутри iframe. Мобильное касание
+   одним пальцем прокручивает основную страницу через vision:scroll.
+   Два касания (джойстик + интерьер) управляют ходьбой и взглядом.
+   При отпускании второго пальца снова доступна прокрутка. Нижняя стрелка
+   продолжает основную страницу через vision:continue.
+5. Хостинг должен отдавать .js/.mjs как JavaScript и разрешать чтение локальных
+   JSON, WebP, glTF/bin и .bin.gz. Загрузчик проверяет gzip-заголовок фактических
+   данных и не распаковывает второй раз уже распакованный HTTP-ответ.
+6. Если политика хостинга блокирует iframe, разрешите в frame-ancestors только
+   точный домен основной страницы. Эти настройки в текущей работе не менялись.
+7. Приёмка на будущем хостинге: проверить загрузку на узком и широком экране,
+   fullscreen, все профили качества, шаги/джойстик, выход к следующему блоку,
+   обычную прокрутку вне viewer и отдельную реальную форму основной страницы.
+8. Не вставляйте содержимое .mjs, .bin.gz или Rapier целиком в HTML-поле.
+   iframe должен получать готовый viewer с сохранённой структурой файлов.
+
+ПАРАМЕТРЫ ДЛЯ РУЧНОЙ ПРОВЕРКИ
+
+index.html?embed=1                 — Residence без собственной шапки/контактов.
+atelier.html?embed=1               — Atelier, включая опциональное «Фото».
+index.html?embed=1&quality=medium  — принудительный средний профиль.
+atelier.html?embed=1&quality=low   — принудительный лёгкий профиль.
+index.html?embed=1&room=kitchen    — начать с кухни.
+
+Заготовка подготовлена локально. Подключение на реальном сайте, проверка
+реальной отправки заявок и публикация требуют отдельной разрешённой задачи.
