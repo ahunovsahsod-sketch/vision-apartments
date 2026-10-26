@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#26372e">
+ <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
  <title>Vision Apartments · Atelier</title><meta name="description" content="Интерактивный интерьер квартиры Vision Apartments.">
- <link rel="stylesheet" href="styles.css?v=20261025-gesture12"><link rel="stylesheet" href="quality.css?v=20261025-gesture12"><link rel="stylesheet" href="controls.css?v=20261025-gesture12">
- <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/","three/examples/jsm/":"./vendor/three/addons/","three-mesh-bvh":"./vendor/bvh/index.js"}}</script>
- <script type="module" src="app.js?v=20261025-gesture13"></script>
+ <link rel="stylesheet" href="styles.css">
+ <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/","three/examples/jsm/":"./vendor/three/addons/","three-mesh-bvh":"./vendor/bvh/index.js","cannon-es":"./vendor/cannon-es/cannon-es.js"}}</script>
+ <script type="module" src="app.js"></script>
 </head>
 <body data-experience="atelier">
  <header class="hero" id="home">
@@ -15,20 +16,19 @@
  <main>
   <section id="apartment-tour" aria-label="Интерактивная квартира">
    <div class="tour" id="vision-apartment" data-room="living">
-    <div class="scene-stage"><canvas id="apartment-canvas" tabindex="0" aria-label="Квартира. WASD — движение, мышь или касание — осмотр. На телефоне: один палец — прокрутка, джойстик и второй палец — прогулка и осмотр. Escape — остановка."></canvas><div class="scene-loader" role="status"><span></span></div><div class="scene-error" hidden>Не удалось открыть интерьер.<button class="retry-tour" type="button">Повторить загрузку</button></div></div>
+    <div class="scene-stage"><canvas id="apartment-canvas" tabindex="0" aria-label="Квартира. Клавиши W A S D — ходьба, мышь — осмотр, стрелки влево и вправо — поворот. Escape — остановка. Карта справа для ориентации."></canvas><div class="scene-loader" role="status"><span></span></div><div class="scene-error" hidden>Не удалось открыть интерьер в этом браузере.</div></div>
     <button class="full-button" type="button" aria-label="Открыть на весь экран">⤢</button>
     <aside class="tour-navigation" aria-label="Карта и текущее положение">
      <div class="map-header"><span>План квартиры · м²</span><button class="map-size" type="button" aria-label="Развернуть карту" aria-expanded="false">⤢</button></div>
      <div class="map-body"><div class="floor-plan" id="floor-plan"></div><div id="room-legend" class="room-legend" aria-label="Комнаты и площади в квадратных метрах"></div></div><div class="current-location"><span id="current-room">Гостиная</span><span id="current-area">21,0 м²</span></div>
-     <label class="sr-only" for="room-picker">Выбрать комнату</label><select id="room-picker"></select>
+     <label class="sr-only" for="room-picker">Текущая комната на карте (ориентация)</label><select id="room-picker"></select>
     </aside>
-    <a class="leave-tour" href="#contacts" aria-label="Перейти к контактам">↓</a>
-    <div class="gesture-hint">WASD — движение<span>Потяните мышью — осмотритесь</span></div>
+    <div class="gesture-hint">WASD — ходьба · мышь — осмотр<span>Карта справа — ориентация</span></div>
     <div class="interaction-feedback" role="status" hidden></div>
     <div class="atmosphere-bar" aria-label="Управление интерьером">
       <div class="daylight-control"><label for="daylight" id="daylight-value">День</label><input id="daylight" type="range" min="0" max="100" value="27" aria-label="Свет: день, закат, вечер"><span aria-hidden="true">◐</span></div>
       <button id="curtains-button" type="button" aria-pressed="false" title="Раздвинуть шторы">Шторы</button>
-      <button id="photo-button" type="button" aria-pressed="false" title="Снимок повышенной чёткости">Фото</button>
+      <button id="photo-button" type="button" aria-pressed="false" title="Точный расчёт света в неподвижном кадре">Фото</button>
      </div><div id="photo-status" role="status" hidden></div>
    </div>
   </section>

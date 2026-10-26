@@ -1,0 +1,726 @@
+{
+ "delivery": "delivery-v16",
+ "when": "2026-10-26 Asia/Tashkent",
+ "base": "delivery-v15",
+ "task": "Visual Round7 residual vs TARGET",
+ "selfAccept": false,
+ "fileCount": 143,
+ "sceneJsMd5": "de04544c54d8c9cb294fe77bb7dcb954",
+ "files": [
+  {
+   "path": "ASSET-LICENSES.txt",
+   "bytes": 1574,
+   "md5": "18d3555982a225872917e2c02abf0806"
+  },
+  {
+   "path": "ASSET-NEEDS.md",
+   "bytes": 1959,
+   "md5": "2a7ad9ef2bcbae1513cf6459722e70a0"
+  },
+  {
+   "path": "CHANGELOG.md",
+   "bytes": 3528,
+   "md5": "a2f3ecf427874313987326460dc9e5ae"
+  },
+  {
+   "path": "DESIGN_REFERENCE_PROMPT.txt",
+   "bytes": 1475,
+   "md5": "d1a1773bf991e1d6b2c089643c59cb01"
+  },
+  {
+   "path": "README_RU.txt",
+   "bytes": 7786,
+   "md5": "0a426c49956cfeabc13a168a611e9a57"
+  },
+  {
+   "path": "START.command",
+   "bytes": 110,
+   "md5": "88c81fce5dca9cc382c53b3d617269e8"
+  },
+  {
+   "path": "TEST-CHECKLIST.md",
+   "bytes": 841,
+   "md5": "d4da616aef59ae97c15b1986b1e73e1c"
+  },
+  {
+   "path": "app.js",
+   "bytes": 7188,
+   "md5": "af0ade1a45bcbf54103e247a05141394"
+  },
+  {
+   "path": "assets/apartment-296-plan.webp",
+   "bytes": 88590,
+   "md5": "815506293df4ffc2922fc7f0653f6421"
+  },
+  {
+   "path": "assets/complex.jpg",
+   "bytes": 253587,
+   "md5": "63765ded69a1ef81651d9e8944600220"
+  },
+  {
+   "path": "assets/daylight-sky-2k.hdr",
+   "bytes": 4434394,
+   "md5": "590a829b3cf71216451655e601d542c6"
+  },
+  {
+   "path": "assets/favicon.svg",
+   "bytes": 259,
+   "md5": "f7a9a41207716c7c3c66eae1dd9999de"
+  },
+  {
+   "path": "assets/models/dining_chair_02/dining_chair_02.bin",
+   "bytes": 544592,
+   "md5": "b7f8a91c0a5249d02de7885f3b242c4e"
+  },
+  {
+   "path": "assets/models/dining_chair_02/model.gltf",
+   "bytes": 2723,
+   "md5": "5aff75016e0943e84161de89dcc3ceb8"
+  },
+  {
+   "path": "assets/models/dining_chair_02/textures/dining_chair_02_arm_1k.jpg",
+   "bytes": 162630,
+   "md5": "2b16c9ddb3ea83d200b02de54a4fdcb8"
+  },
+  {
+   "path": "assets/models/dining_chair_02/textures/dining_chair_02_diff_1k.jpg",
+   "bytes": 91518,
+   "md5": "6b7b8e4ac0a3aad9ecdf314a97b0ef75"
+  },
+  {
+   "path": "assets/models/dining_chair_02/textures/dining_chair_02_nor_gl_1k.jpg",
+   "bytes": 119612,
+   "md5": "9c0e1003f9c8859a2e5c2c7f92a8f238"
+  },
+  {
+   "path": "assets/models/potted_plant_02/model.gltf",
+   "bytes": 6653,
+   "md5": "9999d7e6c51018a85551840e1bdae656"
+  },
+  {
+   "path": "assets/models/potted_plant_02/potted_plant_02.bin",
+   "bytes": 1852244,
+   "md5": "cdbd4619b2596c9c469ad34676085fa8"
+  },
+  {
+   "path": "assets/models/potted_plant_02/textures/potted_plant_02_leaves_diff_1k.jpg",
+   "bytes": 167700,
+   "md5": "e8a026bd7bfa6497729d855c59da03ce"
+  },
+  {
+   "path": "assets/models/potted_plant_02/textures/potted_plant_02_leaves_nor_gl_1k.jpg",
+   "bytes": 127232,
+   "md5": "2420d5c0ab87426f5318a5e91d1ea3bb"
+  },
+  {
+   "path": "assets/models/potted_plant_02/textures/potted_plant_02_leaves_rough_1k.jpg",
+   "bytes": 102396,
+   "md5": "ba934a78cc6496d934c014eb8a33af37"
+  },
+  {
+   "path": "assets/models/potted_plant_02/textures/potted_plant_02_pot_diff_1k.jpg",
+   "bytes": 155244,
+   "md5": "97e149c93eb0d962e491d4c82d3ce477"
+  },
+  {
+   "path": "assets/models/potted_plant_02/textures/potted_plant_02_pot_nor_gl_1k.jpg",
+   "bytes": 108343,
+   "md5": "fbb44ccc1c6564b2837b79a11ed45d58"
+  },
+  {
+   "path": "assets/models/potted_plant_02/textures/potted_plant_02_pot_rough_1k.jpg",
+   "bytes": 114886,
+   "md5": "68ed80fa32791fb0e81df61a75de40b4"
+  },
+  {
+   "path": "assets/models/throw_pillows_01/model.gltf",
+   "bytes": 4548,
+   "md5": "ffffc13de5ce464056e24217dc565d19"
+  },
+  {
+   "path": "assets/models/throw_pillows_01/textures/throw_pillows_01_diff_1k.jpg",
+   "bytes": 299887,
+   "md5": "8e140f48bf4a9c48ccca4ecc941bba19"
+  },
+  {
+   "path": "assets/models/throw_pillows_01/textures/throw_pillows_01_nor_gl_1k.jpg",
+   "bytes": 404720,
+   "md5": "0a57d294ef66db004709f76a961a5f7b"
+  },
+  {
+   "path": "assets/models/throw_pillows_01/textures/throw_pillows_01_rough_1k.jpg",
+   "bytes": 339241,
+   "md5": "47b3576090f2b98a9d18bd9bbd5265ab"
+  },
+  {
+   "path": "assets/models/throw_pillows_01/throw_pillows_01.bin",
+   "bytes": 146012,
+   "md5": "dd26dd164ecfa138e0bb51d94a4197ed"
+  },
+  {
+   "path": "assets/modern-interior-reference-v1.png",
+   "bytes": 2849141,
+   "md5": "375b9e11ac99246bda40835ce745c50d"
+  },
+  {
+   "path": "assets/textures/fabric-normal-1k.webp",
+   "bytes": 235378,
+   "md5": "c062d20dc2204fdf120a1dbd46e8d199"
+  },
+  {
+   "path": "assets/textures/fabric-normal-4k.webp",
+   "bytes": 2251302,
+   "md5": "a186cc26f0a919c41a8c65c76fd5f4b9"
+  },
+  {
+   "path": "assets/textures/fabric-rough-2k.webp",
+   "bytes": 961540,
+   "md5": "ac6fe1476dd60e93cbc59424c9d5f1cd"
+  },
+  {
+   "path": "assets/textures/oak-clean-color-1k.webp",
+   "bytes": 144906,
+   "md5": "97992bfc9e9e4924b2717ef1b8e9c014"
+  },
+  {
+   "path": "assets/textures/oak-clean-color-4k.webp",
+   "bytes": 5754522,
+   "md5": "bebdbd2b3b1cdaee114f2af535077627"
+  },
+  {
+   "path": "assets/textures/oak-clean-normal-1k.webp",
+   "bytes": 31724,
+   "md5": "2309755fbcb8ad67f7fdc68b87137ccc"
+  },
+  {
+   "path": "assets/textures/oak-clean-normal-4k.webp",
+   "bytes": 2307904,
+   "md5": "a644073fc248c0acf5808b7ba979b129"
+  },
+  {
+   "path": "assets/textures/oak-clean-rough-2k.webp",
+   "bytes": 954948,
+   "md5": "1f75de8d2e63ba3fa3ab5d97afe87b9d"
+  },
+  {
+   "path": "assets/textures/plaster-normal-2k.webp",
+   "bytes": 1253686,
+   "md5": "25b6494b0ec0cf76549244cee72c0842"
+  },
+  {
+   "path": "assets/textures/stone-color-1k.webp",
+   "bytes": 61944,
+   "md5": "d693f04ef353a815b9c97e6788b49105"
+  },
+  {
+   "path": "assets/textures/stone-color-4k.webp",
+   "bytes": 1875456,
+   "md5": "72ccb302e9fa61cdaeb0b6c1ca213416"
+  },
+  {
+   "path": "assets/textures/stone-normal-2k.webp",
+   "bytes": 31266,
+   "md5": "1e76a18a2cb3f8ea54abf4d184d115d7"
+  },
+  {
+   "path": "assets/textures/stone-rough-2k.webp",
+   "bytes": 64652,
+   "md5": "3c798f95616d06963b398c00c4037a42"
+  },
+  {
+   "path": "atelier.html",
+   "bytes": 4689,
+   "md5": "e10a658db847484e9cbbd3de0d435f73"
+  },
+  {
+   "path": "door-physics.js",
+   "bytes": 1948,
+   "md5": "f3633b4eb33b9f7667393e5af4d88c73"
+  },
+  {
+   "path": "index.html",
+   "bytes": 4008,
+   "md5": "77b39c330ac082fccd73e8f7d72434da"
+  },
+  {
+   "path": "interior.js",
+   "bytes": 14444,
+   "md5": "adfea2414dd7945008a0e282b83c8a3a"
+  },
+  {
+   "path": "movement.js",
+   "bytes": 14889,
+   "md5": "b8ed45d3130633e4a7dfcfc24a534b0f"
+  },
+  {
+   "path": "package.json",
+   "bytes": 190,
+   "md5": "6f810c63e9749a6daa2ca17d11bfd3cc"
+  },
+  {
+   "path": "photo-resolve.js",
+   "bytes": 4787,
+   "md5": "217708da3301ef9b325f2bdaae86d21c"
+  },
+  {
+   "path": "physics-world.js",
+   "bytes": 3698,
+   "md5": "ec436b78a94265b7b7ba7af4a8d9abd8"
+  },
+  {
+   "path": "plan.js",
+   "bytes": 13996,
+   "md5": "55974b68a5ace400800836efffd2940b"
+  },
+  {
+   "path": "preview-375.html",
+   "bytes": 2484,
+   "md5": "f1f4f14c0ea951d75422690891a22327"
+  },
+  {
+   "path": "preview-atelier-evening.png",
+   "bytes": 84574,
+   "md5": "27b47cae23e6edfa0068b7ec84b681e8"
+  },
+  {
+   "path": "preview-desktop.png",
+   "bytes": 83481,
+   "md5": "13aebba57370e4fe3d181ab4888b1b0e"
+  },
+  {
+   "path": "preview-mobile.png",
+   "bytes": 20604,
+   "md5": "b6c39e7b6ec9255cfc6148cb4af62d1d"
+  },
+  {
+   "path": "preview-narrow.png",
+   "bytes": 20163,
+   "md5": "9ea62e87b034772110ddaf42168e782b"
+  },
+  {
+   "path": "preview.py",
+   "bytes": 756,
+   "md5": "5b16e337ce5a1d8ba2b0ae733c13b35d"
+  },
+  {
+   "path": "programmer-cycle16-report.md",
+   "bytes": 1156,
+   "md5": "917b8d6ae25538859ed629d0ffe20c88"
+  },
+  {
+   "path": "scene.js",
+   "bytes": 71574,
+   "md5": "de04544c54d8c9cb294fe77bb7dcb954"
+  },
+  {
+   "path": "screens/00-door-index-before.webp",
+   "bytes": 30850,
+   "md5": "fb9513b862f61539e3528a9b88b33255"
+  },
+  {
+   "path": "screens/00b-door-index-after.webp",
+   "bytes": 16278,
+   "md5": "c0ac88082e28d9d695b01f948a73f680"
+  },
+  {
+   "path": "screens/01-door-atelier-before.jpg",
+   "bytes": 40737,
+   "md5": "a1a79e983532a7ddf6553065d4a8226a"
+  },
+  {
+   "path": "screens/01-door-atelier-before.webp",
+   "bytes": 24962,
+   "md5": "435eb37719527da0029b981798bf97aa"
+  },
+  {
+   "path": "screens/01-door-atelier-open.jpg",
+   "bytes": 30020,
+   "md5": "bb2a799185b625b7ce89a8fe3394782e"
+  },
+  {
+   "path": "screens/01b-door-atelier-open.jpg",
+   "bytes": 35468,
+   "md5": "73c6cb1c8d82c8fd2ca90330f7141e04"
+  },
+  {
+   "path": "screens/01b-door-atelier-open.webp",
+   "bytes": 18456,
+   "md5": "fa98cd7abd5a6a5926844eb41bc5726d"
+  },
+  {
+   "path": "screens/01c-door-atelier-closed.jpg",
+   "bytes": 40875,
+   "md5": "011a4e41aadf78b7613aced054335171"
+  },
+  {
+   "path": "screens/01c-door-atelier-closed.webp",
+   "bytes": 23700,
+   "md5": "36b9392f6901b15b28c5fd8ae3ea946e"
+  },
+  {
+   "path": "screens/02-375-preview.jpg",
+   "bytes": 31727,
+   "md5": "a4fba5b7f01d0832674c8ac4fd9f71a5"
+  },
+  {
+   "path": "screens/02-375-preview.webp",
+   "bytes": 19604,
+   "md5": "31c87d86d389f4d004cfd7eb50d7bfa2"
+  },
+  {
+   "path": "screens/02-door-atelier-before.jpg",
+   "bytes": 40737,
+   "md5": "a1a79e983532a7ddf6553065d4a8226a"
+  },
+  {
+   "path": "screens/02-door-atelier-before.webp",
+   "bytes": 24962,
+   "md5": "435eb37719527da0029b981798bf97aa"
+  },
+  {
+   "path": "screens/02b-door-atelier-after.jpg",
+   "bytes": 35468,
+   "md5": "73c6cb1c8d82c8fd2ca90330f7141e04"
+  },
+  {
+   "path": "screens/02b-door-atelier-after.webp",
+   "bytes": 18456,
+   "md5": "fa98cd7abd5a6a5926844eb41bc5726d"
+  },
+  {
+   "path": "screens/02c-door-atelier-closed.jpg",
+   "bytes": 40875,
+   "md5": "011a4e41aadf78b7613aced054335171"
+  },
+  {
+   "path": "screens/02c-door-atelier-closed.webp",
+   "bytes": 23700,
+   "md5": "36b9392f6901b15b28c5fd8ae3ea946e"
+  },
+  {
+   "path": "screens/03-375-live.jpg",
+   "bytes": 31727,
+   "md5": "a4fba5b7f01d0832674c8ac4fd9f71a5"
+  },
+  {
+   "path": "screens/03-375-live.webp",
+   "bytes": 19604,
+   "md5": "31c87d86d389f4d004cfd7eb50d7bfa2"
+  },
+  {
+   "path": "screens/03-dining-thrash.webp",
+   "bytes": 38918,
+   "md5": "e390d5d33c3448d3055912332710946f"
+  },
+  {
+   "path": "screens/03b-sofa.webp",
+   "bytes": 24800,
+   "md5": "ad5acbd64dc93403d48651acd76c3d0d"
+  },
+  {
+   "path": "screens/03c-wall.webp",
+   "bytes": 8834,
+   "md5": "11177e18aa4a7ba4e8dd8c562eab1be8"
+  },
+  {
+   "path": "screens/04-floor-parquet.webp",
+   "bytes": 38722,
+   "md5": "419fb2d91017d3a4b94dc3f21c0eaa45"
+  },
+  {
+   "path": "screens/05-lamp-off.webp",
+   "bytes": 18816,
+   "md5": "df2482dc33fff5c18c5d68825324fd35"
+  },
+  {
+   "path": "screens/05b-lamp-on.webp",
+   "bytes": 18476,
+   "md5": "2c10631b21aa47def66f07fc650ea3f8"
+  },
+  {
+   "path": "screens/10-door-index.jpg",
+   "bytes": 20223,
+   "md5": "29b72a67198f3405c6e823d2d3975291"
+  },
+  {
+   "path": "screens/11-tv.jpg",
+   "bytes": 20324,
+   "md5": "4943022afffbd2e8f55f0a7b87e6e6ba"
+  },
+  {
+   "path": "screens/12-lamp.jpg",
+   "bytes": 20327,
+   "md5": "7ebe61d34c0ee55e758ac34735544e3e"
+  },
+  {
+   "path": "screens/13-dining-thrash.jpg",
+   "bytes": 23450,
+   "md5": "aca76c5919b263295cac6ee01cdd867f"
+  },
+  {
+   "path": "screens/13b-sofa.jpg",
+   "bytes": 21290,
+   "md5": "273bc6f4e18e5fc2d6ea5f9bf1cbe63c"
+  },
+  {
+   "path": "screens/13c-wall.jpg",
+   "bytes": 20293,
+   "md5": "2448f917869f320f1d85d190d01e2ba0"
+  },
+  {
+   "path": "screens/14-floor-off.jpg",
+   "bytes": 23404,
+   "md5": "69872b88ca0f9c6288c7f9eb61f484d9"
+  },
+  {
+   "path": "screens/15-mapwalk-dining.jpg",
+   "bytes": 24532,
+   "md5": "e365017d4c957e51f188acc942cf4507"
+  },
+  {
+   "path": "screens/16-curtains.jpg",
+   "bytes": 20327,
+   "md5": "7ebe61d34c0ee55e758ac34735544e3e"
+  },
+  {
+   "path": "screens/17-art.jpg",
+   "bytes": 20333,
+   "md5": "0ee2f339bb4603fae8680ebd85254a31"
+  },
+  {
+   "path": "screens/compare-round7-before-after.jpg",
+   "bytes": 172502,
+   "md5": "dae2e94a9a2b1b8efaff2d31c61ec805"
+  },
+  {
+   "path": "screens/compare-round7-dining.jpg",
+   "bytes": 85528,
+   "md5": "ec196004562fb410711df7a98b74bf6c"
+  },
+  {
+   "path": "screens/compare-round7-living.jpg",
+   "bytes": 93189,
+   "md5": "671e486680b0613845d2bac8716c698b"
+  },
+  {
+   "path": "screens/compare-round7-terrace.jpg",
+   "bytes": 72038,
+   "md5": "9c8ba367ebdd82df90e677d323fea3ae"
+  },
+  {
+   "path": "screens/compare-round7-vs-target.jpg",
+   "bytes": 170435,
+   "md5": "41ddee865111045bbc97f58a53e7cd4e"
+  },
+  {
+   "path": "screens/round7-dining-after.jpg",
+   "bytes": 127237,
+   "md5": "4cd763d27154b8f3927d8405997d9898"
+  },
+  {
+   "path": "screens/round7-dining-before.jpg",
+   "bytes": 135281,
+   "md5": "aab58c2f6d5e683480b133f4c3b79f0b"
+  },
+  {
+   "path": "screens/round7-living-after.jpg",
+   "bytes": 148646,
+   "md5": "8730b44eb8f7b6a692859d72cf282044"
+  },
+  {
+   "path": "screens/round7-living-before.jpg",
+   "bytes": 149419,
+   "md5": "7a379dbc8b7812fa0951e0cc6e53b8bc"
+  },
+  {
+   "path": "screens/round7-metrics.txt",
+   "bytes": 254,
+   "md5": "27c0d2128c281fc738adb38443f6c8f0"
+  },
+  {
+   "path": "screens/round7-terrace-after.jpg",
+   "bytes": 106259,
+   "md5": "ea961715e4ec7ccbac86ec81f61853be"
+  },
+  {
+   "path": "screens/round7-terrace-before.jpg",
+   "bytes": 105560,
+   "md5": "3e1741cebeadd946cbe77c4f0736d0e1"
+  },
+  {
+   "path": "screens/smoke-delivery-v8.json",
+   "bytes": 7677,
+   "md5": "616fb7239297f67f531575f63227fa31"
+  },
+  {
+   "path": "smoke-delivery-v16.json",
+   "bytes": 5317,
+   "md5": "ce790d9d6d328a8af402606b3d3f7d4f"
+  },
+  {
+   "path": "styles.css",
+   "bytes": 14105,
+   "md5": "0130459d6c4c2881a570bd28e133f5ef"
+  },
+  {
+   "path": "vendor/bvh/LICENSE",
+   "bytes": 1072,
+   "md5": "3a0ac89ad5e7dc2241264085eb1abdb6"
+  },
+  {
+   "path": "vendor/bvh/index.js",
+   "bytes": 192653,
+   "md5": "9ec14c8865595091dd38d39f38d78b92"
+  },
+  {
+   "path": "vendor/cannon-es/LICENSE",
+   "bytes": 112,
+   "md5": "3a42ae554899be7725f7a0ff705cad76"
+  },
+  {
+   "path": "vendor/cannon-es/cannon-es.js",
+   "bytes": 346256,
+   "md5": "3248d4f498219b548fcce2a6af15d9bf"
+  },
+  {
+   "path": "vendor/cannon-es/package.json",
+   "bytes": 2050,
+   "md5": "001110329e401a15d6d4ec0f8d4164ad"
+  },
+  {
+   "path": "vendor/pathtracer/DENOISE-LICENSE.txt",
+   "bytes": 1352,
+   "md5": "161c929ba951d85a7ad9ec0c6cd6f6c6"
+  },
+  {
+   "path": "vendor/pathtracer/LICENSE",
+   "bytes": 1072,
+   "md5": "51fee2aba5d662a11856f9d14347ab20"
+  },
+  {
+   "path": "vendor/pathtracer/index.js",
+   "bytes": 221705,
+   "md5": "89bdc362b36b8ffef647f2087ee4fb8d"
+  },
+  {
+   "path": "vendor/three/LICENSE",
+   "bytes": 1081,
+   "md5": "5c4c9366edb129147b1631f489c93a65"
+  },
+  {
+   "path": "vendor/three/addons/environments/RoomEnvironment.js",
+   "bytes": 3606,
+   "md5": "880f2cdbd5111b3e252340c38af2f2ad"
+  },
+  {
+   "path": "vendor/three/addons/geometries/RoundedBoxGeometry.js",
+   "bytes": 4625,
+   "md5": "c6be06a4a121d55e3d928a3b5e50b130"
+  },
+  {
+   "path": "vendor/three/addons/lights/RectAreaLightTexturesLib.js",
+   "bytes": 314097,
+   "md5": "edd45140361d6f3b4fd0630486ac8211"
+  },
+  {
+   "path": "vendor/three/addons/lights/RectAreaLightUniformsLib.js",
+   "bytes": 516,
+   "md5": "ee6a970ef32880f47f7d115527ebf38a"
+  },
+  {
+   "path": "vendor/three/addons/loaders/GLTFLoader.js",
+   "bytes": 110273,
+   "md5": "96c414ae0562a524c71bdea9ab6f2c07"
+  },
+  {
+   "path": "vendor/three/addons/loaders/RGBELoader.js",
+   "bytes": 11377,
+   "md5": "7626b55b4add0131834a926234daedb9"
+  },
+  {
+   "path": "vendor/three/addons/math/SimplexNoise.js",
+   "bytes": 14351,
+   "md5": "3149646f0c96a7f98e5691598a7e8602"
+  },
+  {
+   "path": "vendor/three/addons/objects/Reflector.js",
+   "bytes": 7043,
+   "md5": "63d3cfe50cbde8b91dc43806a8debfe4"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/EffectComposer.js",
+   "bytes": 4651,
+   "md5": "eccf8177035031b3ec0d083845fcb332"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/MaskPass.js",
+   "bytes": 2231,
+   "md5": "10b721db9f8e218a2d4a282b41528b64"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/OutputPass.js",
+   "bytes": 2524,
+   "md5": "7f1dd1087921c60ad9d828f100dc5540"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/Pass.js",
+   "bytes": 1706,
+   "md5": "a5ec37ce3b9f333fa1a69afb1610806e"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/RenderPass.js",
+   "bytes": 1941,
+   "md5": "32a6bf6de0ef360172e2e5591df44f70"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/SSAOPass.js",
+   "bytes": 11116,
+   "md5": "80ce4e1c1bdf3b45d4c6c6b8f5ffab45"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/ShaderPass.js",
+   "bytes": 1576,
+   "md5": "f145da648ed568b0ca51d1e7495d2f6d"
+  },
+  {
+   "path": "vendor/three/addons/postprocessing/UnrealBloomPass.js",
+   "bytes": 12410,
+   "md5": "5730deeff02a815800967e894ba3a977"
+  },
+  {
+   "path": "vendor/three/addons/shaders/CopyShader.js",
+   "bytes": 571,
+   "md5": "6088e45f7638804f9f7039ab358d8424"
+  },
+  {
+   "path": "vendor/three/addons/shaders/FXAAShader.js",
+   "bytes": 6621,
+   "md5": "19c55b726ba4d77ef1ea2d314085010c"
+  },
+  {
+   "path": "vendor/three/addons/shaders/LuminosityHighPassShader.js",
+   "bytes": 1147,
+   "md5": "5938f6a23b372d209d04dbc3947434cf"
+  },
+  {
+   "path": "vendor/three/addons/shaders/OutputShader.js",
+   "bytes": 1490,
+   "md5": "2f682ffc077172f1e4889a8b32e4c642"
+  },
+  {
+   "path": "vendor/three/addons/shaders/SSAOShader.js",
+   "bytes": 6478,
+   "md5": "1dbc6a7261878efaf68435c116ec6129"
+  },
+  {
+   "path": "vendor/three/addons/utils/BufferGeometryUtils.js",
+   "bytes": 31768,
+   "md5": "c7edaa6ddd54f02026dfb6bcf541e740"
+  },
+  {
+   "path": "vendor/three/three.module.js",
+   "bytes": 1314681,
+   "md5": "5f1c9ae07ce947c750aad0a111020935"
+  }
+ ]
+}

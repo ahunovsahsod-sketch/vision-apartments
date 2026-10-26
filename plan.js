@@ -1,5 +1,3 @@
-import {NAV_CACHE} from './navigation-cache.js?v=20261025-gesture12';
-
 // Apartment 296: positions traced from the published plan. Units below are pixels
 // on apartment-296-plan.webp; conversion to metres happens in point().
 export const CEILING = 3.40;
@@ -16,7 +14,7 @@ export const toPlan=(x,z)=>[interpolate(x,METRIC_X,true),interpolate(z,METRIC_Z,
 export const areaAudit=[{"id": "living", "target": 21, "model": 21}, {"id": "kitchen", "target": 11.9, "model": 11.9}, {"id": "terrace", "target": 33.1, "model": 33.1}, {"id": "office", "target": 11.4, "model": 11.4}, {"id": "bed1", "target": 15.7, "model": 15.7}, {"id": "master", "target": 22.1, "model": 22.1}, {"id": "bed3", "target": 15.2, "model": 15.2}, {"id": "wardrobe", "target": 5.4, "model": 5.4}, {"id": "bath1", "target": 3.6, "model": 3.601}, {"id": "bath2", "target": 2.6, "model": 2.601}, {"id": "bath3", "target": 3.9, "model": 3.9}, {"id": "hall", "target": 13.4, "model": 13.4}, {"id": "entry", "target": 8.5, "model": 8.5}];
 
 export const ROOMS = [
- {id:'living',name:'Гостиная',short:'Гостиная',area:'21,0',poly:[[174,818],[269,818],[269,858],[499,858],[499,1014],[174,1014]],label:[340,963],camera:[224,940],look:[370,932]},
+ {id:'living',name:'Гостиная',short:'Гостиная',area:'21,0',poly:[[174,818],[269,818],[269,858],[499,858],[499,1014],[174,1014]],label:[340,963],camera:[224,896],look:[352,944]},
  {id:'kitchen',name:'Кухня',short:'Кухня',area:'11,9',poly:[[269,716],[499,716],[499,858],[269,858]],label:[389,787],camera:[312,778],look:[419,745]},
  {id:'terrace',name:'Терраса',short:'Терраса',area:'33,1',poly:[[499,716],[786,716],[786,1014],[499,1014]],label:[635,870],camera:[641,810],look:[604,943],outside:true},
  {id:'office',name:'Кабинет',short:'Кабинет',area:'11,4',poly:[[18,818],[174,818],[174,1014],[18,1014]],label:[96,939],camera:[131,872],look:[82,930]},
@@ -24,7 +22,7 @@ export const ROOMS = [
  {id:'master',name:'Мастер-спальня',short:'Спальня',area:'22,1',poly:[[340,18],[499,18],[499,362],[282,362],[282,276],[340,276]],label:[417,151],camera:[421,306],look:[397,185]},
  {id:'bed3',name:'Спальня 2',short:'Спальня',area:'15,2',poly:[[352,362],[499,362],[499,636],[352,636]],label:[429,513],camera:[409,593],look:[409,484]},
  {id:'wardrobe',name:'Гардеробная',short:'Гардероб',area:'5,4',poly:[[184,276],[282,276],[282,421],[184,421]],label:[234,346],camera:[249,350],look:[200,337]},
- {id:'bath1',name:'Ванная 1',short:'С/у',area:'3,6',poly:[[184,421],[282,421],[282,543],[184,543]],label:[234,485],camera:[260,510],look:[232,447]},
+ {id:'bath1',name:'Ванная 1',short:'С/у',area:'3,6',poly:[[184,421],[282,421],[282,543],[184,543]],label:[234,485],camera:[260,514],look:[232,447]},
  {id:'bath2',name:'Гостевой санузел',short:'С/у',area:'2,6',poly:[[184,543],[282,543],[282,622],[184,622]],label:[234,587],camera:[261,597],look:[217,564]},
  {id:'bath3',name:'Ванная 2',short:'С/у',area:'3,9',poly:[[352,636],[499,636],[499,716],[352,716]],label:[430,681],camera:[452,657],look:[452,695]},
  {id:'hall',name:'Коридор',short:'Коридор',area:'13,4',poly:[[282,362],[352,362],[352,716],[184,716],[184,622],[282,622]],label:[319,560],camera:[315,660],look:[316,419]},
@@ -68,7 +66,8 @@ function footprintAt(px,pz,width,depth){const[x,z]=point(px,pz);return worldFoot
 export const DETAIL_OBSTACLES = [
  {id:'office-chair',bounds:footprintAt(94,981,.65,.65)},
  {id:'terrace-coffee-table',bounds:footprintAt(608,910,.84,.84)},
- {id:'living-reading-light',bounds:footprintAt(463,997,.4,.4)},
+ {id:'living-reading-light',bounds:footprintAt(450,1000,.4,.4)},
+ {id:'lounge-dining',bounds:footprintAt(458,918,1.8,1.4)},
  ...[[248,195,1.8],[403,195,1.9],[414,495,1.65]].flatMap(([px,pz,width],bedIndex)=>{
   const[x,z]=point(px,pz);
   // bed() rotates PI/2 around Y: local Z becomes world X, local X becomes -Z.
@@ -99,16 +98,14 @@ export function segmentDistance(x,z,s){
  const [a,b,c,d]=s,dx=c-a,dz=d-b,t=Math.max(0,Math.min(1,((x-a)*dx+(z-b)*dz)/(dx*dx+dz*dz||1)));
  return Math.hypot(x-a-t*dx,z-b-t*dz);
 }
-export const BODY_RADIUS=.22;
+export const BODY_RADIUS=.17;
 const worldWalls=WALLS.map(w=>[...point(w[0],w[1]),...point(w[2],w[3])]);
 export function doorSegment(d,opening=d.open){
  const a=point(d.x,d.z),b=point(d.x+d.width*Math.cos(d.angle),d.z+d.width*Math.sin(d.angle));
  const width=Math.hypot(b[0]-a[0],b[1]-a[1]),angle=-d.angle+opening;
  return[a[0],a[1],a[0]+width*Math.cos(angle),a[1]-width*Math.sin(angle)];
 }
-const sampleCache=new Map(),visibilityCache=new Map();
-export function walkable(x,z){const key=x+','+z;if(sampleCache.has(key))return sampleCache.get(key);const safe=walkableExact(x,z);if(sampleCache.size>=250000)sampleCache.clear();sampleCache.set(key,safe);return safe;}
-function walkableExact(x,z){
+export function walkable(x,z){
  const p=point(x,z);
  if(!ROOMS.some(r=>inside(x,z,r.poly)))return false;
  // Camera capsule must remain inside the union of the rooms, including the terrace edge.
@@ -118,20 +115,11 @@ function walkableExact(x,z){
  if(OBSTACLES.some(b=>{const a=point(b[0],b[1]),c=point(b[2],b[3]);return p[0]>a[0]-BODY_RADIUS&&p[0]<c[0]+BODY_RADIUS&&p[1]>a[1]-BODY_RADIUS&&p[1]<c[1]+BODY_RADIUS;}))return false;
  return true;
 }
-const STEP=5,cache=new Map(),edgeCache=new Map(),gridCache=new Map(),endpointCache=new Map(),fixedEndpoints=new Set(ROOMS.map(r=>r.camera.join(',')));
-const navigationHash=value=>{let result=2166136261;for(const c of JSON.stringify(value)){result^=c.charCodeAt(0);result=Math.imul(result,16777619);}return(result>>>0).toString(16);};
-const cacheMatches=NAV_CACHE?.version===1&&NAV_CACHE.step===STEP&&NAV_CACHE.signature===navigationHash([ROOMS.map(r=>r.poly),WALLS,DOORS,OBSTACLES,BODY_RADIUS,WALL_THICKNESS,METRIC_X,METRIC_Z,STEP]);
-const decodeBits=value=>Uint8Array.from(atob(value),c=>c.charCodeAt(0)),preparedGrid=cacheMatches?decodeBits(NAV_CACHE.grid):null,preparedEdges=cacheMatches?decodeBits(NAV_CACHE.edges):null;
-const gridIndex=(x,z)=>{const xx=x-NAV_CACHE.minX,zz=z-NAV_CACHE.minZ;return xx>=0&&xx<NAV_CACHE.width&&zz>=0&&zz<NAV_CACHE.height?zz*NAV_CACHE.width+xx:-1;},bit=(array,i)=>Boolean(array[i>>3]&(1<<(i&7)));
-// The plan is immutable. Cache only exact grid samples used by A*; arbitrary
-// camera positions and swept segments still use the full geometric checks.
-function gridWalkable(x,z){if(preparedGrid){const i=gridIndex(x,z);if(i>=0)return bit(preparedGrid,i);}const k=x+','+z;if(!gridCache.has(k))gridCache.set(k,walkable(x*STEP,z*STEP));return gridCache.get(k);}
-function preparedEdge(x,z,dx,dz){if(!preparedEdges)return undefined;if(dx<0||dx===0&&dz<0){x+=dx;z+=dz;dx=-dx;dz=-dz;}const i=gridIndex(x,z);if(i<0||gridIndex(x+dx,z+dz)<0)return undefined;const direction=dx===0?1:dz===0?0:dz>0?2:3;return bit(preparedEdges,i*4+direction);}
+const STEP=10,cache=new Map(),edgeCache=new Map();
 function nearest(p){
- const endpoint=p.join(',');if(fixedEndpoints.has(endpoint)&&endpointCache.has(endpoint))return endpointCache.get(endpoint);
- let best=null,d=Infinity;for(let x=Math.round(p[0]/STEP)-16;x<=Math.round(p[0]/STEP)+16;x++)for(let z=Math.round(p[1]/STEP)-16;z<=Math.round(p[1]/STEP)+16;z++){
-  if(gridWalkable(x,z)){const dd=Math.hypot(x*STEP-p[0],z*STEP-p[1]);if(dd<d&&visibleLine(p,[x*STEP,z*STEP])){d=dd;best=[x,z];}}
- }if(fixedEndpoints.has(endpoint))endpointCache.set(endpoint,best);return best;
+ let best=null,d=Infinity;for(let x=Math.round(p[0]/STEP)-8;x<=Math.round(p[0]/STEP)+8;x++)for(let z=Math.round(p[1]/STEP)-8;z<=Math.round(p[1]/STEP)+8;z++){
+  if(walkable(x*STEP,z*STEP)){const dd=Math.hypot(x*STEP-p[0],z*STEP-p[1]);if(dd<d&&visibleLine(p,[x*STEP,z*STEP])){d=dd;best=[x,z];}}
+ }return best;
 }
 function intersects(a,b,c,d){const cross=(p,q,r)=>(q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0]);return Math.max(Math.min(a[0],b[0]),Math.min(c[0],d[0]))<=Math.min(Math.max(a[0],b[0]),Math.max(c[0],d[0]))&&Math.max(Math.min(a[1],b[1]),Math.min(c[1],d[1]))<=Math.min(Math.max(a[1],b[1]),Math.max(c[1],d[1]))&&cross(a,b,c)*cross(a,b,d)<=0&&cross(c,d,a)*cross(c,d,b)<=0;}
 function segmentGap(a,b,w){const c=[w[0],w[1]],d=[w[2],w[3]];if(intersects(a,b,c,d))return 0;return Math.min(segmentDistance(...a,w),segmentDistance(...b,w),segmentDistance(...c,[...a,...b]),segmentDistance(...d,[...a,...b]));}
@@ -140,26 +128,26 @@ function crossesFurniture(a,b,box){
  for(let axis=0;axis<2;axis++){const d=b[axis]-a[axis];if(Math.abs(d)<1e-12){if(a[axis]<=lo[axis]||a[axis]>=hi[axis])return false;}else{const u=(lo[axis]-a[axis])/d,v=(hi[axis]-a[axis])/d;enter=Math.max(enter,Math.min(u,v));exit=Math.min(exit,Math.max(u,v));if(enter>=exit)return false;}}
  return enter<exit&&exit>0&&enter<1;
 }
-export function visibleLine(a,b){const aa=a.join(','),bb=b.join(','),key=aa<bb?aa+'|'+bb:bb+'|'+aa;if(visibilityCache.has(key))return visibilityCache.get(key);const clear=visibleLineExact(a,b);if(visibilityCache.size>=100000)visibilityCache.clear();visibilityCache.set(key,clear);return clear;}
-function visibleLineExact(a,b){
+export function visibleLine(a,b){
  const aw=point(...a),bw=point(...b);
  if(worldWalls.some(w=>segmentGap(aw,bw,w)<WALL_THICKNESS/2+BODY_RADIUS))return false;
  if(DOORS.some(d=>segmentGap(aw,bw,doorSegment(d))<BODY_RADIUS+.065))return false;
  if(OBSTACLES.some(box=>crossesFurniture(aw,bw,box)))return false;
  const n=Math.max(1,Math.ceil(Math.hypot(a[0]-b[0],a[1]-b[1])));for(let i=0;i<=n;i++)if(!walkable(a[0]+(b[0]-a[0])*i/n,a[1]+(b[1]-a[1])*i/n))return false;return true;
 }
+// route() used by movement.go for map room click → walk (R08 update 2026-10-25 ~21:45).
 export function route(from,to){
  const k=from.join(',')+'>'+to.join(',');if(cache.has(k))return cache.get(k);
  const start=nearest(from),end=nearest(to);if(!start||!end)return null;
  const key=p=>p[0]+','+p[1],endKey=key(end),open=new Map([[key(start),{p:start,g:0,f:0,prev:null}]]),closed=new Map();
  let found=null;
- while(open.size&&closed.size<40000){
+ while(open.size&&closed.size<14000){
   let q=null;for(const n of open.values())if(!q||n.f<q.f)q=n;
   const qk=key(q.p);open.delete(qk);closed.set(qk,q);if(qk===endKey){found=q;break;}
   for(const [dx,dz] of [[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]]){
-   const p=[q.p[0]+dx,q.p[1]+dz],pk=key(p);if(closed.has(pk)||!gridWalkable(p[0],p[1]))continue;
-   if(dx&&dz&&(!gridWalkable(q.p[0]+dx,q.p[1])||!gridWalkable(q.p[0],q.p[1]+dz)))continue;
-   let clear=preparedEdge(q.p[0],q.p[1],dx,dz);if(clear===undefined){const ek=qk<pk?qk+'|'+pk:pk+'|'+qk;if(!edgeCache.has(ek))edgeCache.set(ek,visibleLine(q.p.map(v=>v*STEP),p.map(v=>v*STEP)));clear=edgeCache.get(ek);}if(!clear)continue;
+   const p=[q.p[0]+dx,q.p[1]+dz],pk=key(p);if(closed.has(pk)||!walkable(p[0]*STEP,p[1]*STEP))continue;
+   if(dx&&dz&&(!walkable((q.p[0]+dx)*STEP,q.p[1]*STEP)||!walkable(q.p[0]*STEP,(q.p[1]+dz)*STEP)))continue;
+   const ek=qk<pk?qk+'|'+pk:pk+'|'+qk;if(!edgeCache.has(ek))edgeCache.set(ek,visibleLine(q.p.map(v=>v*STEP),p.map(v=>v*STEP)));if(!edgeCache.get(ek))continue;
    const g=q.g+Math.hypot(dx,dz);if(!open.has(pk)||g<open.get(pk).g)open.set(pk,{p,g,f:g+Math.hypot(p[0]-end[0],p[1]-end[1]),prev:q});
   }
  }
@@ -182,5 +170,5 @@ export function roundedRoute(path){
  }result.push(path.at(-1));return result.slice(1).every((p,i)=>visibleLine(result[i],p))?result:path;
 }
 export function planMarkup(){
- return `<svg viewBox="0 0 815 1040" role="group" aria-label="План квартиры, выберите комнату">${ROOMS.map((r,index)=>`<a href="#apartment-tour" data-room="${r.id}" aria-label="${r.name}, ${r.area} м²"><path class="room-shape" d="M${r.poly.map(p=>p.join(',')).join('L')}Z"/><text x="${r.label[0]}" y="${r.label[1]}" text-anchor="middle"><tspan x="${r.label[0]}">${String(index+1).padStart(2,'0')}</tspan></text></a>`).join('')}<g class="plan-walls">${WALLS.map(w=>`<path d="M${w[0]},${w[1]}L${w[2]},${w[3]}"/>`).join('')}</g></svg>`;
+ return `<svg viewBox="0 0 815 1040" role="group" aria-label="План квартиры — клик по комнате: идти пешком">${ROOMS.map((r,index)=>`<a href="#apartment-tour" data-room="${r.id}" aria-label="${r.name}, ${r.area} м²"><path class="room-shape" d="M${r.poly.map(p=>p.join(',')).join('L')}Z"/><text x="${r.label[0]}" y="${r.label[1]}" text-anchor="middle"><tspan x="${r.label[0]}">${String(index+1).padStart(2,'0')}</tspan></text></a>`).join('')}<g class="plan-walls">${WALLS.map(w=>`<path d="M${w[0]},${w[1]}L${w[2]},${w[3]}"/>`).join('')}</g></svg>`;
 }

@@ -1,4 +1,4 @@
-import {doorSegment,segmentDistance,BODY_RADIUS} from './plan.js?v=20261025-gesture12';
+import {doorSegment,segmentDistance,BODY_RADIUS} from './plan.js';
 
 // Damped angular hinges with a swept personal-space guard. Both the camera
 // controller and leaf animation query this same physical state.
@@ -20,10 +20,11 @@ export function createDoorPhysics(states){
   return angle;
  }
  return {
-  blocks(p){for(const door of states){if(Math.hypot(p.x-door.point.x,p.z-door.point.z)<1.25){door.target=door.d.open;door.manual=false;}if(segmentDistance(p.x,p.z,doorSegment(door.d,door.angle))<.21)return true;}return false;},
+  blocks(p){for(const door of states){if(!door.manual&&Math.hypot(p.x-door.point.x,p.z-door.point.z)<1.35){door.target=door.d.open;}if(segmentDistance(p.x,p.z,doorSegment(door.d,door.angle))<.21)return true;}return false;},
   update(dt,body){let moving=false;for(const d of states){
-   const distance=Math.hypot(body.x-d.point.x,body.z-d.point.z);if(!d.manual)d.target=distance<1.6?d.d.open:0;
-   let velocity=d.velocity+((d.target-d.angle)*34-d.velocity*11)*dt,next=d.angle+velocity*dt;
+   const distance=Math.hypot(body.x-d.point.x,body.z-d.point.z);if(!d.manual)d.target=distance<1.75?d.d.open:0;
+   // Softer spring (v9): smoother open/close, still settles quickly
+   let velocity=d.velocity+((d.target-d.angle)*22-d.velocity*9.5)*dt,next=d.angle+velocity*dt;
    const safe=sweep(d,next,body);if(Math.abs(safe-next)>1e-10){next=safe;velocity=0;}
    d.velocity=velocity;d.angle=next;if(d.leaf)d.leaf.rotation.y=next;
    if(Math.abs(d.target-d.angle)+Math.abs(d.velocity)>.002)moving=true;

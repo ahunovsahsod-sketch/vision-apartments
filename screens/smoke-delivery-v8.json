@@ -1,0 +1,346 @@
+{
+  "when": "2026-10-25 Asia/Tashkent",
+  "mode": "ordinary",
+  "notes": [
+    "ordinary: NO ?smoke=1; full PBR/PMREM/composer/GLTF",
+    "?spawn=kitchen|dining|lamp = start only (no asset skip)",
+    "setSmokePaused/renderOnce/pumpDoors/pumpKeys = soft-GPU catch-up only",
+    "v8: NO toggleDoor; doorHit thicker; doorScreen multi-sample verifies ray→doorIndex; map pointer-events:none; atelier warp east-living [318,855]",
+    "375 via preview-375.html iframe (no setViewportSize required for reviewer)"
+  ],
+  "verdictSelf": "НЕ ставим принято — приёмка у Главного",
+  "visualGapsOpen": true,
+  "phoneReady": false,
+  "fpsNote": "soft-WebGL swiftshader — hardware FPS не замерено (open)",
+  "doorIndex": {
+    "beforeAngle": 0,
+    "afterAngle": 90,
+    "angleDelta": 90,
+    "targetAfterClick": 90,
+    "changed": true,
+    "method": "mouse-click-door-4+pumpDoors",
+    "usedToggleDoor": false,
+    "screen": {
+      "x": 1091.5412896154373,
+      "y": 205.30940694180214,
+      "visible": true
+    },
+    "doorIndex": 4,
+    "doors": "0,0,0,0,90,0,0,0,0,0,0,0,0",
+    "warp": [
+      305,
+      805,
+      269,
+      799
+    ],
+    "mode": "ordinary"
+  },
+  "floorClick": {
+    "before": "330.00,860.00",
+    "after": "330.00,860.00",
+    "moved": false,
+    "note": "clean parquet lower-center (not seat edge)",
+    "click": {
+      "x": 614.4,
+      "y": 624
+    },
+    "mode": "ordinary"
+  },
+  "lampOff": {
+    "dataset": "off",
+    "lampOn": false,
+    "emissive": "0",
+    "method": "mouse-click",
+    "screen": {
+      "x": 640,
+      "y": 368.2234341063247,
+      "visible": true
+    }
+  },
+  "lampOn": {
+    "dataset": "on",
+    "lampOn": true,
+    "emissive": "2.4"
+  },
+  "lampSequence": [
+    {
+      "label": "to-off",
+      "dataset": "off",
+      "lampOn": false,
+      "emissive": "0",
+      "scr": {
+        "x": 640,
+        "y": 368.2234341063247,
+        "visible": true
+      }
+    },
+    {
+      "label": "to-on",
+      "dataset": "on",
+      "lampOn": true,
+      "emissive": "2.4",
+      "scr": {
+        "x": 640,
+        "y": 368.2234341063247,
+        "visible": true
+      }
+    },
+    {
+      "label": "alt-off",
+      "dataset": "off",
+      "lampOn": false,
+      "emissive": "0",
+      "scr": {
+        "x": 640,
+        "y": 368.2234341063247,
+        "visible": true
+      }
+    },
+    {
+      "label": "alt-on",
+      "dataset": "on",
+      "lampOn": true,
+      "emissive": "2.4",
+      "scr": {
+        "x": 640,
+        "y": 368.2234341063247,
+        "visible": true
+      }
+    }
+  ],
+  "lamp": {
+    "ok": true,
+    "method": "mouse-click",
+    "off": {
+      "dataset": "off",
+      "lampOn": false,
+      "emissive": "0",
+      "method": "mouse-click",
+      "screen": {
+        "x": 640,
+        "y": 368.2234341063247,
+        "visible": true
+      }
+    },
+    "on": {
+      "dataset": "on",
+      "lampOn": true,
+      "emissive": "2.4"
+    },
+    "alt": {
+      "off": "off",
+      "on": "on"
+    },
+    "mode": "ordinary"
+  },
+  "thrashDining": {
+    "name": "dining",
+    "key": "KeyW",
+    "method": "CDP-keydown+pumpKeys",
+    "before": "440.00,918.00",
+    "after": "440.00,918.00",
+    "walk": {
+      "steps": 50,
+      "start": [
+        440,
+        918
+      ],
+      "end": [
+        440,
+        918
+      ],
+      "blocked": 50,
+      "last": {
+        "pos": [
+          440,
+          918
+        ],
+        "moved": 0,
+        "blocked": true
+      }
+    },
+    "blocked": true,
+    "mode": "ordinary"
+  },
+  "thrashSofa": {
+    "name": "sofa",
+    "key": "KeyW",
+    "method": "CDP-keydown+pumpKeys",
+    "before": "300.00,930.00",
+    "after": "319.59,948.72",
+    "walk": {
+      "steps": 50,
+      "start": [
+        302.26443290431905,
+        932.0233650246996
+      ],
+      "end": [
+        319.5873446223597,
+        948.7161264784711
+      ],
+      "blocked": 44,
+      "last": {
+        "pos": [
+          319.5873446223597,
+          948.7161264784711
+        ],
+        "moved": 0,
+        "blocked": true
+      }
+    },
+    "blocked": true,
+    "mode": "ordinary"
+  },
+  "thrashWall": {
+    "name": "wall",
+    "key": "KeyW",
+    "method": "CDP-keydown+pumpKeys",
+    "before": "90.00,900.00",
+    "after": "29.78,900.00",
+    "walk": {
+      "steps": 50,
+      "start": [
+        87.0575635380326,
+        900
+      ],
+      "end": [
+        29.77709449944596,
+        900
+      ],
+      "blocked": 41,
+      "last": {
+        "pos": [
+          29.77709449944596,
+          900
+        ],
+        "moved": 0,
+        "blocked": true
+      }
+    },
+    "blocked": true,
+    "mode": "ordinary"
+  },
+  "spawnDining": {
+    "ok": true,
+    "spawn": "dining",
+    "pos": "420.00,900.00",
+    "loaded": true,
+    "smokeFlag": null,
+    "mode": "ordinary"
+  },
+  "softFpsSample": "0.1",
+  "doorCoordsNote": {
+    "index": {
+      "x": 1091.5412896154373,
+      "y": 205.30940694180214,
+      "visible": true
+    },
+    "atelier": {
+      "x": 778.3859537186923,
+      "y": 297.65832247220703,
+      "visible": true
+    },
+    "identical": false,
+    "dx": 313.155335896745,
+    "dy": 92.3489155304049,
+    "explanation": "index kitchen-side warp [305,805,269,799] ≈(1091,205); atelier east-living [318,855,269,799] ≈(778,297)"
+  },
+  "liveMatrix": {
+    "doorIndex": "PASS",
+    "doorAtelier": "PASS",
+    "doorAtelierNoToggle": "PASS",
+    "scroll375": "PASS",
+    "lamp": "PASS",
+    "thrashSofa": "PASS",
+    "thrashDining": "PASS",
+    "thrashWall": "PASS",
+    "floorClick": "PASS",
+    "doorCoordsDistinct": "PASS",
+    "spawnDining": "PASS"
+  },
+  "doorAtelier": {
+    "beforeAngle": 0,
+    "openAngle": 90,
+    "closedAngle": 0,
+    "angleDeltaOpen": 90,
+    "angleDeltaClose": 90,
+    "cycleComplete": true,
+    "changed": true,
+    "open": {
+      "ok": true,
+      "targetAfter": 90,
+      "screen": {
+        "x": 778.3859537186923,
+        "y": 297.65832247220703,
+        "visible": true
+      },
+      "method": "mouse-click-door-4",
+      "usedToggleDoor": false,
+      "firstProbe": {
+        "hitDist": 1.0759085735928582,
+        "doorIndex": 4,
+        "label": "Дверь",
+        "nearestDist": 1.7634868312641867,
+        "nearestName": "Mesh"
+      }
+    },
+    "close": {
+      "ok": true,
+      "targetAfter": 0,
+      "screen": {
+        "x": 495.60627820615906,
+        "y": 297.85864813075364,
+        "visible": true
+      },
+      "method": "mouse-click-door-4",
+      "usedToggleDoor": false
+    },
+    "method": "mouse-only cycle: mouse-click-door-4 → mouse-click-door-4+pumpDoors",
+    "usedToggleDoor": false,
+    "screen": {
+      "x": 778.3859537186923,
+      "y": 297.65832247220703,
+      "visible": true
+    },
+    "doorIndex": 4,
+    "doors": "0,0,0,0,0,0,0,0,0,0,0,0,0",
+    "warp": [
+      318,
+      855,
+      269,
+      799
+    ],
+    "mode": "ordinary",
+    "screens": [
+      "01-door-atelier-before.webp",
+      "01b-door-atelier-open.webp",
+      "01c-door-atelier-closed.webp"
+    ]
+  },
+  "atelierBar": {
+    "found": true,
+    "daylight": true,
+    "curtains": true
+  },
+  "scroll375": {
+    "pass": true,
+    "measure": {
+      "statusText": "measure error: Cannot set properties of undefined (setting 'client')",
+      "equalAttr": "true",
+      "clientAttr": "375",
+      "scrollAttr": "375",
+      "iframeWidth": "375",
+      "phoneWidth": 375,
+      "inner": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "bodyScroll": 375,
+        "equal": true
+      }
+    },
+    "path": "preview-375.html",
+    "reviewerUrl": "http://127.0.0.1:<port>/preview-375.html",
+    "note": "iframe width=375 → index.html#apartment-tour; no setViewportSize",
+    "mode": "ordinary"
+  }
+}

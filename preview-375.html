@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Vision · preview 375px</title>
+ <style>
+  :root{color-scheme:light}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#1c261f;color:#f3f0e9;font:14px/1.45 Arial,Helvetica,sans-serif}
+  header{padding:14px 18px;border-bottom:1px solid #3a473c;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline}
+  header strong{font-weight:600;letter-spacing:.04em}
+  header code{background:#2a352d;padding:2px 6px;border-radius:4px}
+  .frame-wrap{display:flex;justify-content:center;padding:18px 12px 28px}
+  .phone{
+    width:375px;max-width:100%;height:min(812px,calc(100svh - 90px));
+    border:1px solid #5a685c;border-radius:12px;overflow:hidden;background:#f3f0e9;
+    box-shadow:0 12px 40px #00000055;
+  }
+  .phone iframe{display:block;width:375px;height:100%;border:0;background:#f3f0e9}
+  .meta{font-size:12px;color:#b9c4b0}
+ </style>
+</head>
+<body>
+ <header>
+  <strong>preview-375</strong>
+  <span class="meta">iframe <code>width=375</code> → <code>index.html</code> · без setViewportSize</span>
+  <span class="meta" id="status">loading…</span>
+ </header>
+ <div class="frame-wrap">
+  <div class="phone" id="phone">
+   <iframe id="frame" title="Vision 375 preview" src="index.html#apartment-tour" width="375"></iframe>
+  </div>
+ </div>
+ <script>
+  const frame=document.getElementById('frame');
+  const status=document.getElementById('status');
+  function measure(){
+   try{
+    const doc=frame.contentDocument||frame.contentWindow?.document;
+    if(!doc){status.textContent='cross-origin / not ready';return;}
+    const de=doc.documentElement, body=doc.body;
+    const cw=de.clientWidth, sw=de.scrollWidth, bw=body?.scrollWidth??sw;
+    const equal=sw===cw;
+    status.textContent=`iframe document: clientWidth=${cw} scrollWidth=${sw} body=${bw} equal=${equal}`;
+    status.dataset.equal=String(equal);
+    status.dataset.clientWidth=String(cw);
+    status.dataset.scrollWidth=String(sw);
+    document.documentElement.dataset.preview375Equal=String(equal);
+    document.documentElement.dataset.preview375Client=String(cw);
+    document.documentElement.dataset.preview375Scroll=String(sw);
+   }catch(e){status.textContent='measure error: '+e.message;}
+  }
+  frame.addEventListener('load',()=>{measure();setTimeout(measure,800);setTimeout(measure,2200);});
+  setInterval(measure,4000);
+ </script>
+</body>
+</html>

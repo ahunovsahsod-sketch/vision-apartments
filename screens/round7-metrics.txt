@@ -1,0 +1,5 @@
+TARGET=118.49
+living: before=112.96 after=111.29 d=-1.67 |err| 5.53→7.20 Rb_a=52.9
+dining: before=145.19 after=134.14 d=-11.06 |err| 26.71→15.65 Rb_a=57.8
+terrace: before=104.65 after=104.69 d=+0.04 |err| 13.84→13.80 Rb_a=25.9
+sum_err 46.08->36.65

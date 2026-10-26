@@ -1,171 +1,37 @@
-VISION APARTMENTS — ПРОИСХОЖДЕНИЕ РЕСУРСОВ И ЛИЦЕНЗИИ
-Документ от 25 октября 2026 года.
+THREE.JS
+Version 0.170.0. MIT License. Full license: vendor/three/LICENSE.
+https://threejs.org/
+https://registry.npmjs.org/three/-/three-0.170.0.tgz
 
-Этот перечень разделяет лицензии сторонних библиотек, CC0-ресурсов,
-авторских элементов проекта и клиентских изображений. Пакет целиком
-не объявляется CC0. При переносе сохраняйте лицензионные файлы ниже.
-Для просмотра не требуются обращения к API поставщиков ассетов.
+CANNON-ES
+Version 0.20.0. MIT License. vendor/cannon-es/
+https://github.com/pmndrs/cannon-es
+https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js
 
-1. БИБЛИОТЕКИ, ПОСТАВЛЯЕМЫЕ ЛОКАЛЬНО
-
-Three.js 0.170.0 — MIT.
-Источник: https://threejs.org/
-Пакет: https://registry.npmjs.org/three/-/three-0.170.0.tgz
-Полный текст и уведомления: vendor/three/LICENSE.
-Подключённые addons относятся к той же поставке Three.js.
-
-@dimforge/rapier3d-compat 0.21.0 — Apache-2.0.
-Источник: https://rapier.rs/
-Пакет: https://www.npmjs.com/package/@dimforge/rapier3d-compat
-Версия локальной поставки: vendor/rapier/package.json.
-Полная лицензия: vendor/rapier/LICENSE.
-Локальный rapier.mjs содержит необходимый совместимый WebAssembly runtime.
-
-three-mesh-bvh 0.8.3 — MIT, Garrett Johnson и участники.
-Источник: https://github.com/gkjohnson/three-mesh-bvh
-Полный текст: vendor/bvh/LICENSE.
-
-three-gpu-pathtracer 0.0.23 — MIT, Garrett Johnson и участники.
-Источник: https://github.com/gkjohnson/three-gpu-pathtracer
-Полный текст: vendor/pathtracer/LICENSE.
-Поставка также содержит DenoiseMaterial на основе glslSmartDeNoise,
-Michele Morrone, BSD 2-Clause. Сохраняйте исходное уведомление в модуле и
-vendor/pathtracer/DENOISE-LICENSE.txt.
-Активная фильтрация сайта реализована отдельно в photo-resolve.js.
-
-Meshoptimizer / Meshopt decoder 1.3.0 — MIT, Arseny Kapoulkine.
-Источник: https://github.com/zeux/meshoptimizer
-Локальный декодер: assets/baked/meshopt_decoder.mjs.
-Полный текст: assets/baked/MESHOPT-LICENSE.txt.
-Он декодирует поставляемую геометрию и световые атрибуты; исходная модель
-квартиры и её рассчитанный свет не становятся работой авторов декодера.
-
-Blender 4.5.9 LTS / Cycles использовался как внешний инструмент для локального
-расчёта непрямого света и AO. Исполняемые файлы Blender в сайт не включены,
-для просмотра они не нужны. Информация об инструменте:
-https://www.blender.org/about/license/
-
-2. ОСНОВНЫЕ PBR-НАБОРЫ — CC0 1.0
-
-ambientCG: https://docs.ambientcg.com/license/
-Poly Haven: https://polyhaven.com/license
-CC0: https://creativecommons.org/publicdomain/zero/1.0/
-
-assets/materials/oak-veneer/ — ambientCG Wood049.
-https://ambientcg.com/a/Wood049
-Натуральный oak для мебели/шпона; физический тайл около 80 × 80 см.
-Источник не содержит AO; ambientOcclusion в manifest равен null.
-
-assets/materials/linen/ — ambientCG Fabric061.
-https://ambientcg.com/a/Fabric061
-Нейтральная ткань, тайл около 40 × 40 см. Источник не подтверждает конкретный
-ботанический состав волокна; название linen описывает роль материала в проекте.
-Сохранены исходные albedo, normal OpenGL, roughness и реальный AO.
-
-assets/materials/jute/ — Poly Haven hessian_380.
-https://polyhaven.com/a/hessian_380
-Официальное описание определяет материал как hessian/jute.
-Размеры тайла из API: около 273,866 × 273,800 мм.
-
-assets/materials/travertine/ — ambientCG Travertine001.
-https://ambientcg.com/a/Travertine001
-Тайл около 1,2 × 1,2 м. Оригинал сильно полированный. Отдельные
-roughness-honed-* и orm-honed-* являются явно авторским вариантом отделки:
-roughness = 0.62 + 0.30 × исходная roughness. Цвет, нормали и AO источника
-в этой версии отделки не перерисованы.
-
-assets/materials/plaster/ — ambientCG Plaster001.
-https://ambientcg.com/a/Plaster001
-Чистая штукатурка. Реальный размер тайла у источника не указан; рекомендуемый
-масштаб отображения 1 × 1 м — настройка проекта. AO у источника отсутствует.
-
-Подготовка карт: изменение разрешения и кодирования в WebP, сохранение
-конвенции normal OpenGL +Y, упаковка ORM: R=AO, G=roughness, B=0 для диэлектрика.
-Когда источник не содержит AO, R=255 является нейтральной технической заглушкой,
-а не придуманной измеренной AO-картой. Runtime назначает AO только наборам
-с реальным исходным AO.
-
-В premium-materials.js цвет linen, jute, travertine и oak дополнительно
-адаптируется под авторскую палитру modern warm с сохранением фактуры.
-Это художественное изменение albedo, а не новый замер реального материала.
-Тёплый оттенок штукатурки задаётся отдельным линейным множителем материала.
-Полные источники, размеры, ссылки загрузки, параметры и SHA-256:
-assets/materials/manifest.json и source.json внутри каждой папки.
-
-3. ДОПОЛНИТЕЛЬНЫЕ POLY HAVEN РЕСУРСЫ — CC0
-
-Модели с исходными файлами в assets/models/:
+POLY HAVEN — CC0 ASSETS
+Asset license: https://polyhaven.com/license
+Downloaded through the public Poly Haven API; all resources are local.
+Models:
 https://polyhaven.com/a/dining_chair_02
 https://polyhaven.com/a/throw_pillows_01
 https://polyhaven.com/a/potted_plant_02
-Части моделей повторно используются, масштабируются или получают материалы
-проекта. Листья potted_plant_02 используются для небольших посадок;
-крупные оливы строятся собственным procedural-модулем olive-tree.js.
-
-Фактуры, используемые или сохранённые в assets/textures/:
+Textures:
 https://polyhaven.com/a/laminate_floor_02
 https://polyhaven.com/a/fabric_pattern_07
 https://polyhaven.com/a/white_plaster_02
 https://polyhaven.com/a/marble_01
-Некоторые прежние карты сохранены для совместимости, даже если основной
-интерьер уже использует наборы из assets/materials/.
-Деревянный пол oak-clean-* происходит из laminate_floor_02. Дополнительные
-2K albedo и OpenGL normal получены уменьшением соответствующих локальных
-4K-карт; исходные 4K-файлы сохранены.
-Новые имена: assets/textures/oak-clean-color-2k.webp и
-assets/textures/oak-clean-normal-2k.webp, оба 2048 × 2048.
-
-Световое окружение assets/daylight-sky-2k.hdr:
+Lighting environment:
 https://polyhaven.com/a/kloppenheim_06_puresky
-Небо служит световым окружением, не подтверждённым видом из окна квартиры.
+Textures compressed to WebP and some downsampled. Decorative model materials
+recoloured and instances resized. Room geometry generated separately from plan.
 
-Данные были загружены через официальные публичные API/ссылки и сохранены
-локально. Сайт во время просмотра не интегрирован с API поставщиков.
-Лицензия CC0 на ассеты не распространяется автоматически на логотипы,
-текст сайтов или любые сторонние материалы, на которые эти сайты ссылаются.
-
-4. ГЕОМЕТРИЯ, ПРОЦЕДУРНЫЕ ЭЛЕМЕНТЫ И РАССЧИТАННЫЙ СВЕТ
-
-Архитектура, современная процедурная мебель, керамика, оливковое растение,
-интерфейс и взаимодействия созданы для этой дизайн-концепции. Они следуют
-переданному плану и используют перечисленные сторонние фактуры/детали.
-Отдельный приобретаемый комплект авторской high-poly мебели в поставку
-не включён. Для дальнейших сторонних моделей нужно проверять лицензию
-каждого ассета и возможность коммерческого использования.
-
-assets/baked/scene*.meshopt.bin[.gz], manifest*.json — локально рассчитанные
-данные геометрии, дневного/вечернего непрямого света и AO этого проекта.
-Сведения о Cycles, методе, исходном fingerprint и проверках кодека содержатся
-в соответствующих manifests и reports. Blender, Meshopt и поставщики CC0
-фактур не выдаются за авторов планировки или застройщика.
-
-5. КЛИЕНТСКИЕ ИЗОБРАЖЕНИЯ — НЕ CC0 ИЗ ЭТИХ КАТАЛОГОВ
-
-assets/complex.jpg — существующее изображение комплекса с neohouse.uz.
-Исторический URL источника, сохранённый для атрибуции:
+CLIENT REFERENCES — NOT COVERED BY THE POLY HAVEN LICENSE
+assets/complex.jpg: existing complex image from neohouse.uz:
 https://static.tildacdn.net/tild6238-6437-4134-a462-373939636138/IMG_20240321_230704_.jpg
-Этот адрес здесь является записью происхождения; Tilda для данной работы
-не открывалась и не использовалась для загрузки или публикации.
+assets/apartment-296-plan.webp: apartment 296 plan embedded on neohouse.uz,
+matching the plan supplied in the conversation. Used as project reference.
 
-assets/apartment-296-plan.webp — план квартиры №296, предоставленный
-заказчиком и совпадающий с опубликованной схемой на neohouse.uz.
-Он использован как архитектурный ориентир. Права и разрешение на коммерческое
-размещение клиентских фото/плана согласуются с их правообладателем;
-CC0 сторонних материалов их не заменяет.
-
-6. СГЕНЕРИРОВАННЫЙ СТИЛЕВОЙ ОРИЕНТИР
-
-assets/modern-interior-reference-v1.png — изображение, созданное встроенным
-Imagegen для направления стиля этого проекта. Оно не является фотографией
-готового ремонта, обмерной документацией или подтверждённой комплектацией ЖК.
-Интерактивная сцена не подменяется этим изображением.
-Промпт и сведения о генерации сохранены в DESIGN_REFERENCE_PROMPT.txt.
-
-7. ПЕРЕД ДАЛЬНЕЙШИМ РАСПРОСТРАНЕНИЕМ
-
-Сохранить перечисленные MIT / Apache-2.0 / BSD уведомления и лицензионные файлы.
-Согласовать права на фото комплекса, исходный план и будущие сторонние модели.
-Проверить лицензии новых high-poly ассетов до включения в коммерческую сборку.
-Не представлять дизайн-концепцию как подтверждённый ремонт или комплектацию.
-Документирование источников не является публикацией сайта: доступ к Tilda,
-загрузка и изменение внешнего сайта в рамках текущей работы не выполнялись.
+GENERATED DESIGN REFERENCE
+assets/modern-interior-reference-v1.png: generated with the built-in Imagegen
+tool for this project. Design direction only; not a photograph of the property.
+The interactive viewer does not load this image as its scene.
