@@ -71,7 +71,7 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
   wall:standard('#c6ac88',.94,{bumpMap:stoneTex,bumpScale:.029}),ceiling:standard('#d0bc98',.96,{side:T.DoubleSide}), // Round6 plaster dining crush
   oak:standard('#e8d8bb',.55,{map:woodTex,bumpMap:woodTex,bumpScale:.022}),walnut:standard('#c4a57a',.52,{map:woodTex,bumpMap:woodTex,bumpScale:.018}),
   floor:standard('#c6ac7c',.71,{map:woodTex,bumpMap:woodTex,bumpScale:.031}),stone:standard('#ccbc9e',.87,{map:stoneTex,bumpMap:stoneTex,bumpScale:.053}), // Round6 oak / dining-still-bright
-  tile:standard('#f0ece0',.48,{map:tileTex,bumpMap:tileTex,bumpScale:.008}),terrace:standard('#f8d0a0',.80,{map:tileTex,bumpMap:tileTex,bumpScale:.024}), // Round7 terrace warmer chroma (no global wash)
+  tile:standard('#f0ece0',.48,{map:tileTex,bumpMap:tileTex,bumpScale:.008}),terrace:standard('#ffb050',.68,{map:tileTex,bumpMap:tileTex,bumpScale:.028}), // Round8 terrace warmer chroma + mean lift (no global wash)
   linen:fabric('#beaa84'),ivory:fabric('#ceb89c'),moss:fabric('#6e7454'),blue:fabric('#b0a080'),rose:fabric('#b0a080'), // Round6 greige warmer
   metal:standard('#373e36',.29,{metalness:.65}),brass:standard('#a39772',.28,{metalness:.8}),black:new T.MeshPhysicalMaterial({color:'#0c0d0b',roughness:.35,specularIntensity:.12,envMapIntensity:.18,metalness:.15}),
   porcelain:new T.MeshPhysicalMaterial({color:'#f2efe8',roughness:.19,clearcoat:1,clearcoatRoughness:.12}),
@@ -184,10 +184,10 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  const coffeeTable=group(364,944);const top=cylinder(.72,.72,.075,materials.stone,0,.40,0,coffeeTable);top.scale.z=.78;const base=cylinder(.30,.34,.38,materials.stone,0,.19,0,coffeeTable);base.scale.z=.82; // Round2 travertine mass
  // Lounge dining (TARGET): table + 4 chairs + flat saucer pendant toward terrace
  // Round1 dining depth: stone top + thicker apron
- const loungeDining=group(458,918);const diningTop=materials.stone.clone();diningTop.color=new T.Color('#b8a888');diningTop.roughness=Math.min(.95,(diningTop.roughness||.7)+.08); // Round7 dining-local stone crush
+ const loungeDining=group(458,918);const diningTop=materials.stone.clone();diningTop.color=new T.Color('#a89070');diningTop.roughness=Math.min(.96,(diningTop.roughness||.7)+.10); // Round8 dining-local stone crush
  box(1.58,.085,.96,diningTop,0,.78,0,loungeDining,true);box(1.5,.05,.88,materials.walnut,0,.72,0,loungeDining,true);for(const x of[-.55,.55])cylinder(.1,.13,.72,materials.walnut,x,.36,0,loungeDining);
  chair(458,880,Math.PI,materials.linen);chair(458,956,0,materials.linen);chair(420,918,-Math.PI/2,materials.linen);chair(492,918,Math.PI/2,materials.linen);
- {const g=group(458,918);cylinder(.02,.02,.55,materials.metal,0,CEILING-.28,0,g);const dish=cylinder(.48,.52,.035,materials.linen,0,2.22,0,g);dish.scale.y=.55;cylinder(.42,.42,.008,materials.led,0,2.195,0,g);const pl=new T.PointLight('#ffd0a0',1.75,3.1,2.2);pl.position.set(0,2.05,0);g.add(pl);} // Round7 dining pendant quieter (dining-still-bright)
+ {const g=group(458,918);cylinder(.02,.02,.55,materials.metal,0,CEILING-.28,0,g);const dish=cylinder(.48,.52,.035,materials.linen,0,2.22,0,g);dish.scale.y=.55;cylinder(.42,.42,.008,materials.led,0,2.195,0,g);const pl=new T.PointLight('#ffd0a0',1.10,2.9,2.35);pl.position.set(0,2.05,0);g.add(pl);} // Round8 dining pendant quieter (dining-still-bright)
  
  // Cohesive oak TV wall unit (TARGET): full panel + niches/shelves left of TV + low console + LED
  const media=group(385,865);
@@ -271,11 +271,11 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  for(const [px,pz,len]of[[366,892,2.8],[384,785,2.0],[317,532,3.0]]){const[x,z]=point(px,pz);box(len,.018,.045,materials.metal,x,3.375,z,ceilings);box(len-.03,.005,.018,materials.led,x,3.362,z,ceilings);}
  // Daylight enters through the actual perimeter openings; local fills stay restrained.
  const dayLights=[];
- // Round7: ONLY dining windows (492,923 / 492,779) base↓↓ — living fills/exposure untouched (living mean≈113)
- for(const [px,pz,width,rotation,base]of[[493,150,2.7,-Math.PI/2,1.0],[493,490,2.2,-Math.PI/2,1.0],[492,923,.85,-Math.PI/2,.22],[492,779,.85,-Math.PI/2,.28],[260,25,2.5,Math.PI,1.0]]){
+ // Round8: ONLY dining windows (492,923 / 492,779) base↓↓ — living fills/exposure untouched (living mean≈111)
+ for(const [px,pz,width,rotation,base]of[[493,150,2.7,-Math.PI/2,1.0],[493,490,2.2,-Math.PI/2,1.0],[492,923,.85,-Math.PI/2,.10],[492,779,.85,-Math.PI/2,.14],[260,25,2.5,Math.PI,1.0]]){
   const[x,z]=point(px,pz),light=new T.RectAreaLight('#ffc890',1.02*base,width,2.5);light.userData.base=base;light.position.set(x,1.9,z);light.rotation.y=rotation;scene.add(light);dayLights.push(light);
  }
- const fills=[];for(const[px,pz,base]of[[270,120,1.05],[420,170,1.05],[420,522,1.0],[325,532,1.0],[100,925,.62],[363,932,1.0],[382,784,.48]]){const[x,z]=point(px,pz),light=new T.PointLight('#ffb870',1.95*base,4.6,2.2);light.userData.base=base;light.position.set(x,3.12,z);scene.add(light);fills.push(light);} // Round7 dining-only fill↓; living fills slight↑ protect |err|
+ const fills=[];for(const[px,pz,base]of[[270,120,1.05],[420,170,1.05],[420,522,1.0],[325,532,1.0],[100,925,.38],[363,932,1.0],[382,784,.28],[620,900,.85],[720,880,.55]]){const[x,z]=point(px,pz),light=new T.PointLight('#ffb870',1.95*base,4.6,2.2);light.userData.base=base;light.position.set(x,3.12,z);scene.add(light);fills.push(light);} // Round8 dining fill↓ + terrace warm fill; living fills protect |err|
  const interior=furnish({scene,materials,group,box,cylinder,tube,fabric,plant,pillowTargets,bedGroups,doors:doorStates,renderer,atelier});
  for(const c of interior.curtains)c.group.userData.dynamic=true;
  for(const i of interior.interactions)i.object.userData.dynamic=true;
@@ -325,7 +325,7 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  const stepMarker=new T.Mesh(new T.RingGeometry(.095,.12,48),new T.MeshBasicMaterial({color:'#f8e8c6',transparent:true,opacity:.65,depthWrite:false}));stepMarker.rotation.x=-Math.PI/2;stepMarker.userData.dynamic=true;stepMarker.visible=false;scene.add(stepMarker);
  let markerLife=0,clockValue=.38,clockTarget=.38;
  const composer=new EffectComposer(renderer);composer.addPass(new RenderPass(scene,camera));
- // Round7: SSAO/bloom = Round6 (global protect living); dining crush via selective lights
+ // Round8: SSAO/bloom = Round6 (global protect living); dining crush via selective lights; terrace fill local
  const ao=new SSAOPass(scene,camera,640,480);ao.kernelRadius=1.95;ao.minDistance=.00034;ao.maxDistance=.53;ao.output=SSAOPass.OUTPUT.Default;composer.addPass(ao);
  const bloom=new UnrealBloomPass(new T.Vector2(640,480),.036,.29,.986);composer.addPass(bloom);
  composer.addPass(new OutputPass());const fxaa=new ShaderPass(FXAAShader);composer.addPass(fxaa);
@@ -404,7 +404,7 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
   }
   render();if(activity||movement.active||movement.moving||forceRender||(photoActive&&photo?.samples<96))schedule();
  }
-  function applyTime(value){const evening=T.MathUtils.smoothstep(value,.48,1),gold=Math.sin(Math.min(1,value)*Math.PI);// Round7: dining-still-bright selective↓↓; exposure/sun/hemi intensity unchanged (protect living≈113)
+  function applyTime(value){const evening=T.MathUtils.smoothstep(value,.48,1),gold=Math.sin(Math.min(1,value)*Math.PI);// Round8: dining-still-bright selective↓↓ + terrace fill; exposure/sun/hemi intensity unchanged (protect living≈111)
  sun.position.set(28,6.7-value*8.5,12+value*18);sun.color.set('#ffa848').lerp(new T.Color('#ff6414'),gold*1.05);sun.intensity=3.60*(1-evening)+.12;scene.environmentIntensity=.23*(1-evening)+.03;scene.backgroundIntensity=.105*(1-evening)+.04;hemisphere.intensity=.21*(1-evening)+.08;hemisphere.color.set('#ffc890').lerp(new T.Color('#ff9440'),gold*.75);for(const l of dayLights)l.intensity=(1.06*(1-evening)+.05)*(l.userData.base??1);for(const l of fills)l.intensity=(1.92+evening*4.5)*(l.userData.base??1);for(const o of interior.lightSources)o.light.intensity=(o.enabled===false?0:o.base)*(.85+evening*1.0);consoleLight.intensity=6.8*(.5+evening*.85);shelfLed.intensity=3.5*(.48+evening*.9);shelfLed2.intensity=3.0*(.48+evening*.9);coveTop.intensity=2.4*(.45+evening);renderer.toneMappingExposure=.752+gold*.028;renderer.shadowMap.needsUpdate=true;}
  function resize(){exitPhoto('resize');const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);const preset=w<500?'low':(w<900?'medium':'high');applyQuality(preset);camera.aspect=w/h;camera.fov=camera.aspect<.9?72:62;camera.updateProjectionMatrix();schedule();}
  new ResizeObserver(resize).observe(stage);new IntersectionObserver(es=>{shown=es[0].isIntersecting;lastTick=performance.now();if(shown||forceRender)schedule();else if(frame&&!forceRender){cancelAnimationFrame(frame);frame=0;}}).observe(stage);

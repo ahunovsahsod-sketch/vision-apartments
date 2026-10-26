@@ -26,3 +26,8 @@
 - Dining still bright (|err|≈15.7 after selective crush from ≈26.7): denser sheer / darker dining oak albedo (free WebP ok).
 - Terrace cool chroma (R−B≈26 vs TARGET≈60): warmer free HDRI or graded sky; без paid gens.
 - Living slightly under TARGET (|err|≈7.2): FOV/layout differ; avoid global exposure bump that re-washes dining.
+
+## Round8 residual (OPEN, no purchase)
+- Dining still bright (|err|≈9.0 after selective crush from ≈15.7): denser sheer / darker dining oak albedo (free WebP ok).
+- Terrace cool chroma (R−B≈28 vs TARGET≈60): warmer free HDRI or graded sky; material `#ffb050` helped slightly; без paid gens.
+- Living slightly under TARGET (|err|≈8.8): FOV/layout differ; avoid global exposure bump that re-washes dining.

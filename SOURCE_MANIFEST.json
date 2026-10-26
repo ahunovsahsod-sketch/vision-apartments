@@ -1,11 +1,11 @@
 {
- "delivery": "delivery-v16",
+ "delivery": "delivery-v17",
  "when": "2026-10-26 Asia/Tashkent",
- "base": "delivery-v15",
- "task": "Visual Round7 residual vs TARGET",
+ "base": "delivery-v16",
+ "task": "Visual Round8 residual vs TARGET",
  "selfAccept": false,
- "fileCount": 143,
- "sceneJsMd5": "de04544c54d8c9cb294fe77bb7dcb954",
+ "fileCount": 144,
+ "sceneJsMd5": "05ab9260a2fd90476e7055494684c7f3",
  "files": [
   {
    "path": "ASSET-LICENSES.txt",
@@ -14,13 +14,13 @@
   },
   {
    "path": "ASSET-NEEDS.md",
-   "bytes": 1959,
-   "md5": "2a7ad9ef2bcbae1513cf6459722e70a0"
+   "bytes": 2379,
+   "md5": "44089af14eddf56c38883ef833930695"
   },
   {
    "path": "CHANGELOG.md",
-   "bytes": 3528,
-   "md5": "a2f3ecf427874313987326460dc9e5ae"
+   "bytes": 3715,
+   "md5": "eb926813c4dadba4f12e02d5ab89b8a2"
   },
   {
    "path": "DESIGN_REFERENCE_PROMPT.txt",
@@ -31,6 +31,11 @@
    "path": "README_RU.txt",
    "bytes": 7786,
    "md5": "0a426c49956cfeabc13a168a611e9a57"
+  },
+  {
+   "path": "SOURCE_MANIFEST.json",
+   "bytes": 17647,
+   "md5": "e3c78b400283333c88cf2960ea1c9b22"
   },
   {
    "path": "START.command",
@@ -303,14 +308,14 @@
    "md5": "5b16e337ce5a1d8ba2b0ae733c13b35d"
   },
   {
-   "path": "programmer-cycle16-report.md",
-   "bytes": 1156,
-   "md5": "917b8d6ae25538859ed629d0ffe20c88"
+   "path": "programmer-cycle17-report.md",
+   "bytes": 1227,
+   "md5": "3818489fea75a93ecd9f96707db8185e"
   },
   {
    "path": "scene.js",
-   "bytes": 71574,
-   "md5": "de04544c54d8c9cb294fe77bb7dcb954"
+   "bytes": 71655,
+   "md5": "05ab9260a2fd90476e7055494684c7f3"
   },
   {
    "path": "screens/00-door-index-before.webp",
@@ -334,8 +339,8 @@
   },
   {
    "path": "screens/01-door-atelier-open.jpg",
-   "bytes": 30020,
-   "md5": "bb2a799185b625b7ce89a8fe3394782e"
+   "bytes": 30278,
+   "md5": "b5c4a618814c4e84018548381a7f347f"
   },
   {
    "path": "screens/01b-door-atelier-open.jpg",
@@ -359,8 +364,8 @@
   },
   {
    "path": "screens/02-375-preview.jpg",
-   "bytes": 31727,
-   "md5": "a4fba5b7f01d0832674c8ac4fd9f71a5"
+   "bytes": 32737,
+   "md5": "59f3af2a2ab1e100672ba5759682d21b"
   },
   {
    "path": "screens/02-375-preview.webp",
@@ -454,8 +459,8 @@
   },
   {
    "path": "screens/13-dining-thrash.jpg",
-   "bytes": 23450,
-   "md5": "aca76c5919b263295cac6ee01cdd867f"
+   "bytes": 27913,
+   "md5": "83984cede06fc204602368fe08a614fb"
   },
   {
    "path": "screens/13b-sofa.jpg",
@@ -469,13 +474,13 @@
   },
   {
    "path": "screens/14-floor-off.jpg",
-   "bytes": 23404,
-   "md5": "69872b88ca0f9c6288c7f9eb61f484d9"
+   "bytes": 23412,
+   "md5": "ba5577daf4121a084f8efe0838bf4df5"
   },
   {
    "path": "screens/15-mapwalk-dining.jpg",
-   "bytes": 24532,
-   "md5": "e365017d4c957e51f188acc942cf4507"
+   "bytes": 24528,
+   "md5": "ea3f7b5a19ac22ffdeedbe2706d0acec"
   },
   {
    "path": "screens/16-curtains.jpg",
@@ -488,64 +493,64 @@
    "md5": "0ee2f339bb4603fae8680ebd85254a31"
   },
   {
-   "path": "screens/compare-round7-before-after.jpg",
-   "bytes": 172502,
-   "md5": "dae2e94a9a2b1b8efaff2d31c61ec805"
+   "path": "screens/compare-round8-before-after.jpg",
+   "bytes": 150182,
+   "md5": "fcd02c9dd27d7a75da293c828c8dde3c"
   },
   {
-   "path": "screens/compare-round7-dining.jpg",
-   "bytes": 85528,
-   "md5": "ec196004562fb410711df7a98b74bf6c"
+   "path": "screens/compare-round8-dining.jpg",
+   "bytes": 92668,
+   "md5": "cd5bef35204d7b0aeebcedbaa76b49df"
   },
   {
-   "path": "screens/compare-round7-living.jpg",
-   "bytes": 93189,
-   "md5": "671e486680b0613845d2bac8716c698b"
+   "path": "screens/compare-round8-living.jpg",
+   "bytes": 103164,
+   "md5": "611fd53afd8aeab909647d6d3072f4d7"
   },
   {
-   "path": "screens/compare-round7-terrace.jpg",
-   "bytes": 72038,
-   "md5": "9c8ba367ebdd82df90e677d323fea3ae"
+   "path": "screens/compare-round8-terrace.jpg",
+   "bytes": 80313,
+   "md5": "21643ec37771958af5fc07e41f3f3518"
   },
   {
-   "path": "screens/compare-round7-vs-target.jpg",
-   "bytes": 170435,
-   "md5": "41ddee865111045bbc97f58a53e7cd4e"
+   "path": "screens/compare-round8-vs-target.jpg",
+   "bytes": 214542,
+   "md5": "f0cacb236e7dfcae610870508f0860c8"
   },
   {
-   "path": "screens/round7-dining-after.jpg",
+   "path": "screens/round8-dining-after.jpg",
+   "bytes": 127497,
+   "md5": "b750860800dbb80adb40109682535292"
+  },
+  {
+   "path": "screens/round8-dining-before.jpg",
    "bytes": 127237,
    "md5": "4cd763d27154b8f3927d8405997d9898"
   },
   {
-   "path": "screens/round7-dining-before.jpg",
-   "bytes": 135281,
-   "md5": "aab58c2f6d5e683480b133f4c3b79f0b"
+   "path": "screens/round8-living-after.jpg",
+   "bytes": 148478,
+   "md5": "2577473bc9c32b77a35c3f1718329ceb"
   },
   {
-   "path": "screens/round7-living-after.jpg",
+   "path": "screens/round8-living-before.jpg",
    "bytes": 148646,
    "md5": "8730b44eb8f7b6a692859d72cf282044"
   },
   {
-   "path": "screens/round7-living-before.jpg",
-   "bytes": 149419,
-   "md5": "7a379dbc8b7812fa0951e0cc6e53b8bc"
+   "path": "screens/round8-metrics.txt",
+   "bytes": 252,
+   "md5": "4bfa1a66d38a829ffb2a3c19083f0b29"
   },
   {
-   "path": "screens/round7-metrics.txt",
-   "bytes": 254,
-   "md5": "27c0d2128c281fc738adb38443f6c8f0"
+   "path": "screens/round8-terrace-after.jpg",
+   "bytes": 107112,
+   "md5": "8b65f689c734c970ce8175832a031549"
   },
   {
-   "path": "screens/round7-terrace-after.jpg",
+   "path": "screens/round8-terrace-before.jpg",
    "bytes": 106259,
    "md5": "ea961715e4ec7ccbac86ec81f61853be"
-  },
-  {
-   "path": "screens/round7-terrace-before.jpg",
-   "bytes": 105560,
-   "md5": "3e1741cebeadd946cbe77c4f0736d0e1"
   },
   {
    "path": "screens/smoke-delivery-v8.json",
@@ -553,9 +558,9 @@
    "md5": "616fb7239297f67f531575f63227fa31"
   },
   {
-   "path": "smoke-delivery-v16.json",
-   "bytes": 5317,
-   "md5": "ce790d9d6d328a8af402606b3d3f7d4f"
+   "path": "smoke-delivery-v17.json",
+   "bytes": 8976,
+   "md5": "c0f3fc734b6390002871e0bad6565f60"
   },
   {
    "path": "styles.css",
