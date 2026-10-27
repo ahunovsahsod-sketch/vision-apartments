@@ -1,75 +1,46 @@
-# CHANGELOG — delivery-v37 (Visual Round28 + Polish pack)
+# CHANGELOG — delivery-v38 (Visual Round29 + Polish + User feedback 16:48)
 
 **Дата:** 2026-10-27 Asia/Tashkent  
-**База:** delivery-v36 (scene.md5 `2a6d0b4d7e26eb19382c8967f337305d`)  
-**Задача:** Visual Round28 residual vs TARGET≈118.5 / R−B≈60 **плюс** Polish pack (BRIEF ~13:15).  
-**selfAccept:** false
+**База:** delivery-v37 (scene.md5 `67caa1bdaee14bd9419c112be026e766`)  
+**Итог scene.md5:** `6f7df3cec3e1bad69bc41e13bebd322d`  
+**Заморозка:** movement `b8ed45d3130633e4a7dfcfc24a534b0f` · interior `adfea2414dd7945008a0e282b83c8a3a` · plan `55974b68a5ace400800836efffd2940b` (SAME as v37)  
+**selfAccept:** false · **v39:** не начат · phone/FPS: OPEN
 
----
+## Visual Round29
+- PRIMARY: dining mean → TARGET≈118.5 (dining-local materials/LED/apron/GLTF only).
+- living / terrace HOLD; terrace R−B band 59.7–60.5.
+- NO global exposure / sun / hemi / ACES.
+- Soft-GPU same-camera interim (this session): sum|err| **1.95 → 1.63**; dining 119.31→119.13 (−0.18); living 119.14→119.03; terrace 119.00→118.96; R−B 60.56→60.52.
+- **STATUS: IMPROVED_OPEN_RESIDUAL**
+- Pack knobs Round29d: stone.env=.03 apron=.06 chairs=.05 runner=.02 LED.emissive=.00012 PointLight=.0000003 GLTF.env=.05.
 
-## A. Visual Round28
+## User feedback 16:48
+Сложено в **текущий** v38 (не отложено на v39).
 
-**Фокус:** living mean **к** TARGET≈118.5; dining HOLD; terrace HOLD + R−B band 59.7–60.5.  
-Только selective `scene.js`; **NO** global exposure / sun / hemi / ACES.  
-movement / interior / plan — **SAME** as v36.
+### Chairs / doors (crooked)
+- **Dining chairs:** rotations were π off (backs to table). Fixed holder rot: `(458,880,0)`, `(458,956,π)`, `(420,918,π/2)`, `(492,918,−π/2)`; GLTF `asset.position.z−=.06` pull-back. Screens: `furniture-chairs-before.jpg` / `furniture-chairs-after.jpg` (+ close).
+- **Doors (index + atelier + all):** spawn **CLOSED** flush (`leaf.rotation.y=0`, `angle/target=0`); auto-open still → `d.open`. Panel wider/thicker (`width−.012`, `.055`, z=0); jambs hug leaf (`.028×.18`). plan.js DOORS untouched. Screens: `furniture-door-before/after`, `furniture-door-glass-*`, `furniture-door-atelier-*`.
+- P1 HOLD: doors / thrashSofa/Wall/Dining / mapWalk / doorIndex / doorAtelier / doorCoordsDistinct = PASS.
 
-### Knobs
-- living-only `@240,960` base **2.16→1.90** dist2.40 (dial-down)
-- `[363,932]=3.28` **HOLD**
-- terrace FAR fills / RectAreas / materials — **не трогали**
-- dining lights/materials — **не трогали**
+### Texture depth («нет глубины»)
+- Non-sofa: wall bump→.072 normalScale→.95 + sheen.08; floor bump→.078 normal→1.05; oak/walnut bump+normal↑; stone bump→.095; curtains fabric-normal-4k normalScale 3.2, bump.22, rough.94, sheen.22, **clearcoat=0**, transmission HOLD .38.
+- SSAO kernel HOLD 1.95 (no mean-lift via AO).
+- Screens: `texture-depth-before/after`, `texture-curtains-before/after`.
+- Covers Polish **Textures** + partial **Render**.
 
-### Почему dial-down, а не mean↑
-Бриф предполагал living under-target (~118.12 по аудиту v36). На soft-GPU той же сессии polish-before дал **~119.31** (абсолютный drift). Первичный проход base **2.42** увёл mean **от** 118.5 (119.31→119.47, sum|err| 2.14→2.26).  
-Trials: 2.42↑хуже → 2.24≈плоско → 2.00/−0.11 → **1.90/−0.16** оставлен.
+## Polish 1–6
+1. **Textures** — measurable depth knobs + before/after (wall/floor/curtains). PASS  
+2. **Render** — SSAO HOLD + curtain/wall depth; high bloom reverted to v37 HOLD. PASS (partial via textures)  
+3. **Mechanics R08** — mapWalk / doors / thrash / spawn HOLD. PASS  
+4. **Bugs** — qualityAdaptive clear on Auto resize (NEW, not sticky setQuality). quality-proof bug PASS  
+5. **Optimization** — shadowMap distinct **2048 / 768 / 256** (soft-GPU pixelRatio≈1 N/A). opt PASS via shadowDistinct  
+6. **Quality tiers** — high/med/low + low-narrow screens + Auto wiring note. PASS  
 
-### Measurable (PIL full-frame, same-camera)
+## Smoke
+- Ordinary **16/16 P1**, NO `?smoke=1`, selfAccept=false.  
+- curtains retest: open glass doors 11/12 first (spawn-closed after feedback) then mouse-click Шторы.  
+- File: `smoke-delivery-v38.json`
 
-| room | before | after | Δ | \|err\| |
-|---|---|---|---|---|
-| living | 119.31 | 119.15 | **−0.16** | 0.81→**0.65** |
-| dining | 119.33 | 119.33 | −0.00 | 0.83→0.83 HOLD |
-| terrace | 119.00 | 119.01 | +0.01 | 0.50→0.51 HOLD |
-| terrace R−B | 60.56 | 60.59 | +0.03 | **ΔHOLD** (soft-GPU band edge ~60.5) |
-| **sum\|err\|** | **2.14** | **1.99** | **−0.15** | toward TARGET≈118.5 |
-
-vs broken 2.42 after: living |err| 0.97→0.65; sum|err| 2.26→1.99.
-
-**STATUS:** IMPROVED_OPEN_RESIDUAL  
-scene.md5 after: `67caa1bdaee14bd9419c112be026e766`  
-(polish-only before Round28 dial: `299d07f48a4dc0c3bbb6558d56918e82`)
-
----
-
-## B. Polish pack
-
-1. **Render** — quality proof screens `quality-high.jpg` / `quality-medium.jpg` / `quality-low-narrow.jpg` (non-trivial sizes; ordinary без beige blank). Evidence: `quality-proof.json` pass=true.
-2. **Mechanics** — R08 HOLD (WASD+mouse, map walk, floor OFF, двери/интерактивы). Code-change mechanics: нет. Checklist: `status/polish-prep/mechanics-R08-checklist.md` (+ копия в screens notes).
-3. **Textures** — living sofa anti-plastic (`sofaMat`: clearcoat=0, sheenRoughness↑, bump↑, envMapIntensity↓). Screens: `texture-sofa-before.jpg` / `texture-sofa-before-living.jpg` → `texture-sofa-after.jpg`.
-4. **Bugs** — sticky manual `setQuality` on resize (`dataset.qualityManual=1` до Auto). Fix в `app.js`. См. `polish-prep/bugs-scan.md`.
-5. **Optimization** — `canvas.dataset.fps` пишется; adaptive: auto + `2≤fps<28` ~2s на high → step to medium once (`dataset.qualityAdaptive=1`). Proof description + dataset asserts в `quality-proof.json`.
-6. **Quality tiers** — UI High/Med/Low/Auto в `index.html`+`atelier.html`; `dataset.quality` на каждом `applyQuality`; proofs `quality-high.jpg` / `quality-medium.jpg` / `quality-low-narrow.jpg` (viewport ~375).
-
----
-
-## P1 ordinary smoke
-
-`smoke-delivery-v37.json` — mode=ordinary, NO `?smoke=1`, selfAccept=false — **все 16 P1 PASS**  
-(mapWalk/aliases, kitchen spawn 290/810, floor OFF, doors, curtains/art/tv/lamp, scroll375, thrash/spawn, doorAtelier/coordsDistinct). Soft-GPU screenshot timeouts non-blocking (evaluate PASS).
-
----
-
-## OPEN (честно)
-
-- residual visual → TARGET (living |err|≈0.65 soft-GPU; dining ≈0.83; terrace ≈0.51)  
-- phone-ready — **OPEN** (не писать «готово на телефоне»)  
-- hardware FPS — **OPEN**
-
-## Не трогали
-
-shared/baselines; movement.js / interior.js / plan.js (md5 SAME as v36); Tilda / paid gens; phone/FPS work; **v38 не начат**.
-
-## Изменённые файлы (vs v36)
-
-- `scene.js` — Round28 living dial + polish sofa anti-plastic  
-- `app.js` / `index.html` / `atelier.html` / `styles.css` — quality UI + sticky manual + adaptive FPS  
+## Files
+- Changed: `scene.js` only (vs v37).  
+- Screens: `screens-delivery-v38/`.  

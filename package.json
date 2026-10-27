@@ -1,1 +1,7 @@
-{"name":"vision-apartments-interactive","private":true,"type":"module","version":"0.1.0","description":"Standalone review site before Tilda integration. No build step or account required."}
+{
+  "name": "vision-apartments-interactive",
+  "private": true,
+  "type": "module",
+  "version": "0.38.0",
+  "description": "Standalone review site before Tilda integration. No build step or account required."
+}

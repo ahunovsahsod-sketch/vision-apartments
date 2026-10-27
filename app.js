@@ -28,23 +28,26 @@ const enterLink=document.querySelector('.enter-tour');enterLink.addEventListener
 root.querySelector('.full-button').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await root.requestFullscreen();}catch{root.scrollIntoView({behavior:'smooth',block:'start'});}});document.addEventListener('fullscreenchange',()=>engine?.resize());
 // Polish v37-prep: High/Med/Low/Auto quality tiers (manual override sticky until Auto)
 const qualityBar=root.querySelector('.quality-control');
-function syncQualityUI(q,manual){
+function syncQualityUI(q,manual,adaptive){
  if(!qualityBar)return;
  const active=manual?q:'auto';
  qualityBar.querySelectorAll('[data-quality]').forEach(btn=>{
   const on=btn.dataset.quality===active;
   btn.setAttribute('aria-pressed',String(on));
  });
+ // Polish v38: Auto title reflects adaptive step honestly (soft-GPU may not trigger)
+ const autoBtn=qualityBar.querySelector('[data-quality="auto"]');
+ if(autoBtn){autoBtn.title=adaptive?'Авто: снижено до Med по FPS':'Авто по ширине экрана';autoBtn.dataset.adaptive=adaptive?'1':'';}
 }
 qualityBar?.addEventListener('click',e=>{
  const btn=e.target.closest('[data-quality]');if(!btn||!engine)return;
  const q=btn.dataset.quality;
  engine.setQuality(q);
- syncQualityUI(q==='auto'?'auto':q,q!=='auto');
+ syncQualityUI(q==='auto'?'auto':q,q!=='auto',false);
 });
 canvas.addEventListener('qualitychange',e=>{
- const {quality,manual}=e.detail||{};
- syncQualityUI(quality,!!manual);
+ const {quality,manual,adaptive}=e.detail||{};
+ syncQualityUI(quality,!!manual,!!adaptive);
 });
 
 const mapSize=root.querySelector('.map-size');mapSize.addEventListener('click',()=>{const open=root.querySelector('.tour-navigation').classList.toggle('is-expanded');mapSize.setAttribute('aria-expanded',String(open));mapSize.setAttribute('aria-label',open?'Свернуть карту':'Развернуть карту');});

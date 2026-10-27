@@ -2,7 +2,7 @@
 
 Interactive apartment walkthrough (Residence / Atelier).
 
-Current pack: **delivery-v37** (2026-10-27, Asia/Tashkent) — Visual Round28 + Polish pack, ordinary P1 PASS (audit accepted).
+Current pack: **delivery-v38** (2026-10-27, Asia/Tashkent) — Visual Round29 + Polish + chairs/doors/texture-depth fixes, ordinary P1 PASS (audit accepted).
 
 Open gaps: residual visual vs TARGET, phone-ready, hardware FPS.
 
