@@ -71,7 +71,7 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
   wall:standard('#c6ac88',.94,{bumpMap:stoneTex,bumpScale:.029}),ceiling:standard('#d0bc98',.96,{side:T.DoubleSide}), // Round6 plaster dining crush
   oak:standard('#e8d8bb',.55,{map:woodTex,bumpMap:woodTex,bumpScale:.022}),walnut:standard('#c4a57a',.52,{map:woodTex,bumpMap:woodTex,bumpScale:.018}),
   floor:standard('#c6ac7c',.71,{map:woodTex,bumpMap:woodTex,bumpScale:.031}),stone:standard('#ccbc9e',.87,{map:stoneTex,bumpMap:stoneTex,bumpScale:.053}), // Round6 oak / dining-still-bright
-  tile:standard('#f0ece0',.48,{map:tileTex,bumpMap:tileTex,bumpScale:.008}),terrace:standard('#ffb050',.68,{map:tileTex,bumpMap:tileTex,bumpScale:.028}), // Round8 terrace warmer chroma + mean lift (no global wash)
+  tile:standard('#f0ece0',.48,{map:tileTex,bumpMap:tileTex,bumpScale:.008}),terrace:standard('#ff4800',.07,{map:tileTex,bumpMap:tileTex,bumpScale:.036}), // Round27 terrace mean↑ tiny roughness↓; chroma #ff4800 HOLD; R−B band
   linen:fabric('#beaa84'),ivory:fabric('#ceb89c'),moss:fabric('#6e7454'),blue:fabric('#b0a080'),rose:fabric('#b0a080'), // Round6 greige warmer
   metal:standard('#373e36',.29,{metalness:.65}),brass:standard('#a39772',.28,{metalness:.8}),black:new T.MeshPhysicalMaterial({color:'#0c0d0b',roughness:.35,specularIntensity:.12,envMapIntensity:.18,metalness:.15}),
   porcelain:new T.MeshPhysicalMaterial({color:'#f2efe8',roughness:.19,clearcoat:1,clearcoatRoughness:.12}),
@@ -165,6 +165,8 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  // Architecture is fixed; loose furniture is part of the user's renovation concept.
  rug(364,957,3.6,1.9,'#c8c0ac');
  const livingSofa=group(363,984,Math.PI);
+ // Polish v37-prep: sofa ivory anti-plastic — kill clearcoat, softer sheen, stronger weave bump (living-local only)
+ const sofaMat=materials.ivory.clone();sofaMat.clearcoat=0;sofaMat.clearcoatRoughness=1;sofaMat.sheenRoughness=.58;sofaMat.roughness=Math.min(.99,(sofaMat.roughness||.88)+.08);sofaMat.bumpScale=.24;sofaMat.envMapIntensity=.28;sofaMat.specularIntensity=.22;
  function upholstered(w,h,d,m,x,y,z,parent){
   const geo=new T.SphereGeometry(1,48,30),p=geo.attributes.position,sp=(a,e)=>Math.sign(a)*Math.pow(Math.abs(a),e);
   for(let i=0;i<p.count;i++){const nx=p.getX(i),ny=p.getY(i),nz=p.getZ(i);let xx=sp(nx,.42)*w/2,yy=sp(ny,.4)*h/2,zz=sp(nz,.43)*d/2;const wrinkle=(Math.sin(xx*42+zz*11)+Math.sin(zz*51-xx*7)+Math.sin(xx*19+zz*29)*.55)*.0065*Math.max(0,ny+.15); // Round2 fabric depth
@@ -172,9 +174,9 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
   geo.computeVertexNormals();const mesh=new T.Mesh(geo,m);mesh.position.set(x,y,z);mesh.castShadow=true;mesh.receiveShadow=true;parent.add(mesh);return mesh;
  }
  box(2.8,.12,.78,materials.metal,0,.13,0,livingSofa);
- upholstered(3,.34,.98,materials.ivory,0,.32,0,livingSofa);
- for(const x of[-.94,0,.94]){upholstered(.97,.2,.82,materials.ivory,x,.55,.035,livingSofa);const back=upholstered(.98,.54,.21,materials.ivory,x,.82,-.35,livingSofa);back.rotation.x=-.12;}
- for(const x of[-1.39,1.39])upholstered(.24,.45,.93,materials.ivory,x,.62,.015,livingSofa);
+ upholstered(3,.34,.98,sofaMat,0,.32,0,livingSofa);
+ for(const x of[-.94,0,.94]){upholstered(.97,.2,.82,sofaMat,x,.55,.035,livingSofa);const back=upholstered(.98,.54,.21,sofaMat,x,.82,-.35,livingSofa);back.rotation.x=-.12;}
+ for(const x of[-1.39,1.39])upholstered(.24,.45,.93,sofaMat,x,.62,.015,livingSofa);
  for(const x of[-.91,.89]){const holder=new T.Group();holder.position.set(x,.67,-.17);holder.rotation.x=-.17;holder.rotation.y=x*.14;livingSofa.add(holder);pillowTargets.push({holder,width:.56,height:.44,depth:.16});}{const holder=new T.Group();holder.position.set(.05,.64,-.05);holder.rotation.x=-.22;holder.rotation.y=-.35;livingSofa.add(holder);pillowTargets.push({holder,width:.48,height:.38,depth:.18});}
  // Round2: draped throw on sofa arm (TARGET knit throw)
  {const throwGeo=new T.PlaneGeometry(1.15,.72,36,28),tp=throwGeo.attributes.position;
@@ -184,10 +186,15 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  const coffeeTable=group(364,944);const top=cylinder(.72,.72,.075,materials.stone,0,.40,0,coffeeTable);top.scale.z=.78;const base=cylinder(.30,.34,.38,materials.stone,0,.19,0,coffeeTable);base.scale.z=.82; // Round2 travertine mass
  // Lounge dining (TARGET): table + 4 chairs + flat saucer pendant toward terrace
  // Round1 dining depth: stone top + thicker apron
- const loungeDining=group(458,918);const diningTop=materials.stone.clone();diningTop.color=new T.Color('#a89070');diningTop.roughness=Math.min(.96,(diningTop.roughness||.7)+.10); // Round8 dining-local stone crush
- box(1.58,.085,.96,diningTop,0,.78,0,loungeDining,true);box(1.5,.05,.88,materials.walnut,0,.72,0,loungeDining,true);for(const x of[-.55,.55])cylinder(.1,.13,.72,materials.walnut,x,.36,0,loungeDining);
- chair(458,880,Math.PI,materials.linen);chair(458,956,0,materials.linen);chair(420,918,-Math.PI/2,materials.linen);chair(492,918,Math.PI/2,materials.linen);
- {const g=group(458,918);cylinder(.02,.02,.55,materials.metal,0,CEILING-.28,0,g);const dish=cylinder(.48,.52,.035,materials.linen,0,2.22,0,g);dish.scale.y=.55;cylinder(.42,.42,.008,materials.led,0,2.195,0,g);const pl=new T.PointLight('#ffd0a0',1.10,2.9,2.35);pl.position.set(0,2.05,0);g.add(pl);} // Round8 dining pendant quieter (dining-still-bright)
+ const loungeDining=group(458,918);const diningTop=materials.stone.clone();diningTop.color=new T.Color('#030100');diningTop.roughness=Math.min(.99,(diningTop.roughness||.7)+.96); // Round26 dining-local stone quieter continue
+ box(1.58,.085,.96,diningTop,0,.78,0,loungeDining,true);box(1.5,.05,.88,materials.walnut,0,.72,0,loungeDining,true);for(const x of[-.55,.55])cylinder(.1,.13,.72,materials.walnut,x,.36,0,loungeDining); // Round21 walnut reverted p5 (living spill)
+ const diningChairMat=materials.linen.clone();diningChairMat.color=new T.Color('#1c1208');diningChairMat.roughness=Math.min(.99,(diningChairMat.roughness||.7)+.38); // Round26 dining chairs procedural quieter
+ for(const c of[chair(458,880,Math.PI,diningChairMat),chair(458,956,0,diningChairMat),chair(420,918,-Math.PI/2,diningChairMat),chair(492,918,Math.PI/2,diningChairMat)])c.userData.diningChair=true; // Round21 tag for GLTF darker
+ {const runnerMat=materials.linen.clone();runnerMat.color=new T.Color('#040100');runnerMat.roughness=.98;runnerMat.metalness=0; // Round26 dining-local runner quieter
+  box(1.10,.008,.30,runnerMat,0,.825,0,loungeDining,false);
+  for(const[dx,dz]of[[-.45,-.28],[-.45,.28],[.45,-.28],[.45,.28]])box(.22,.006,.18,runnerMat,dx,.824,dz,loungeDining,false);}
+ // Round21: dining floor overlay REMOVED p4 (living botL spill)
+ {const g=group(458,918);cylinder(.02,.02,.55,materials.metal,0,CEILING-.28,0,g);const dishMat=materials.linen.clone();dishMat.color=new T.Color('#1c1208');const dish=cylinder(.48,.52,.035,dishMat,0,2.22,0,g);dish.scale.y=.55;const diningLed=materials.led.clone();diningLed.emissiveIntensity=.005;diningLed.emissive=new T.Color('#ff7a20');cylinder(.42,.42,.008,diningLed,0,2.195,0,g);const pl=new T.PointLight('#ffc080',.000015,1.30,2.95);pl.position.set(0,2.05,0);g.add(pl);} // Round27 micro dining quieter anti-spill (.005/.000015); ceiling absorber stays REMOVED
  
  // Cohesive oak TV wall unit (TARGET): full panel + niches/shelves left of TV + low console + LED
  const media=group(385,865);
@@ -268,14 +275,15 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  for(const [px,pz]of[[264,115],[416,93],[421,560],[317,449],[316,655],[384,785],[336,889],[103,871]]){
   const [x,z]=point(px,pz);cylinder(.055,.055,.015,materials.metal,x,3.386,z,ceilings);cylinder(.035,.035,.006,materials.led,x,3.374,z,ceilings);
  }
- for(const [px,pz,len]of[[366,892,2.8],[384,785,2.0],[317,532,3.0]]){const[x,z]=point(px,pz);box(len,.018,.045,materials.metal,x,3.375,z,ceilings);box(len-.03,.005,.018,materials.led,x,3.362,z,ceilings);}
+  for(const [px,pz,len]of[[366,892,2.8],[384,785,2.0],[317,532,3.0]]){const[x,z]=point(px,pz);box(len,.018,.045,materials.metal,x,3.375,z,ceilings);box(len-.03,.005,.018,materials.led,x,3.362,z,ceilings);} // Round21: strip quieter reverted (living spill)
  // Daylight enters through the actual perimeter openings; local fills stay restrained.
  const dayLights=[];
- // Round8: ONLY dining windows (492,923 / 492,779) base↓↓ — living fills/exposure untouched (living mean≈111)
- for(const [px,pz,width,rotation,base]of[[493,150,2.7,-Math.PI/2,1.0],[493,490,2.2,-Math.PI/2,1.0],[492,923,.85,-Math.PI/2,.10],[492,779,.85,-Math.PI/2,.14],[260,25,2.5,Math.PI,1.0]]){
-  const[x,z]=point(px,pz),light=new T.RectAreaLight('#ffc890',1.02*base,width,2.5);light.userData.base=base;light.position.set(x,1.9,z);light.rotation.y=rotation;scene.add(light);dayLights.push(light);
+ // Round27: terrace FAR mean↑ primary; dining/living HOLD; NO global
+ for(const [px,pz,width,rotation,base,col]of[[493,150,2.7,-Math.PI/2,2.62,'#ffc890'],[493,490,2.2,-Math.PI/2,2.62,'#ffc890'],[492,923,.85,-Math.PI/2,.001,'#ffc890'],[492,779,.85,-Math.PI/2,.001,'#ffc890'],[260,25,2.5,Math.PI,2.22,'#ffc890'],[640,980,2.4,Math.PI,6.15,'#ff1a0e'],[700,980,2.0,Math.PI,6.00,'#ff1a0e']]){ // Round27 terrace RectArea tiny↑ + mild desat R−B HOLD
+  const[x,z]=point(px,pz),light=new T.RectAreaLight(col,1.02*base,width,2.5);light.userData.base=base;light.position.set(x,1.9,z);light.rotation.y=rotation;scene.add(light);dayLights.push(light);
  }
- const fills=[];for(const[px,pz,base]of[[270,120,1.05],[420,170,1.05],[420,522,1.0],[325,532,1.0],[100,925,.38],[363,932,1.0],[382,784,.28],[620,900,.85],[720,880,.55]]){const[x,z]=point(px,pz),light=new T.PointLight('#ffb870',1.95*base,4.6,2.2);light.userData.base=base;light.position.set(x,3.12,z);scene.add(light);fills.push(light);} // Round8 dining fill↓ + terrace warm fill; living fills protect |err|
+ const fills=[];for(const[px,pz,base,col]of[[270,120,3.10,'#ffc070'],[420,170,3.10,'#ffc070'],[420,522,2.72,'#ffb868'],[325,532,2.72,'#ffb868'],[100,925,.008,'#ffb870'],[363,932,3.28,'#ffc070'],[382,784,.008,'#ffb870'],[458,918,.001,'#ffb870'],[620,900,2.50,'#ff0600'],[720,880,9.25,'#ff1c10'],[680,850,8.95,'#ff1c10'],[650,920,7.35,'#ff0000'],[750,820,8.60,'#ff1c10'],[690,860,8.18,'#ff1c10'],[600,860,0.65,'#ff0c00'],[710,930,7.45,'#ff0000'],[580,900,0.40,'#ff1000'],[760,860,7.22,'#ff1c10'],[640,840,1.40,'#ff0600']]){const[x,z]=point(px,pz),light=new T.PointLight(col,1.95*base,5.2,2.0);light.userData.base=base;light.position.set(x,3.12,z);scene.add(light);fills.push(light);} // Round28 living-only @240,960 base1.90 (dial-down); [363,932]=3.28 HOLD; FAR terrace HOLD; dining HOLD; no global
+ {const[x,z]=point(240,960);const livFill=new T.PointLight('#ffc070',1.95*1.90,2.40,2.0);livFill.userData.base=1.90;livFill.position.set(x,2.75,z);scene.add(livFill);fills.push(livFill);} // Round28 living dial-down @240,960 base1.90 dist2.40 (toward 118.5; soft-GPU over-target); dining/terrace HOLD
  const interior=furnish({scene,materials,group,box,cylinder,tube,fabric,plant,pillowTargets,bedGroups,doors:doorStates,renderer,atelier});
  for(const c of interior.curtains)c.group.userData.dynamic=true;
  for(const i of interior.interactions)i.object.userData.dynamic=true;
@@ -325,19 +333,21 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  const stepMarker=new T.Mesh(new T.RingGeometry(.095,.12,48),new T.MeshBasicMaterial({color:'#f8e8c6',transparent:true,opacity:.65,depthWrite:false}));stepMarker.rotation.x=-Math.PI/2;stepMarker.userData.dynamic=true;stepMarker.visible=false;scene.add(stepMarker);
  let markerLife=0,clockValue=.38,clockTarget=.38;
  const composer=new EffectComposer(renderer);composer.addPass(new RenderPass(scene,camera));
- // Round8: SSAO/bloom = Round6 (global protect living); dining crush via selective lights; terrace fill local
+ // Round21: SSAO/bloom = Round6 (NO global); dining quieter break-plateau; living HOLD; terrace HOLD chroma
  const ao=new SSAOPass(scene,camera,640,480);ao.kernelRadius=1.95;ao.minDistance=.00034;ao.maxDistance=.53;ao.output=SSAOPass.OUTPUT.Default;composer.addPass(ao);
  const bloom=new UnrealBloomPass(new T.Vector2(640,480),.036,.29,.986);composer.addPass(bloom);
  composer.addPass(new OutputPass());const fxaa=new ShaderPass(FXAAShader);composer.addPass(fxaa);
  if(smokeMode){ao.enabled=false;bloom.enabled=false;fxaa.enabled=false;renderer.shadowMap.enabled=false;}
  // Quality presets: high (desktop wide), medium (laptop), low (narrow / soft GPU)
- let qualityPreset='high';let forceRender=false;
+ let qualityPreset='high';let forceRender=false;let lowFpsSince=0,adaptiveDropped=false;
  function applyQuality(preset){
   qualityPreset=preset;const w=stage.clientWidth,h=stage.clientHeight;
   if(preset==='low'){ao.enabled=false;bloom.enabled=false;fxaa.enabled=false;renderer.setPixelRatio(Math.min(devicePixelRatio||1,1));renderer.shadowMap.type=T.BasicShadowMap;sun.shadow.mapSize.set(512,512);sun.castShadow=w>420;}
   else if(preset==='medium'){ao.enabled=false;bloom.enabled=w>600;bloom.strength=.036;bloom.radius=.28;bloom.threshold=.986;fxaa.enabled=true;renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.25));renderer.shadowMap.type=T.PCFShadowMap;sun.shadow.mapSize.set(1024,1024);sun.castShadow=true;}
   else{ao.enabled=w>600;bloom.enabled=true;bloom.strength=.036;bloom.radius=.29;bloom.threshold=.986;fxaa.enabled=true;renderer.setPixelRatio(Math.min(devicePixelRatio||1,w>700?1.75:1.5,3840/Math.max(w,h)));renderer.shadowMap.type=T.PCFSoftShadowMap;sun.shadow.mapSize.set(w>700?2048:1024,w>700?2048:1024);sun.castShadow=true;}
   renderer.shadowMap.needsUpdate=true;composer.setSize(w,h);ao.setSize(Math.min(w,preset==='high'?1280:640),Math.min(h,preset==='high'?900:480));bloom.setSize(w,h);const pr=renderer.getPixelRatio();fxaa.material.uniforms.resolution.value.set(1/(w*pr),1/(h*pr));
+  // Polish v37-prep: expose current quality tier for UI / smoke / proof
+  canvas.dataset.quality=preset;canvas.dispatchEvent(new CustomEvent('qualitychange',{detail:{quality:preset,manual:canvas.dataset.qualityManual==='1',adaptive:canvas.dataset.qualityAdaptive==='1'},bubbles:true}));
  }
  let frame=0,shown=true,onMove=null,onInteraction=null,lastTick=0,ready=false,photo=null,photoActive=false,photoBusy=false,photoState='off',denoise=null,photoEnvironment=null,normalEnvironment=null;
  let smokePaused=false,catchUpMode=false,renderReady=false,warmPromise=null,warmAbort=false;function schedule(){if(smokePaused)return;if(!frame&&(shown||forceRender))frame=requestAnimationFrame(tick);}
@@ -390,7 +400,10 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
  }
  let fpsFrames=0,fpsLast=performance.now();
  function tick(now){frame=0;if(atelier&&!movement.active&&!photoActive&&!photoBusy&&now-lastTick<33){schedule();return;}
-  const rawDt=(now-lastTick)/1000||.016;lastTick=now;fpsFrames++;canvas.dataset.ticks=String((Number(canvas.dataset.ticks||0)+1));if(now-fpsLast>=1000){const fps=fpsFrames*1000/(now-fpsLast);canvas.dataset.fps=String(Math.round(fps*10)/10);canvas.dataset.frameMs=String(Math.round((now-fpsLast)/Math.max(1,fpsFrames)));fpsFrames=0;fpsLast=now;}
+  const rawDt=(now-lastTick)/1000||.016;lastTick=now;fpsFrames++;canvas.dataset.ticks=String((Number(canvas.dataset.ticks||0)+1));if(now-fpsLast>=1000){const fps=fpsFrames*1000/(now-fpsLast);canvas.dataset.fps=String(Math.round(fps*10)/10);canvas.dataset.frameMs=String(Math.round((now-fpsLast)/Math.max(1,fpsFrames)));fpsFrames=0;fpsLast=now;
+   // Polish v37-prep adaptive: if auto (no manual override) and stuck <28fps ~2s on high → step to medium once
+   if(canvas.dataset.qualityManual!=='1'&&qualityPreset==='high'&&!adaptiveDropped){if(fps>=2&&fps<28){if(!lowFpsSince)lowFpsSince=now;if(now-lowFpsSince>=2000){adaptiveDropped=true;canvas.dataset.qualityAdaptive='1';applyQuality('medium');}}else lowFpsSince=0;}
+  }
   // Soft/remote GPUs: feed movement a catch-up dt so routes finish even at ~1–5 FPS.
   const moveDt=Math.min(.22,Math.max(.016,rawDt));
   const dt=Math.min(.033,rawDt);let activity=false;
@@ -404,9 +417,9 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
   }
   render();if(activity||movement.active||movement.moving||forceRender||(photoActive&&photo?.samples<96))schedule();
  }
-  function applyTime(value){const evening=T.MathUtils.smoothstep(value,.48,1),gold=Math.sin(Math.min(1,value)*Math.PI);// Round8: dining-still-bright selective↓↓ + terrace fill; exposure/sun/hemi intensity unchanged (protect living≈111)
+  function applyTime(value){const evening=T.MathUtils.smoothstep(value,.48,1),gold=Math.sin(Math.min(1,value)*Math.PI);// Round23: dining quieter continue; living HOLD; terrace HOLD; exposure/sun/hemi/ACES unchanged (no global)
  sun.position.set(28,6.7-value*8.5,12+value*18);sun.color.set('#ffa848').lerp(new T.Color('#ff6414'),gold*1.05);sun.intensity=3.60*(1-evening)+.12;scene.environmentIntensity=.23*(1-evening)+.03;scene.backgroundIntensity=.105*(1-evening)+.04;hemisphere.intensity=.21*(1-evening)+.08;hemisphere.color.set('#ffc890').lerp(new T.Color('#ff9440'),gold*.75);for(const l of dayLights)l.intensity=(1.06*(1-evening)+.05)*(l.userData.base??1);for(const l of fills)l.intensity=(1.92+evening*4.5)*(l.userData.base??1);for(const o of interior.lightSources)o.light.intensity=(o.enabled===false?0:o.base)*(.85+evening*1.0);consoleLight.intensity=6.8*(.5+evening*.85);shelfLed.intensity=3.5*(.48+evening*.9);shelfLed2.intensity=3.0*(.48+evening*.9);coveTop.intensity=2.4*(.45+evening);renderer.toneMappingExposure=.752+gold*.028;renderer.shadowMap.needsUpdate=true;}
- function resize(){exitPhoto('resize');const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);const preset=w<500?'low':(w<900?'medium':'high');applyQuality(preset);camera.aspect=w/h;camera.fov=camera.aspect<.9?72:62;camera.updateProjectionMatrix();schedule();}
+ function resize(){exitPhoto('resize');const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);if(canvas.dataset.qualityManual==='1')applyQuality(qualityPreset);else{const preset=w<500?'low':(w<900?'medium':'high');applyQuality(preset);}camera.aspect=w/h;camera.fov=camera.aspect<.9?72:62;camera.updateProjectionMatrix();schedule();}
  new ResizeObserver(resize).observe(stage);new IntersectionObserver(es=>{shown=es[0].isIntersecting;lastTick=performance.now();if(shown||forceRender)schedule();else if(frame&&!forceRender){cancelAnimationFrame(frame);frame=0;}}).observe(stage);
  canvas.addEventListener('pointerdown',exitPhoto);canvas.addEventListener('keydown',exitPhoto);
  canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();canvas.dispatchEvent(new CustomEvent('tourerror',{bubbles:true}));});
@@ -518,7 +531,7 @@ export function createApartment(canvas,onReady,{atelier=false}={}){
   const normalized=new T.Group();normalized.add(asset);asset.position.sub(new T.Vector3(center.x,bounds.min.y,center.z));normalized.scale.set(w/size.x,h/size.y,d/size.z);
   asset.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;if(o.material)o.material.envMapIntensity=.55;}});return normalized;
  }
- loader.load('assets/models/dining_chair_02/model.gltf',gltf=>{for(const holder of chairTargets){holder.clear();const asset=fitAsset(gltf.scene,.54,.94,.58);asset.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.map=null;o.material.color.set('#b9aa91');o.material.metalness=0;o.material.roughness=.9;}});holder.add(asset);}assetDone();},undefined,assetDone);
+ loader.load('assets/models/dining_chair_02/model.gltf',gltf=>{for(const holder of chairTargets){holder.clear();const asset=fitAsset(gltf.scene,.54,.94,.58);const tone=holder.userData.diningChair?'#2e240f':'#b9aa91';asset.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.map=null;o.material.color.set(tone);o.material.metalness=0;o.material.roughness=(holder.userData.diningChair?0.98:0.9);}});holder.add(asset);}assetDone();},undefined,assetDone); // Round26 dining GLTF #2e240f quieter
  loader.load('assets/models/throw_pillows_01/model.gltf',gltf=>{const source=gltf.scene.getObjectByName('throw_pillows_01_pillow01')||gltf.scene.children[0];pillowTargets.forEach((t,i)=>{t.holder.clear();const asset=fitAsset(source,t.width,t.height,t.depth);const tone=i%3===0?'#7a8460':i%3===1?'#b89468':'#d8c8a8'; // Round3 olive/beige pillows
 asset.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.map=null;o.material.color.set(tone);o.material.roughness=.88;o.material.metalness=0;o.material=new T.MeshPhysicalMaterial({color:tone,roughness:.82,sheen:1.0,sheenColor:new T.Color('#f0e4cc'),sheenRoughness:.4,bumpScale:.055,envMapIntensity:.4});}});t.holder.add(asset);});assetDone();},undefined,assetDone);
  loader.load('assets/models/potted_plant_02/model.gltf',gltf=>{for(const t of plantTargets){t.holder.clear();const asset=fitAsset(gltf.scene,t.size*.75,t.size*1.25,t.size*.75);asset.traverse(o=>{if(o.isMesh&&o.name.endsWith('_pot')){o.material=o.material.clone();o.material.map=null;o.material.color.set('#d8d0bf');o.material.roughness=.85;}});t.holder.add(asset);}const leaves=gltf.scene.getObjectByName('potted_plant_02_leaves');if(leaves)for(const t of planterTargets){t.holder.clear();for(const[x,z]of t.positions){const plant=fitAsset(leaves,.24,.23,.24);plant.position.set(x,.31,z);plant.rotation.y=x*12+z*9;plant.traverse(o=>{if(o.isMesh)o.castShadow=false;});t.holder.add(plant);}}assetDone();},undefined,assetDone);
@@ -526,7 +539,7 @@ asset.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.map=nul
  }
  movement.go('living',true);resize();if(smokeMode){applyQuality('low');canvas.dataset.smoke='1';applyTime(clockValue);applySpawn();onReady?.();schedule();}
  function syncDataset(){const dir=new T.Vector3();camera.getWorldDirection(dir);const[x,z]=movement.position;onMove?.({x,z,heading:Math.atan2(dir.x,-dir.z)*180/Math.PI,walking:movement.moving,room:movement.room});canvas.dataset.walking=String(movement.moving);canvas.dataset.curtains=interior.curtainsOpen?'open':'closed';canvas.dataset.doors=doorStates.map(d=>Math.round(d.angle*180/Math.PI)).join(',');canvas.dataset.position=x.toFixed(2)+','+z.toFixed(2);canvas.dataset.lamp=interior.lampOn?'on':'off';canvas.dataset.lampEmissive=String(interior.lampOn?2.4:0);}
- return{go(id,instant=false){exitPhoto();const ok=movement.go(id,instant);syncDataset();return ok;},warp(px,pz,lx,lz){exitPhoto();const ok=movement.warp(px,pz,lx??px+40,lz??pz);syncDataset();return ok;},resize,setPhoto,setQuality(preset){applyQuality(preset==='low'||preset==='medium'?preset:'high');schedule();},setContinuous(on){forceRender=!!on;if(forceRender)schedule();},setSmokePaused(on){smokePaused=!!on;if(smokePaused){catchUpMode=true;warmAbort=true;ao.enabled=false;bloom.enabled=false;fxaa.enabled=false;if(frame){cancelAnimationFrame(frame);frame=0;}renderReady=true;canvas.dataset.renderReady='true';}else{warmAbort=false;catchUpMode=false;applyQuality(qualityPreset);schedule();}},renderOnce(){softCatchUpRender();return{lamp:canvas.dataset.lamp,emissive:canvas.dataset.lampEmissive,doors:canvas.dataset.doors,pos:canvas.dataset.position,renderReady:canvas.dataset.renderReady||null};},warmFrames(n=4){return warmSoft(Math.max(1,n|0));},get quality(){return qualityPreset;},get fps(){return Number(canvas.dataset.fps||0);},get physicsInfo(){return{static:physics.staticCount,dynamic:physics.dynamicCount};},nudgeProp(i=0){const m=physProps[i];if(!m)return false;const dir=new T.Vector3();camera.getWorldDirection(dir);dir.y=0;if(dir.lengthSq())dir.normalize();const ok=physics.nudge(m,dir,1.6);schedule();return ok;},
+ return{go(id,instant=false){exitPhoto();const ok=movement.go(id,instant);syncDataset();return ok;},warp(px,pz,lx,lz){exitPhoto();const ok=movement.warp(px,pz,lx??px+40,lz??pz);syncDataset();return ok;},resize,setPhoto,setQuality(preset,{manual=true}={}){const p=preset==='low'||preset==='medium'?preset:(preset==='auto'?'auto':'high');if(p==='auto'){canvas.dataset.qualityManual='';canvas.dataset.qualityAdaptive='';adaptiveDropped=false;lowFpsSince=0;const w=stage.clientWidth;applyQuality(w<500?'low':(w<900?'medium':'high'));}else{if(manual!==false){canvas.dataset.qualityManual='1';canvas.dataset.qualityAdaptive='';}applyQuality(p);}schedule();},setContinuous(on){forceRender=!!on;if(forceRender)schedule();},setSmokePaused(on){smokePaused=!!on;if(smokePaused){catchUpMode=true;warmAbort=true;ao.enabled=false;bloom.enabled=false;fxaa.enabled=false;if(frame){cancelAnimationFrame(frame);frame=0;}renderReady=true;canvas.dataset.renderReady='true';}else{warmAbort=false;catchUpMode=false;applyQuality(qualityPreset);schedule();}},renderOnce(){softCatchUpRender();return{lamp:canvas.dataset.lamp,emissive:canvas.dataset.lampEmissive,doors:canvas.dataset.doors,pos:canvas.dataset.position,renderReady:canvas.dataset.renderReady||null};},warmFrames(n=4){return warmSoft(Math.max(1,n|0));},get quality(){return qualityPreset;},get fps(){return Number(canvas.dataset.fps||0);},get physicsInfo(){return{static:physics.staticCount,dynamic:physics.dynamicCount};},nudgeProp(i=0){const m=physProps[i];if(!m)return false;const dir=new T.Vector3();camera.getWorldDirection(dir);dir.y=0;if(dir.lengthSq())dir.normalize();const ok=physics.nudge(m,dir,1.6);schedule();return ok;},
  debugWalk(fwd=0,strafe=0,steps=12,dt=.08){const out=[];for(let i=0;i<steps;i++){out.push(movement.debugWalk(fwd,strafe,dt));}schedule();const last=out[out.length-1];return{steps:out.length,start:out[0]?.pos,end:last?.pos,blocked:out.filter(o=>o.blocked).length,last};},
  toggleDoor(i=0){const d=doorStates[i];if(!d)return false;d.manual=true;d.target=Math.abs(d.target)<.3?d.d.open:0;onInteraction?.('Дверь');schedule();return true;},
  closeDoor(i=0){const d=doorStates[i];if(!d)return false;d.manual=true;d.target=0;d.angle=0;d.velocity=0;if(d.leaf)d.leaf.rotation.y=0;onInteraction?.('Дверь');schedule();return true;},closeAllDoors(){for(const d of doorStates){d.manual=true;d.target=0;d.angle=0;d.velocity=0;if(d.leaf)d.leaf.rotation.y=0;}schedule();return true;},

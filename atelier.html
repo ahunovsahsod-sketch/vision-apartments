@@ -18,6 +18,13 @@
    <div class="tour" id="vision-apartment" data-room="living">
     <div class="scene-stage"><canvas id="apartment-canvas" tabindex="0" aria-label="Квартира. Клавиши W A S D — ходьба, мышь — осмотр, стрелки влево и вправо — поворот. Escape — остановка. Карта справа для ориентации."></canvas><div class="scene-loader" role="status"><span></span></div><div class="scene-error" hidden>Не удалось открыть интерьер в этом браузере.</div></div>
     <button class="full-button" type="button" aria-label="Открыть на весь экран">⤢</button>
+    <div class="quality-control" role="group" aria-label="Качество графики">
+     <span class="quality-label">Качество</span>
+     <button type="button" data-quality="high" aria-pressed="false">High</button>
+     <button type="button" data-quality="medium" aria-pressed="false">Med</button>
+     <button type="button" data-quality="low" aria-pressed="false">Low</button>
+     <button type="button" data-quality="auto" aria-pressed="true" title="Авто по ширине экрана">Auto</button>
+    </div>
     <aside class="tour-navigation" aria-label="Карта и текущее положение">
      <div class="map-header"><span>План квартиры · м²</span><button class="map-size" type="button" aria-label="Развернуть карту" aria-expanded="false">⤢</button></div>
      <div class="map-body"><div class="floor-plan" id="floor-plan"></div><div id="room-legend" class="room-legend" aria-label="Комнаты и площади в квадратных метрах"></div></div><div class="current-location"><span id="current-room">Гостиная</span><span id="current-area">21,0 м²</span></div>

@@ -26,6 +26,27 @@ async function initialize(){if(initializing)return;initializing=true;loadStart=p
 const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.intersectionRatio>0)){initialize();observer.disconnect();}},{threshold:.01});observer.observe(root);
 const enterLink=document.querySelector('.enter-tour');enterLink.addEventListener('pointerenter',initialize,{once:true});enterLink.addEventListener('focus',initialize,{once:true});canvas.addEventListener('pointerdown',hideHint,{once:true});
 root.querySelector('.full-button').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await root.requestFullscreen();}catch{root.scrollIntoView({behavior:'smooth',block:'start'});}});document.addEventListener('fullscreenchange',()=>engine?.resize());
+// Polish v37-prep: High/Med/Low/Auto quality tiers (manual override sticky until Auto)
+const qualityBar=root.querySelector('.quality-control');
+function syncQualityUI(q,manual){
+ if(!qualityBar)return;
+ const active=manual?q:'auto';
+ qualityBar.querySelectorAll('[data-quality]').forEach(btn=>{
+  const on=btn.dataset.quality===active;
+  btn.setAttribute('aria-pressed',String(on));
+ });
+}
+qualityBar?.addEventListener('click',e=>{
+ const btn=e.target.closest('[data-quality]');if(!btn||!engine)return;
+ const q=btn.dataset.quality;
+ engine.setQuality(q);
+ syncQualityUI(q==='auto'?'auto':q,q!=='auto');
+});
+canvas.addEventListener('qualitychange',e=>{
+ const {quality,manual}=e.detail||{};
+ syncQualityUI(quality,!!manual);
+});
+
 const mapSize=root.querySelector('.map-size');mapSize.addEventListener('click',()=>{const open=root.querySelector('.tour-navigation').classList.toggle('is-expanded');mapSize.setAttribute('aria-expanded',String(open));mapSize.setAttribute('aria-label',open?'Свернуть карту':'Развернуть карту');});
 if(atelier){const slider=document.getElementById('daylight'),timeLabel=document.getElementById('daylight-value');slider.addEventListener('input',()=>{const v=Number(slider.value)/100;engine?.setTime(v);timeLabel.textContent=v<.45?'День':v<.8?'Закат':'Вечер';});document.getElementById('curtains-button').addEventListener('click',e=>{const open=engine?.toggleCurtains();e.currentTarget.setAttribute('aria-pressed',String(Boolean(open)));});const photoButton=document.getElementById('photo-button'),photoStatus=document.getElementById('photo-status');photoButton.addEventListener('click',()=>engine?.setPhoto());root.addEventListener('photostate',e=>{const {state,message}=e.detail;photoButton.setAttribute('aria-pressed',String(['preparing','rendering'].includes(state)));photoStatus.textContent=message;photoStatus.hidden=!message;});}
 document.getElementById('preview-form').addEventListener('submit',e=>{e.preventDefault();const result=e.currentTarget.querySelector('.form-result');result.hidden=false;result.textContent='Предпросмотр: заявка не отправлена. Телефон для связи: +998 95 454 22 22.';});

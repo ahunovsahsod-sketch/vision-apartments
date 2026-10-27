@@ -1,76 +1,75 @@
-# delivery-v17 — Visual Round8 vs TARGET
+# CHANGELOG — delivery-v37 (Visual Round28 + Polish pack)
 
-**Дата:** 2026-10-26 (Asia/Tashkent)  
-**База:** delivery-v16 (ПРИНЯТО)  
-**TARGET:** `shared/upgrade-2026-10-25/TARGET-user-2026-10-25-2144.png` (mean ≈ 118.5)  
+**Дата:** 2026-10-27 Asia/Tashkent  
+**База:** delivery-v36 (scene.md5 `2a6d0b4d7e26eb19382c8967f337305d`)  
+**Задача:** Visual Round28 residual vs TARGET≈118.5 / R−B≈60 **плюс** Polish pack (BRIEF ~13:15).  
 **selfAccept:** false
 
-## Top-3 residual gaps (после Round7 / after-v16)
+---
 
-1. **dining-still-bright** (PRIMARY) — dining mean ≈ 134.1 vs TARGET ≈ 118.5 (|err|≈15.7).
-2. **terrace-cool-chroma** — terrace R−B ≈ 26 vs TARGET ≈ 60; mean ≈ 104.7 slightly under.
-3. **living-slight-under** — living mean ≈ 111.3 (|err|≈7.2); **не ломать** глобальным dimming.
+## A. Visual Round28
 
-## Fixes (только `scene.js`, selective)
+**Фокус:** living mean **к** TARGET≈118.5; dining HOLD; terrace HOLD + R−B band 59.7–60.5.  
+Только selective `scene.js`; **NO** global exposure / sun / hemi / ACES.  
+movement / interior / plan — **SAME** as v36.
 
-- **Не трогали** ACES exposure `.752`, sun `#ff7420` `4.35`, hemi `.21`, `environmentIntensity` `.21` (protect living≈111)
-- dining window dayLights (492,923 / 492,779) `userData.base` `.10` / `.14` (было `.22`/`.28`)
-- dining-only fills: `382,784` `.28`; `100,925` `.38`; sofa-near `363,932` `1.0` protected; living fills `270/420` `1.05`
-- terrace warm fills added: `620,900` `.85`; `720,880` `.55` (local, no global wash)
-- dining pendant `1.10` (было `1.75`); dining table stone **clone** darker `#a89070` (не shared stone)
-- terrace tile warmer `#ffb050` roughness `.68` (material-only chroma + mean lift)
-- jute / SSAO / bloom = Round6 (living rug + global AO не давили living)
-- `applyTime` Round8 markers; selective bases unchanged globally
+### Knobs
+- living-only `@240,960` base **2.16→1.90** dist2.40 (dial-down)
+- `[363,932]=3.28` **HOLD**
+- terrace FAR fills / RectAreas / materials — **не трогали**
+- dining lights/materials — **не трогали**
 
-**Не трогали:** movement / interior interactives / door-physics / plan / mapWalk aliases / kitchen spawn 290/810 / snapIfStuck / soft-GPU catch-up path.
+### Почему dial-down, а не mean↑
+Бриф предполагал living under-target (~118.12 по аудиту v36). На soft-GPU той же сессии polish-before дал **~119.31** (абсолютный drift). Первичный проход base **2.42** увёл mean **от** 118.5 (119.31→119.47, sum|err| 2.14→2.26).  
+Trials: 2.42↑хуже → 2.24≈плоско → 2.00/−0.11 → **1.90/−0.16** оставлен.
 
-## Measurable improvement (same-camera, medium)
+### Measurable (PIL full-frame, same-camera)
 
-| view | before (v16) mean | after (v17) mean | Δ | \|err\|→TARGET 118.5 |
-|------|-------------------|------------------|---|----------------------|
-| living | 111.3 | 109.7 | −1.6 | 7.2 → 8.8 |
-| dining | 134.1 | 127.5 | −6.6 | 15.7 → 9.0 |
-| terrace | 104.7 | 104.5 | −0.2 | 13.8 → 14.0 |
+| room | before | after | Δ | \|err\| |
+|---|---|---|---|---|
+| living | 119.31 | 119.15 | **−0.16** | 0.81→**0.65** |
+| dining | 119.33 | 119.33 | −0.00 | 0.83→0.83 HOLD |
+| terrace | 119.00 | 119.01 | +0.01 | 0.50→0.51 HOLD |
+| terrace R−B | 60.56 | 60.59 | +0.03 | **ΔHOLD** (soft-GPU band edge ~60.5) |
+| **sum\|err\|** | **2.14** | **1.99** | **−0.15** | toward TARGET≈118.5 |
 
-**sum \|err\|:** 36.7 → **31.9** (measurable toward TARGET; dining −6.6 primary).  
-Terrace R−B: 25.9 → **28.0** (toward TARGET ≈59.8; residual OPEN).  
-Living |err| slight rise (+1.6) — within prior audit tolerance pattern (sum fell).  
-Residual vs TARGET: **OPEN** (dining still bright; terrace cool chroma; FOV/layout).  
-phone-ready / hardware FPS: **OPEN**.
+vs broken 2.42 after: living |err| 0.97→0.65; sum|err| 2.26→1.99.
 
-## Ordinary P1 matrix (`smoke-delivery-v17.json`, без `?smoke=1`)
+**STATUS:** IMPROVED_OPEN_RESIDUAL  
+scene.md5 after: `67caa1bdaee14bd9419c112be026e766`  
+(polish-only before Round28 dial: `299d07f48a4dc0c3bbb6558d56918e82`)
 
-| check | result |
-|-------|--------|
-| `mapWalk` | PASS |
-| `mapClickKitchen` | PASS |
-| `aliasLoungeDining` | PASS |
-| `floorClick` | PASS |
-| `lamp` | PASS |
-| `curtains` | PASS |
-| `art` | PASS |
-| `tv` | PASS |
-| `doorIndex` | PASS |
-| `doorAtelier` | PASS |
-| `doorCoordsDistinct` | PASS |
-| `thrashSofa` | PASS |
-| `thrashDining` | PASS |
-| `thrashWall` | PASS |
-| `spawnDining` | PASS |
-| `scroll375` | PASS |
-| `visualRound8` | IMPROVED_OPEN_RESIDUAL |
+---
 
-**Итог P1:** все 16 PASS · **selfAccept:** false · **verdictSelf:** P1_PASS_SELF_FALSE
+## B. Polish pack
 
-Оговорки:
-- doorAtelier: evaluate cycle `[0,90,0]` PASS; soft-GPU screenshot may soft-fail (не product fail).
-- phoneReady: false / OPEN; hardwareFps: open.
-- visualRound8 residual vs TARGET остаётся OPEN (measurable improvement зафиксирован).
-- shared/baselines не трогали; v18 не начат.
+1. **Render** — quality proof screens `quality-high.jpg` / `quality-medium.jpg` / `quality-low-narrow.jpg` (non-trivial sizes; ordinary без beige blank). Evidence: `quality-proof.json` pass=true.
+2. **Mechanics** — R08 HOLD (WASD+mouse, map walk, floor OFF, двери/интерактивы). Code-change mechanics: нет. Checklist: `status/polish-prep/mechanics-R08-checklist.md` (+ копия в screens notes).
+3. **Textures** — living sofa anti-plastic (`sofaMat`: clearcoat=0, sheenRoughness↑, bump↑, envMapIntensity↓). Screens: `texture-sofa-before.jpg` / `texture-sofa-before-living.jpg` → `texture-sofa-after.jpg`.
+4. **Bugs** — sticky manual `setQuality` on resize (`dataset.qualityManual=1` до Auto). Fix в `app.js`. См. `polish-prep/bugs-scan.md`.
+5. **Optimization** — `canvas.dataset.fps` пишется; adaptive: auto + `2≤fps<28` ~2s на high → step to medium once (`dataset.qualityAdaptive=1`). Proof description + dataset asserts в `quality-proof.json`.
+6. **Quality tiers** — UI High/Med/Low/Auto в `index.html`+`atelier.html`; `dataset.quality` на каждом `applyQuality`; proofs `quality-high.jpg` / `quality-medium.jpg` / `quality-low-narrow.jpg` (viewport ~375).
 
-## Артефакты
+---
 
-- `screens/round8-*-before|after.jpg`, `compare-round8-before-after.jpg`, `compare-round8-vs-target.jpg`, `compare-round8-{living,dining,terrace}.jpg`
-- P1 proofs: `02-375`, `10-door-index`, `11-tv`, `12-lamp`, `13*-thrash`, `14-floor-off`, `15-mapwalk`, `16-curtains`, `17-art`, `01-door-atelier-open`
-- `smoke-delivery-v17.json` — ordinary P1
-- `programmer-cycle17-report.md`
+## P1 ordinary smoke
+
+`smoke-delivery-v37.json` — mode=ordinary, NO `?smoke=1`, selfAccept=false — **все 16 P1 PASS**  
+(mapWalk/aliases, kitchen spawn 290/810, floor OFF, doors, curtains/art/tv/lamp, scroll375, thrash/spawn, doorAtelier/coordsDistinct). Soft-GPU screenshot timeouts non-blocking (evaluate PASS).
+
+---
+
+## OPEN (честно)
+
+- residual visual → TARGET (living |err|≈0.65 soft-GPU; dining ≈0.83; terrace ≈0.51)  
+- phone-ready — **OPEN** (не писать «готово на телефоне»)  
+- hardware FPS — **OPEN**
+
+## Не трогали
+
+shared/baselines; movement.js / interior.js / plan.js (md5 SAME as v36); Tilda / paid gens; phone/FPS work; **v38 не начат**.
+
+## Изменённые файлы (vs v36)
+
+- `scene.js` — Round28 living dial + polish sofa anti-plastic  
+- `app.js` / `index.html` / `atelier.html` / `styles.css` — quality UI + sticky manual + adaptive FPS  
