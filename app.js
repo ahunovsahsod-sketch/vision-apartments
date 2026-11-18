@@ -36,8 +36,14 @@ function syncQualityUI(q,manual,adaptive){
   btn.setAttribute('aria-pressed',String(on));
  });
  // Polish v38: Auto title reflects adaptive step honestly (soft-GPU may not trigger)
- const autoBtn=qualityBar.querySelector('[data-quality="auto"]');
- if(autoBtn){autoBtn.title=adaptive?'Авто: снижено до Med по FPS':'Авто по ширине экрана';autoBtn.dataset.adaptive=adaptive?'1':'';}
+  const autoBtn=qualityBar.querySelector('[data-quality="auto"]');
+ // Polish v39: Auto title reflects adaptive + soft-GPU honesty
+ if(autoBtn){
+  const c=document.getElementById('apartment-canvas');
+  const sm=c?.dataset?.shadowMap||'';
+  if(adaptive){autoBtn.dataset.adaptive='1';autoBtn.title='Авто: снижено по FPS → Med (shadow '+sm+')';}
+  else{autoBtn.dataset.adaptive='';autoBtn.title='Авто по ширине экрана (soft-GPU FPS adaptive может не сработать)';}
+ }
 }
 qualityBar?.addEventListener('click',e=>{
  const btn=e.target.closest('[data-quality]');if(!btn||!engine)return;

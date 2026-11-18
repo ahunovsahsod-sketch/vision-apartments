@@ -1,19 +1,16 @@
 {
-  "delivery": "v38",
+  "delivery": "delivery-v39",
   "when": "2026-10-27 Asia/Tashkent",
-  "scene.md5": "6f7df3cec3e1bad69bc41e13bebd322d",
-  "base_v37_scene.md5": "67caa1bdaee14bd9419c112be026e766",
-  "frozen": {
+  "base": "delivery-v38",
+  "files": {
+    "scene.js": "b551104887f099d831f7403b45e397c6",
+    "app.js": "972e8767d065319c23e01025292b2099",
+    "styles.css": "d441b79972ac0bc5f483e56922c50217",
     "movement.js": "b8ed45d3130633e4a7dfcfc24a534b0f",
     "interior.js": "adfea2414dd7945008a0e282b83c8a3a",
-    "plan.js": "55974b68a5ace400800836efffd2940b"
+    "plan.js": "55974b68a5ace400800836efffd2940b",
+    "index.html": "33b7420db1b7769eb538e70e8ab2a3da",
+    "atelier.html": "466094b59b12f00f39a3673b0df01815"
   },
-  "selfAccept": false,
-  "visualRound29": "IMPROVED_OPEN_RESIDUAL",
-  "smoke": "16/16 ordinary P1 PASS",
-  "userFeedback_1648": [
-    "dining chairs face-table",
-    "doors closed-flush",
-    "texture depth non-sofa"
-  ]
+  "selfAccept": false
 }
